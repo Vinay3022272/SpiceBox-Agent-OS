@@ -1,0 +1,10 @@
+product_name,brand,category,price,currency,description,specifications_display,specifications_battery,specifications_camera,specifications_storage,specifications_ram,specifications_processor
+iPhone 15,Apple,Smartphones,79900,INR,Latest Apple smartphone with Dynamic Island and A16 chip,6.1 inch Super Retina XDR,Up to 20 hours video playback,48MP main camera with 2x optical zoom,128GB,6GB,A16 Bionic
+iPhone 15 Pro,Apple,Smartphones,134900,INR,Pro-grade iPhone with titanium design and A17 Pro chip,6.1 inch Super Retina XDR ProMotion,Up to 23 hours video playback,48MP main with 3x optical zoom,256GB,8GB,A17 Pro
+Samsung Galaxy S24,Samsung,Smartphones,74999,INR,Samsung flagship with Galaxy AI features,6.2 inch Dynamic AMOLED 2X,Up to 22 hours video playback,50MP main camera with 3x optical zoom,256GB,8GB,Snapdragon 8 Gen 3
+Samsung Galaxy S24 Ultra,Samsung,Smartphones,129999,INR,Ultimate Samsung flagship with S Pen and 200MP camera,6.8 inch Dynamic AMOLED 2X,Up to 28 hours video playback,200MP main with 5x optical zoom,512GB,12GB,Snapdragon 8 Gen 3
+OnePlus 12,OnePlus,Smartphones,64999,INR,Flagship killer with Hasselblad camera partnership,6.82 inch LTPO AMOLED,Up to 18 hours video playback,50MP Hasselblad camera system,256GB,12GB,Snapdragon 8 Gen 3
+Sony WH-1000XM5,Sony,Headphones,29990,INR,Industry-leading noise cancelling wireless headphones,N/A,Up to 30 hours,N/A,N/A,N/A,N/A
+Apple AirPods Pro 2,Apple,Headphones,24900,INR,Active noise cancellation with Adaptive Transparency,N/A,Up to 6 hours (30 with case),N/A,N/A,N/A,N/A
+iPad Air M2,Apple,Tablets,59900,INR,Supercharged by M2 chip with 10.9 inch Liquid Retina display,10.9 inch Liquid Retina,Up to 10 hours,12MP Wide camera,128GB,8GB,Apple M2
+Samsung Galaxy Tab S9,Samsung,Tablets,74999,INR,Premium Android tablet with S Pen included,11 inch Dynamic AMOLED 2X,Up to 15 hours,13MP main camera,128GB,8GB,Snapdragon 8 Gen 2

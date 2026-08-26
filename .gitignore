@@ -1,0 +1,23 @@
+# Environment variables
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+backend/.env
+backend/src/.env
+
+# Python / Pycache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Generated knowledge & artifacts
+# merchant_knowledge/
+implementation_plan.md
+walkthrough.md
+task.md
+
+/temp
