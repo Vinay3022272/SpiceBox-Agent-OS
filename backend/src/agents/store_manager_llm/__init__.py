@@ -20,6 +20,7 @@ Usage:
 from .graph import build_wiki_graph
 from .state import WikiState
 from .utils.file_io import ensure_wiki_structure
+from .query_pipeline import query_wiki
 
 
 def run_wiki_agent(

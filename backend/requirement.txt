@@ -12,3 +12,4 @@ openpyxl>=3.1.0
 slugify
 genai
 rapidfuzz
+groq

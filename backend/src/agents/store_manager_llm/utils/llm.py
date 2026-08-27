@@ -14,7 +14,7 @@ import json
 import time
 from pathlib import Path
 from dotenv import load_dotenv
-from google import genai
+from groq import Groq
 
 # Load .env from backend directory
 _env_paths = [
@@ -26,11 +26,11 @@ for _ep in _env_paths:
         load_dotenv(str(_ep))
         break
 
-_client: genai.Client | None = None
+
 
 # Rate limiting: Gemini free tier = 5 requests/minute
 _last_call_time: float = 0
-_MIN_INTERVAL: float = 13.0  # ~4.6 req/min to stay safe
+_MIN_INTERVAL: float = 2.0  
 
 
 def _rate_limit():
@@ -44,15 +44,19 @@ def _rate_limit():
         time.sleep(wait)
     _last_call_time = time.time()
 
+_client = None
 
-def _get_client() -> genai.Client:
-    """Lazy-init Gemini client."""
+def _get_client():
     global _client
+
     if _client is None:
-        api_key = os.getenv("GEMINI_API_KEY")
+        api_key = os.getenv("GROQ_API_KEY")
+
         if not api_key:
-            raise ValueError("GEMINI_API_KEY not found in environment variables")
-        _client = genai.Client(api_key=api_key)
+            raise ValueError("GROQ_API_KEY not found")
+
+        _client = Groq(api_key=api_key)
+
     return _client
 
 
@@ -93,92 +97,89 @@ def _call_with_retry(fn, max_retries: int = 3):
 def call_llm(
     prompt: str,
     system: str | None = None,
-    model: str = "gemini-3.6-flash",
+    model: str = "openai/gpt-oss-120b",
     temperature: float = 0.3,
     max_tokens: int = 4096,
     include_schema: bool = True,
 ) -> str:
-    """
-    Call Gemini with a plain text prompt. Returns the text response.
 
-    If include_schema is True, schema.md is prepended to the system prompt.
-    Includes automatic rate limiting and retry on 429/503 errors.
-    """
     client = _get_client()
 
     system_parts = []
+
     if include_schema:
         schema = get_schema()
         if schema:
             system_parts.append(schema)
+
     if system:
         system_parts.append(system)
 
-    system_prompt = "\n\n---\n\n".join(system_parts) if system_parts else "You are a helpful assistant."
+    system_prompt = "\n\n---\n\n".join(system_parts)
 
-    def _do_call():
-        response = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=genai.types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                temperature=temperature,
-                max_output_tokens=max_tokens,
-            ),
-        )
-        return response.text.strip()
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {
+                "role": "system",
+                "content": system_prompt
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=temperature,
+        max_tokens=max_tokens,
+    )
 
-    return _call_with_retry(_do_call)
-
+    return response.choices[0].message.content.strip()
 
 def call_llm_json(
     prompt: str,
     system: str | None = None,
-    model: str = "gemini-3.6-flash",
+    model: str = "openai/gpt-oss-120b",
     temperature: float = 0.2,
     max_tokens: int = 4096,
     include_schema: bool = True,
 ) -> dict | list:
-    """
-    Call Gemini with JSON output. Returns parsed JSON.
 
-    The prompt MUST instruct the model to return JSON.
-    Includes automatic rate limiting and retry on 429/503 errors.
-    """
     client = _get_client()
 
     system_parts = []
+
     if include_schema:
         schema = get_schema()
         if schema:
             system_parts.append(schema)
+
     if system:
         system_parts.append(system)
 
-    system_parts.append("You must respond with valid JSON only. No markdown fences, no explanation outside JSON.")
+    system_parts.append(
+        "You must respond with valid JSON only. "
+        "No markdown fences, no explanation outside JSON."
+    )
+
     system_prompt = "\n\n---\n\n".join(system_parts)
 
-    def _do_call():
-        response = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=genai.types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                temperature=temperature,
-                max_output_tokens=max_tokens,
-                response_mime_type="application/json",
-            ),
-        )
-        text = response.text.strip()
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {
+                "role": "system",
+                "content": system_prompt
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=temperature,
+        max_tokens=max_tokens,
+        response_format={"type": "json_object"},
+    )
 
-        try:
-            return json.loads(text)
-        except json.JSONDecodeError:
-            # Try to extract JSON from markdown fences
-            if "```json" in text:
-                text = text.split("```json")[1].split("```")[0].strip()
-            elif "```" in text:
-                text = text.split("```")[1].split("```")[0].strip()
-            return json.loads(text)
+    text = response.choices[0].message.content.strip()
 
-    return _call_with_retry(_do_call)
+    return json.loads(text)
