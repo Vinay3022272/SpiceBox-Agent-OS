@@ -20,7 +20,7 @@ Usage:
 from .graph import build_wiki_graph
 from .state import WikiState
 from .utils.file_io import ensure_wiki_structure
-from .query_pipeline import query_wiki
+from .query_pipeline import query_wiki, query_knowledge_base, query_marketing_intelligence
 
 
 def run_wiki_agent(
@@ -81,12 +81,12 @@ def run_wiki_agent(
     # Build and run graph
     graph = build_wiki_graph()
 
-    print("  ⏳ Running pipeline...\n")
+    print("  Running pipeline...\n")
     final_state = graph.invoke(initial_state)
 
     # Summary
     print(f"\n{'='*60}")
-    print(f"  ✅ Pipeline Complete")
+    print(f"  Pipeline Complete")
     print(f"  Status: {final_state.get('status', 'unknown')}")
     print(f"  Files processed: {len(final_state.get('uploaded_files', []))}")
     print(f"  Products extracted: {len(final_state.get('extracted_products', []))}")

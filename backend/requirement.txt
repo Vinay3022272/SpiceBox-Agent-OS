@@ -13,3 +13,5 @@ slugify
 genai
 rapidfuzz
 groq
+langchain 
+langchain-groq

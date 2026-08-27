@@ -215,3 +215,40 @@ def query_wiki(
         "sources": sources,
         "page_count": len(all_pages),
     }
+
+
+def query_knowledge_base(
+    query: str,
+    wiki_base_path: str = "./merchant_knowledge",
+    merchant_id: str = "default_merchant",
+    top_k: int = 5,
+) -> Dict[str, Any]:
+    """
+    Query the product knowledge base (products, categories, specs, reviews).
+    """
+    return query_wiki(
+        query=query,
+        wiki_base_path=wiki_base_path,
+        merchant_id=merchant_id,
+        section="knowledge",
+        top_k=top_k,
+    )
+
+
+def query_marketing_intelligence(
+    query: str,
+    wiki_base_path: str = "./merchant_knowledge",
+    merchant_id: str = "default_merchant",
+    top_k: int = 5,
+) -> Dict[str, Any]:
+    """
+    Query the marketing intelligence base (promotions, campaigns, popular items).
+    """
+    return query_wiki(
+        query=query,
+        wiki_base_path=wiki_base_path,
+        merchant_id=merchant_id,
+        section="marketing",
+        top_k=top_k,
+    )
+
