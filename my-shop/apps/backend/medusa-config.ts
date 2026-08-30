@@ -16,32 +16,38 @@ module.exports = defineConfig({
       ssl: false,
       sslmode: "disable"
     },
-    admin: {
-      vite: (config) => {
-        return {
-          server: {
-            host: "0.0.0.0",
-            // Allow all hosts when running in Docker (development mode)
-            // In production, this should be more restrictive
-            allowedHosts: [
-              "localhost",
-              ".localhost",
-              "127.0.0.1",
-            ],
-            fs: {
-              strict: false,
-              allow: ["/server"],
-            },
-            hmr: {
-              // HMR websocket port inside container
-              port: 5173,
-              // Port browser connects to (exposed in docker-compose.yml)
-              clientPort: 5174,
-            },
-          },
-        }
-      },
-    },
     redisUrl: process.env.REDIS_URL,
-  }
+  },
+  admin: {
+    backendUrl: process.env.MEDUSA_BACKEND_URL || "http://localhost:9001",
+    vite: (config) => {
+      return {
+        server: {
+          host: "0.0.0.0",
+          // Allow all hosts when running in Docker (development mode)
+          // In production, this should be more restrictive
+          allowedHosts: [
+            "localhost",
+            ".localhost",
+            "127.0.0.1",
+          ],
+          fs: {
+            strict: false,
+            allow: ["/server"],
+          },
+          hmr: {
+            // HMR websocket port inside container
+            port: 5173,
+            // Port browser connects to (exposed in docker-compose.yml)
+            clientPort: 5174,
+          },
+        },
+      }
+    },
+  },
+  modules: [
+    {
+      resolve: "./src/modules/merchant_wiki",
+    },
+  ],
 })
