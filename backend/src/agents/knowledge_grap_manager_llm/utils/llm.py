@@ -1,12 +1,12 @@
 """
-llm.py — Google Gemini wrapper for the wiki agent.
+llm.py — LLM wrapper for the wiki agent using Groq.
 
 Provides:
-  - call_llm()       → plain text response
-  - call_llm_json()  → structured JSON response
-  - get_schema()     → reads schema.md for system prompt context
+  - call_llm()       -> plain text response
+  - call_llm_json()  -> structured JSON response
+  - get_schema()     -> reads schema.md for system prompt context
 
-Includes automatic rate-limiting and retry logic for free-tier quotas.
+Includes automatic rate-limiting, retry logic, and fallback models.
 """
 
 import os
@@ -19,18 +19,18 @@ from groq import Groq
 # Load .env from backend directory
 _env_paths = [
     Path(__file__).resolve().parents[4] / ".env",   # backend/.env
-    Path(__file__).resolve().parents[5] / ".env",    # project root/.env
+    Path(__file__).resolve().parents[5] / ".env",   # project root/.env
 ]
 for _ep in _env_paths:
     if _ep.exists():
         load_dotenv(str(_ep))
         break
 
-
-
-# Rate limiting: Gemini free tier = 5 requests/minute
+# Rate limiting
 _last_call_time: float = 0
-_MIN_INTERVAL: float = 2.0  
+_MIN_INTERVAL: float = 1.0  
+
+DEFAULT_MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"]
 
 
 def _rate_limit():
@@ -40,7 +40,6 @@ def _rate_limit():
     elapsed = now - _last_call_time
     if elapsed < _MIN_INTERVAL:
         wait = _MIN_INTERVAL - elapsed
-        print(f"    ⏳ Rate limit: waiting {wait:.1f}s...")
         time.sleep(wait)
     _last_call_time = time.time()
 
@@ -53,7 +52,7 @@ def _get_client():
         api_key = os.getenv("GROQ_API_KEY")
 
         if not api_key:
-            raise ValueError("GROQ_API_KEY not found")
+            raise ValueError("GROQ_API_KEY not found in environment")
 
         _client = Groq(api_key=api_key)
 
@@ -71,33 +70,10 @@ def get_schema() -> str:
     return ""
 
 
-def _call_with_retry(fn, max_retries: int = 3):
-    """Call a function with retry on rate limit (429) errors."""
-    for attempt in range(max_retries):
-        try:
-            _rate_limit()
-            return fn()
-        except Exception as e:
-            error_str = str(e)
-            if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
-                wait = 30 * (attempt + 1)
-                print(f"    ⏳ Rate limited (attempt {attempt+1}/{max_retries}), waiting {wait}s...")
-                time.sleep(wait)
-            elif "503" in error_str or "UNAVAILABLE" in error_str:
-                wait = 15 * (attempt + 1)
-                print(f"    ⏳ Service unavailable (attempt {attempt+1}/{max_retries}), waiting {wait}s...")
-                time.sleep(wait)
-            else:
-                raise
-    # Final attempt without catching
-    _rate_limit()
-    return fn()
-
-
 def call_llm(
     prompt: str,
     system: str | None = None,
-    model: str = "openai/gpt-oss-120b",
+    model: str = "openai/gpt-oss-20b",
     temperature: float = 0.3,
     max_tokens: int = 4096,
     include_schema: bool = True,
@@ -106,7 +82,6 @@ def call_llm(
     client = _get_client()
 
     system_parts = []
-
     if include_schema:
         schema = get_schema()
         if schema:
@@ -117,23 +92,39 @@ def call_llm(
 
     system_prompt = "\n\n---\n\n".join(system_parts)
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        temperature=temperature,
-        max_tokens=max_tokens,
-    )
+    models_to_try = [model] + [m for m in DEFAULT_MODELS if m != model]
 
-    return response.choices[0].message.content.strip()
+    last_error = None
+    for cur_model in models_to_try:
+        for attempt in range(3):
+            try:
+                _rate_limit()
+                response = client.chat.completions.create(
+                    model=cur_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+                return response.choices[0].message.content.strip()
+            except Exception as e:
+                last_error = e
+                err_str = str(e)
+                if "429" in err_str or "rate_limit" in err_str:
+                    # If daily token limit reached for this model, switch to fallback model immediately
+                    if "tokens per day" in err_str or "TPD" in err_str:
+                        print(f"    [Model Rate Limit] Switching from {cur_model} to fallback model...")
+                        break
+                    wait = 5 * (attempt + 1)
+                    print(f"    [Rate limit] Waiting {wait}s on {cur_model}...")
+                    time.sleep(wait)
+                else:
+                    break
+
+    raise last_error
+
 
 def call_llm_json(
     prompt: str,
@@ -147,7 +138,6 @@ def call_llm_json(
     client = _get_client()
 
     system_parts = []
-
     if include_schema:
         schema = get_schema()
         if schema:
@@ -163,23 +153,36 @@ def call_llm_json(
 
     system_prompt = "\n\n---\n\n".join(system_parts)
 
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {
-                "role": "system",
-                "content": system_prompt
-            },
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ],
-        temperature=temperature,
-        max_tokens=max_tokens,
-        response_format={"type": "json_object"},
-    )
+    models_to_try = [model] + [m for m in DEFAULT_MODELS if m != model]
 
-    text = response.choices[0].message.content.strip()
+    last_error = None
+    for cur_model in models_to_try:
+        for attempt in range(3):
+            try:
+                _rate_limit()
+                response = client.chat.completions.create(
+                    model=cur_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                    response_format={"type": "json_object"},
+                )
+                text = response.choices[0].message.content.strip()
+                return json.loads(text)
+            except Exception as e:
+                last_error = e
+                err_str = str(e)
+                if "429" in err_str or "rate_limit" in err_str:
+                    if "tokens per day" in err_str or "TPD" in err_str:
+                        print(f"    [Model Rate Limit] Switching from {cur_model} to fallback model...")
+                        break
+                    wait = 5 * (attempt + 1)
+                    print(f"    [Rate limit] Waiting {wait}s on {cur_model}...")
+                    time.sleep(wait)
+                else:
+                    break
 
-    return json.loads(text)
+    raise last_error
