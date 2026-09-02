@@ -10,6 +10,8 @@ from .tools import (
     clear_cart,
     get_product_catalog,
     get_upsell_products,
+    generate_payment_qr,
+    show_receipt_image,
 )
 
 __all__ = [
@@ -21,4 +23,7 @@ __all__ = [
     "clear_cart",
     "get_product_catalog",
     "get_upsell_products",
+    "generate_payment_qr",
+    "show_receipt_image",
 ]
+

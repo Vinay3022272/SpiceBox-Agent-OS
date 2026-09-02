@@ -35,6 +35,7 @@ from .query_pipeline import (
     query_wiki,
     query_knowledge_base,
     query_marketing_intelligence,
+    query_upsell_alternatives,
 )
 
 
@@ -148,4 +149,5 @@ __all__ = [
     "query_wiki",
     "query_knowledge_base",
     "query_marketing_intelligence",
+    "query_upsell_alternatives",
 ]

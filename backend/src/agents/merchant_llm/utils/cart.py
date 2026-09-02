@@ -1,10 +1,17 @@
 """
 cart.py — Dynamic shopping cart operations for the Merchant Commerce Agent.
 
-Provides non-static, dynamic cart storage and management functions.
+Provides non-static, dynamic cart storage, wiki price lookup, and management functions.
 """
 
-from typing import Dict, Any, List
+import os
+import re
+from pathlib import Path
+from typing import Dict, Any, List, Optional
+from rapidfuzz import fuzz
+
+# Resolve backend root path
+_BACKEND_DIR = Path(__file__).resolve().parents[4]
 
 # Fallback session cart store for stateless/in-memory execution
 _SESSION_CART: Dict[str, Any] = {
@@ -15,6 +22,71 @@ _SESSION_CART: Dict[str, Any] = {
 def get_global_cart() -> Dict[str, Any]:
     """Retrieve the global session cart reference."""
     return _SESSION_CART
+
+
+def _lookup_price_from_wiki(product_name: str, wiki_base_path: Optional[str] = None) -> float:
+    """
+    Auto-fetch a product's price from the wiki markdown files.
+    Fuzzy-matches product_name against page slugs and YAML name fields,
+    then extracts the **Price** field or YAML price from the best-matching page.
+    Returns 0.0 if no match is found.
+    """
+    try:
+        candidate_dirs = []
+        if wiki_base_path:
+            p = Path(wiki_base_path)
+            candidate_dirs.extend([
+                p / "wiki" / "knowledge" / "products",
+                p / "knowledge" / "products",
+                p / "products",
+                p,
+            ])
+        else:
+            candidate_dirs.extend([
+                _BACKEND_DIR / "merchant_knowledge_test" / "wiki" / "knowledge" / "products",
+                _BACKEND_DIR / "merchant_knowledge_test" / "knowledge" / "products",
+                _BACKEND_DIR / "merchant_knowledge" / "wiki" / "knowledge" / "products",
+                _BACKEND_DIR / "merchant_knowledge" / "knowledge" / "products",
+            ])
+
+        search_dirs = [d for d in candidate_dirs if d.exists()]
+        if not search_dirs:
+            return 0.0
+
+        best_price = 0.0
+        best_score = 0.0
+        hint = product_name.lower().replace("-", " ").replace("_", " ")
+
+        for directory in search_dirs:
+            for md_file in directory.glob("*.md"):
+                slug = md_file.stem.replace("-", " ").replace("_", " ").lower()
+                try:
+                    content = md_file.read_text(encoding="utf-8")
+                except Exception:
+                    continue
+
+                # Also check YAML name: field
+                name_field = slug
+                nm = re.search(r"^name\s*:\s*(.+)$", content, re.MULTILINE | re.IGNORECASE)
+                if nm:
+                    name_field = nm.group(1).strip().lower()
+
+                score = max(
+                    fuzz.partial_ratio(hint, slug),
+                    fuzz.partial_ratio(hint, name_field),
+                )
+                if score > best_score and score >= 65:
+                    # Extract price from **Price**: 79900 INR or price: 79900
+                    m = re.search(r"\*\*Price\*\*\s*[:\-]\s*([\d,]+)", content, re.IGNORECASE)
+                    if not m:
+                        m = re.search(r"^price\s*:\s*([\d,]+)", content, re.MULTILINE | re.IGNORECASE)
+                    if m:
+                        best_price = float(m.group(1).replace(",", ""))
+                        best_score = score
+
+        return best_price
+    except Exception:
+        return 0.0
 
 
 def get_cart_data(cart: Dict[str, Any] | None = None) -> Dict[str, Any]:
@@ -54,7 +126,7 @@ def add_item_to_cart(
     cart: Dict[str, Any] | None = None
 ) -> Dict[str, Any]:
     """
-    Add or update an item in the shopping cart dynamically.
+    Add or update an item in the shopping cart dynamically (with auto price lookup).
     """
     target = cart if cart is not None else _SESSION_CART
     if "items" not in target:
@@ -63,6 +135,12 @@ def add_item_to_cart(
     pid_clean = product_id.lower().strip()
     display_name = name.strip() if name and name.strip() else product_id.replace("_", " ").replace("-", " ").title()
     
+    # Auto-fetch price from wiki if not provided
+    if price <= 0:
+        price = _lookup_price_from_wiki(display_name)
+        if price <= 0:
+            price = _lookup_price_from_wiki(product_id)
+
     # Check if item is already in cart
     for item in target["items"]:
         item_pid = str(item.get("product_id", "")).lower().strip()
@@ -75,7 +153,7 @@ def add_item_to_cart(
                 
             return {
                 "success": True,
-                "message": f"Updated quantity for {item['name']} in cart.",
+                "message": f"Updated quantity for {item['name']} in cart (₹{item['price']:,.0f} each)",
                 "cart": get_cart_data(target)
             }
 
@@ -90,7 +168,7 @@ def add_item_to_cart(
 
     return {
         "success": True,
-        "message": f"Successfully added {display_name} to cart.",
+        "message": f"{display_name} (₹{price:,.0f}) added to cart",
         "cart": get_cart_data(target)
     }
 
@@ -115,13 +193,13 @@ def remove_item_from_cart(
             items.remove(item)
             return {
                 "success": True,
-                "message": f"Removed {removed_name} from cart.",
+                "message": f"{removed_name} removed from cart",
                 "cart": get_cart_data(target)
             }
 
     return {
         "success": False,
-        "error": f"Product '{product_id}' was not found in your cart.",
+        "error": f"Product '{product_id}' not present in cart",
         "cart": get_cart_data(target)
     }
 
@@ -135,3 +213,4 @@ def clear_cart_data(cart: Dict[str, Any] | None = None) -> Dict[str, Any]:
         "message": "Shopping cart cleared.",
         "cart": get_cart_data(target)
     }
+

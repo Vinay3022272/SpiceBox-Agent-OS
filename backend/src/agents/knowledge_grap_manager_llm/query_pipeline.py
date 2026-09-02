@@ -561,3 +561,195 @@ def query_marketing_intelligence(
         top_k=top_k,
     )
 
+
+def query_upsell_alternatives(
+    product_name: str,
+    wiki_base_path: str = "./merchant_knowledge_test",
+    merchant_id: str = "default_merchant",
+) -> Dict[str, Any]:
+    """
+    Indian shopkeeper-style upsell: Given a product the customer asked about,
+    find the exact product AND all better-priced alternatives in the same category.
+
+    Flow:
+      1. Load all wiki pages (knowledge + marketing)
+      2. Fuzzy-match `product_name` to find the exact product page, its price & category
+      3. Retrieve all same-category products priced >= matched product price
+      4. Also retrieve any marketing/promotions pages for the same category
+      5. Ask the LLM to present the asked product first, then better-priced alternatives
+
+    Args:
+        product_name: Name of the product the customer asked about (e.g. "Samsung Galaxy S24")
+        wiki_base_path: Root directory of merchant knowledge wiki
+        merchant_id: Unique merchant identifier
+
+    Returns:
+        Dict with keys: query, answer, sources, page_count, matched_product, alternatives_count
+    """
+    all_pages = get_all_wiki_pages(wiki_base_path, section=None)  # search both sections
+
+    if not all_pages:
+        return {
+            "query": product_name,
+            "answer": f"No wiki pages found at '{wiki_base_path}'.",
+            "sources": [],
+            "page_count": 0,
+            "matched_product": None,
+            "alternatives_count": 0,
+        }
+
+    # --- Step 1: Find the exact product the customer asked about ---
+    hint_lower = product_name.lower()
+    best_match_page = None
+    best_score = 0.0
+
+    for page in all_pages:
+        # Only consider product pages
+        page_type = ""
+        type_match = re.search(
+            r"^type\s*:\s*(\S+)", page["content"],
+            re.MULTILINE | re.IGNORECASE,
+        )
+        if type_match:
+            page_type = type_match.group(1).strip().lower()
+        if page_type != "product" and page.get("folder") != "products":
+            continue
+
+        slug_clean = page["slug"].replace("-", " ").replace("_", " ").lower()
+        name_field = slug_clean
+        name_match = re.search(
+            r"^name\s*:\s*(.+)$", page["content"],
+            re.MULTILINE | re.IGNORECASE,
+        )
+        if name_match:
+            name_field = name_match.group(1).strip().lower()
+
+        score = max(
+            fuzz.partial_ratio(hint_lower, slug_clean),
+            fuzz.partial_ratio(hint_lower, name_field),
+        )
+        if score > best_score:
+            best_score = score
+            best_match_page = page
+
+    if best_match_page is None or best_score < 65:
+        return {
+            "query": product_name,
+            "answer": f"Could not find '{product_name}' in the store catalog.",
+            "sources": [],
+            "page_count": len(all_pages),
+            "matched_product": None,
+            "alternatives_count": 0,
+        }
+
+    matched_price = extract_price_from_page(best_match_page)
+    matched_category = extract_category_from_page(best_match_page)
+
+    # --- Step 2: Find all same-category products priced >= matched price ---
+    alternative_pages = []
+    if matched_price is not None and matched_category:
+        upsell_candidates = retrieve_upsell_pages(
+            all_pages, matched_price, matched_category
+        )
+        # Remove the matched product itself from alternatives
+        matched_slug = best_match_page["slug"]
+        alternative_pages = [
+            p for p in upsell_candidates if p["slug"] != matched_slug
+        ]
+
+    # --- Step 3: Also grab any marketing pages for the category ---
+    marketing_pages = []
+    for page in all_pages:
+        if page.get("section") != "marketing":
+            continue
+        content_lower = page["content"].lower()
+        if matched_category and matched_category in content_lower:
+            marketing_pages.append(page)
+        elif fuzz.partial_ratio(hint_lower, content_lower[:500]) > 60:
+            marketing_pages.append(page)
+
+    # --- Step 4: Build context for LLM ---
+    context_blocks = []
+    sources = []
+
+    # Always include the matched product page first
+    sources.append(best_match_page["rel_path"])
+    context_blocks.append(
+        f"--- REQUESTED PRODUCT PAGE: {best_match_page['rel_path']} ---\n"
+        f"{best_match_page['content']}\n"
+        f"--- END PAGE ---"
+    )
+
+    # Then include alternatives
+    for p in alternative_pages:
+        if p["rel_path"] not in sources:
+            sources.append(p["rel_path"])
+            context_blocks.append(
+                f"--- ALTERNATIVE PRODUCT PAGE: {p['rel_path']} ---\n"
+                f"{p['content']}\n"
+                f"--- END PAGE ---"
+            )
+
+    # Then include marketing pages
+    for p in marketing_pages:
+        if p["rel_path"] not in sources:
+            sources.append(p["rel_path"])
+            context_blocks.append(
+                f"--- MARKETING PAGE: {p['rel_path']} ---\n"
+                f"{p['content']}\n"
+                f"--- END PAGE ---"
+            )
+
+    context_str = "\n\n".join(context_blocks)
+
+    # --- Step 5: LLM prompt for shopkeeper-style upsell ---
+    system_prompt = (
+        "You are the Store Manager Assistant performing Indian shopkeeper-style upselling.\n"
+        "The customer asked about a specific product. Your job is to:\n"
+        "1. Present the EXACT product the customer asked about FIRST — with full details, price, key specs, and rating.\n"
+        "2. Then, if better-priced alternatives exist in the SAME category, present them in a structured table:\n"
+        "   Product Name | Price (INR) | Key Highlights | Rating | Source Page\n"
+        "   Sort by price ascending.\n"
+        "3. After the table, add a brief 1-2 sentence recommendation highlighting the best value pick.\n"
+        "4. Frame it naturally like a helpful shopkeeper: 'I'd also recommend...' or 'You might want to consider...'\n"
+        "5. NEVER invent products — only use what is in the context pages provided.\n"
+        "6. If there are active promotions or deals for any product, mention them.\n"
+        "7. If no better alternatives exist, just present the asked product and say it's the top option in that category.\n"
+        "8. Do NOT add anything to cart. Just present information.\n"
+    )
+
+    price_line = (
+        f"Matched product price: ₹{matched_price:,.0f}\n" if matched_price
+        else "Matched product price: Unknown\n"
+    )
+
+    user_prompt = (
+        f"Merchant ID: {merchant_id}\n"
+        f"Customer asked about: {product_name}\n"
+        f"Matched product category: {matched_category}\n"
+        f"{price_line}"
+        f"Number of better-priced alternatives found: {len(alternative_pages)}\n\n"
+        f"Wiki Context:\n{context_str}\n\n"
+        f"Present the product details and any better-priced alternatives."
+    )
+
+
+    try:
+        answer = call_llm(
+            prompt=user_prompt,
+            system=system_prompt,
+            temperature=0.2,
+            include_schema=False,
+        )
+    except Exception as e:
+        answer = f"Error generating upsell response: {str(e)}"
+
+    return {
+        "query": product_name,
+        "answer": answer,
+        "sources": sources,
+        "page_count": len(all_pages),
+        "matched_product": best_match_page["slug"],
+        "alternatives_count": len(alternative_pages),
+    }
+
