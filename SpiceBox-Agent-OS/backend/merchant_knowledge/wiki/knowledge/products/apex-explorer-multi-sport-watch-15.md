@@ -1,0 +1,45 @@
+---
+type: product
+slug: apex-explorer-multi-sport-watch-15
+name: Apex Explorer Multi-Sport Watch Gen 15
+brand: 1.43” Always-on AMOLED display with 14-day battery life
+category: Wearables & Tech
+last_updated: 2026-09-02
+sources: db_catalog_1
+---
+
+# Apex Explorer Multi-Sport Watch Gen 15
+
+## Overview
+
+Track biometrics with surgical accuracy. Features continuous heart rate, SpO2, sleep scoring, IP68 water resistance, and 100+ workout modes.
+
+## Specifications
+
+
+
+## Pricing
+
+- **Price**: 6499 INR
+
+
+## Customer Sentiment
+
+
+_No review data available yet._
+
+## Related
+
+- [Wearables & Tech](../categories/wearables-tech.md) (Category)
+- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
+- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
+- [Apex Explorer Multi-Sport Watch Gen 5](./apex-explorer-multi-sport-watch-5.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Complementary)
+- [Apex Pro Ultra AMOLED Smartwatch Gen 1](./apex-pro-ultra-amoled-smartwatch-1.md) (Complementary)
+- [Apex Explorer Multi-Sport Watch Gen 15 — Popular Item Intelligence](../../marketing/popular/apex-explorer-multi-sport-watch-15.md) (Market Intelligence)
+
+## Sources
+
+
+- `db_catalog_1`

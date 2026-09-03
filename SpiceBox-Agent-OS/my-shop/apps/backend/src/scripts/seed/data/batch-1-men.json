@@ -1,0 +1,2356 @@
+[
+  {
+    "title": "Men's Oversized Essential Tee",
+    "handle": "mens-oversized-tee-1",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This oversized tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Onyx Black",
+          "Optic White",
+          "Heather Grey"
+        ]
+      }
+    ],
+    "base_price_inr": 1099,
+    "base_price_usd": 20,
+    "base_price_eur": 18
+  },
+  {
+    "title": "Men's Heavyweight Essential Tee",
+    "handle": "mens-heavyweight-tee-2",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This heavyweight tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Dusty Olive",
+          "Washed Clay",
+          "Charcoal"
+        ]
+      }
+    ],
+    "base_price_inr": 1199,
+    "base_price_usd": 22,
+    "base_price_eur": 20
+  },
+  {
+    "title": "Men's Vintage Washed Essential Tee",
+    "handle": "mens-vintage-washed-tee-3",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This vintage washed tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Midnight Navy",
+          "Bone Ivory",
+          "Forest Green"
+        ]
+      }
+    ],
+    "base_price_inr": 1299,
+    "base_price_usd": 24,
+    "base_price_eur": 22
+  },
+  {
+    "title": "Men's Organic Cotton Essential Tee",
+    "handle": "mens-organic-cotton-tee-4",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This organic cotton tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Mocha Brown",
+          "Sage",
+          "Smoky Black"
+        ]
+      }
+    ],
+    "base_price_inr": 1399,
+    "base_price_usd": 26,
+    "base_price_eur": 24
+  },
+  {
+    "title": "Men's Raw Hem Essential Tee",
+    "handle": "mens-raw-hem-tee-5",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This raw hem tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Onyx Black",
+          "Optic White",
+          "Heather Grey"
+        ]
+      }
+    ],
+    "base_price_inr": 1499,
+    "base_price_usd": 28,
+    "base_price_eur": 26
+  },
+  {
+    "title": "Men's Boxy Fit Essential Tee",
+    "handle": "mens-boxy-fit-tee-6",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This boxy fit tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Dusty Olive",
+          "Washed Clay",
+          "Charcoal"
+        ]
+      }
+    ],
+    "base_price_inr": 1599,
+    "base_price_usd": 30,
+    "base_price_eur": 28
+  },
+  {
+    "title": "Men's Classic Crew Essential Tee",
+    "handle": "mens-classic-crew-tee-7",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This classic crew tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Midnight Navy",
+          "Bone Ivory",
+          "Forest Green"
+        ]
+      }
+    ],
+    "base_price_inr": 1699,
+    "base_price_usd": 32,
+    "base_price_eur": 16
+  },
+  {
+    "title": "Men's Drop Shoulder Essential Tee",
+    "handle": "mens-drop-shoulder-tee-8",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This drop shoulder tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Mocha Brown",
+          "Sage",
+          "Smoky Black"
+        ]
+      }
+    ],
+    "base_price_inr": 999,
+    "base_price_usd": 19,
+    "base_price_eur": 18
+  },
+  {
+    "title": "Men's Brushed Cotton Essential Tee",
+    "handle": "mens-brushed-cotton-tee-9",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This brushed cotton tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Onyx Black",
+          "Optic White",
+          "Heather Grey"
+        ]
+      }
+    ],
+    "base_price_inr": 1099,
+    "base_price_usd": 21,
+    "base_price_eur": 20
+  },
+  {
+    "title": "Men's Everyday Soft Essential Tee",
+    "handle": "mens-everyday-soft-tee-10",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This everyday soft tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Dusty Olive",
+          "Washed Clay",
+          "Charcoal"
+        ]
+      }
+    ],
+    "base_price_inr": 1199,
+    "base_price_usd": 23,
+    "base_price_eur": 22
+  },
+  {
+    "title": "Men's Oversized Essential Tee Edition 11",
+    "handle": "mens-oversized-tee-11",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This oversized tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Midnight Navy",
+          "Bone Ivory",
+          "Forest Green"
+        ]
+      }
+    ],
+    "base_price_inr": 1299,
+    "base_price_usd": 25,
+    "base_price_eur": 24
+  },
+  {
+    "title": "Men's Heavyweight Essential Tee Edition 12",
+    "handle": "mens-heavyweight-tee-12",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This heavyweight tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Mocha Brown",
+          "Sage",
+          "Smoky Black"
+        ]
+      }
+    ],
+    "base_price_inr": 1399,
+    "base_price_usd": 27,
+    "base_price_eur": 26
+  },
+  {
+    "title": "Men's Vintage Washed Essential Tee Edition 13",
+    "handle": "mens-vintage-washed-tee-13",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This vintage washed tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Onyx Black",
+          "Optic White",
+          "Heather Grey"
+        ]
+      }
+    ],
+    "base_price_inr": 1499,
+    "base_price_usd": 29,
+    "base_price_eur": 28
+  },
+  {
+    "title": "Men's Organic Cotton Essential Tee Edition 14",
+    "handle": "mens-organic-cotton-tee-14",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This organic cotton tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Dusty Olive",
+          "Washed Clay",
+          "Charcoal"
+        ]
+      }
+    ],
+    "base_price_inr": 1599,
+    "base_price_usd": 31,
+    "base_price_eur": 16
+  },
+  {
+    "title": "Men's Raw Hem Essential Tee Edition 15",
+    "handle": "mens-raw-hem-tee-15",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This raw hem tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Midnight Navy",
+          "Bone Ivory",
+          "Forest Green"
+        ]
+      }
+    ],
+    "base_price_inr": 1699,
+    "base_price_usd": 18,
+    "base_price_eur": 18
+  },
+  {
+    "title": "Men's Boxy Fit Essential Tee Edition 16",
+    "handle": "mens-boxy-fit-tee-16",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This boxy fit tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Mocha Brown",
+          "Sage",
+          "Smoky Black"
+        ]
+      }
+    ],
+    "base_price_inr": 999,
+    "base_price_usd": 20,
+    "base_price_eur": 20
+  },
+  {
+    "title": "Men's Classic Crew Essential Tee Edition 17",
+    "handle": "mens-classic-crew-tee-17",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This classic crew tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Onyx Black",
+          "Optic White",
+          "Heather Grey"
+        ]
+      }
+    ],
+    "base_price_inr": 1099,
+    "base_price_usd": 22,
+    "base_price_eur": 22
+  },
+  {
+    "title": "Men's Drop Shoulder Essential Tee Edition 18",
+    "handle": "mens-drop-shoulder-tee-18",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This drop shoulder tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Dusty Olive",
+          "Washed Clay",
+          "Charcoal"
+        ]
+      }
+    ],
+    "base_price_inr": 1199,
+    "base_price_usd": 24,
+    "base_price_eur": 24
+  },
+  {
+    "title": "Men's Brushed Cotton Essential Tee Edition 19",
+    "handle": "mens-brushed-cotton-tee-19",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This brushed cotton tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Midnight Navy",
+          "Bone Ivory",
+          "Forest Green"
+        ]
+      }
+    ],
+    "base_price_inr": 1299,
+    "base_price_usd": 26,
+    "base_price_eur": 26
+  },
+  {
+    "title": "Men's Everyday Soft Essential Tee Edition 20",
+    "handle": "mens-everyday-soft-tee-20",
+    "subtitle": "240 GSM combed cotton with relaxed daily drape",
+    "description": "Engineered for everyday durability. This everyday soft tee is cut from premium organic cotton, pre-shrunk, and finished with double-needle ribbed collar.",
+    "category_handles": [
+      "men-t-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Tops",
+      "Essentials",
+      "T-Shirt"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Mocha Brown",
+          "Sage",
+          "Smoky Black"
+        ]
+      }
+    ],
+    "base_price_inr": 1399,
+    "base_price_usd": 28,
+    "base_price_eur": 28
+  },
+  {
+    "title": "Men's Oxford Button-Down",
+    "handle": "mens-oxford-button-down-1",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2049,
+    "base_price_usd": 38,
+    "base_price_eur": 35
+  },
+  {
+    "title": "Men's Linen Resort Shirt",
+    "handle": "mens-linen-resort-shirt-2",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2199,
+    "base_price_usd": 41,
+    "base_price_eur": 38
+  },
+  {
+    "title": "Men's Utility Overshirt",
+    "handle": "mens-utility-overshirt-3",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2349,
+    "base_price_usd": 44,
+    "base_price_eur": 41
+  },
+  {
+    "title": "Men's Flannel Plaid Shirt",
+    "handle": "mens-flannel-plaid-shirt-4",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2499,
+    "base_price_usd": 47,
+    "base_price_eur": 44
+  },
+  {
+    "title": "Men's Grandad Collar Shirt",
+    "handle": "mens-grandad-collar-shirt-5",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2649,
+    "base_price_usd": 50,
+    "base_price_eur": 47
+  },
+  {
+    "title": "Men's Textured Camp Collar",
+    "handle": "mens-textured-camp-collar-6",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 1899,
+    "base_price_usd": 53,
+    "base_price_eur": 32
+  },
+  {
+    "title": "Men's Oxford Button-Down Vol. 7",
+    "handle": "mens-oxford-button-down-7",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2049,
+    "base_price_usd": 36,
+    "base_price_eur": 35
+  },
+  {
+    "title": "Men's Linen Resort Shirt Vol. 8",
+    "handle": "mens-linen-resort-shirt-8",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2199,
+    "base_price_usd": 39,
+    "base_price_eur": 38
+  },
+  {
+    "title": "Men's Utility Overshirt Vol. 9",
+    "handle": "mens-utility-overshirt-9",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2349,
+    "base_price_usd": 42,
+    "base_price_eur": 41
+  },
+  {
+    "title": "Men's Flannel Plaid Shirt Vol. 10",
+    "handle": "mens-flannel-plaid-shirt-10",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2499,
+    "base_price_usd": 45,
+    "base_price_eur": 44
+  },
+  {
+    "title": "Men's Grandad Collar Shirt Vol. 11",
+    "handle": "mens-grandad-collar-shirt-11",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 2649,
+    "base_price_usd": 48,
+    "base_price_eur": 47
+  },
+  {
+    "title": "Men's Textured Camp Collar Vol. 12",
+    "handle": "mens-textured-camp-collar-12",
+    "subtitle": "Breathable tailored silhouette for work and weekends",
+    "description": "A versatile staple tailored with precision. Crafted from lightweight breathable fabric with mother-of-pearl buttons and clean seams.",
+    "category_handles": [
+      "men-shirts",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Shirts",
+      "Smart Casual"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Sky Blue",
+          "White",
+          "Navy"
+        ]
+      }
+    ],
+    "base_price_inr": 1899,
+    "base_price_usd": 51,
+    "base_price_eur": 32
+  },
+  {
+    "title": "Men's French Terry Fleece Hoodie 1",
+    "handle": "mens-fleece-hoodie-1",
+    "subtitle": "420 GSM ultra-dense loopback French terry",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-hoodies",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3299,
+    "base_price_usd": 60,
+    "base_price_eur": 55
+  },
+  {
+    "title": "Men's Commuter Harrington Jacket 2",
+    "handle": "mens-harrington-jacket-2",
+    "subtitle": "Weather-resistant minimalist outerwear",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-jackets",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3599,
+    "base_price_usd": 65,
+    "base_price_eur": 60
+  },
+  {
+    "title": "Men's French Terry Fleece Hoodie 3",
+    "handle": "mens-fleece-hoodie-3",
+    "subtitle": "420 GSM ultra-dense loopback French terry",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-hoodies",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3899,
+    "base_price_usd": 70,
+    "base_price_eur": 65
+  },
+  {
+    "title": "Men's Commuter Harrington Jacket 4",
+    "handle": "mens-harrington-jacket-4",
+    "subtitle": "Weather-resistant minimalist outerwear",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-jackets",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 2999,
+    "base_price_usd": 75,
+    "base_price_eur": 70
+  },
+  {
+    "title": "Men's French Terry Fleece Hoodie 5",
+    "handle": "mens-fleece-hoodie-5",
+    "subtitle": "420 GSM ultra-dense loopback French terry",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-hoodies",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3299,
+    "base_price_usd": 55,
+    "base_price_eur": 53
+  },
+  {
+    "title": "Men's Commuter Harrington Jacket 6",
+    "handle": "mens-harrington-jacket-6",
+    "subtitle": "Weather-resistant minimalist outerwear",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-jackets",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3599,
+    "base_price_usd": 60,
+    "base_price_eur": 58
+  },
+  {
+    "title": "Men's French Terry Fleece Hoodie 7",
+    "handle": "mens-fleece-hoodie-7",
+    "subtitle": "420 GSM ultra-dense loopback French terry",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-hoodies",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 3899,
+    "base_price_usd": 65,
+    "base_price_eur": 63
+  },
+  {
+    "title": "Men's Commuter Harrington Jacket 8",
+    "handle": "mens-harrington-jacket-8",
+    "subtitle": "Weather-resistant minimalist outerwear",
+    "description": "Built to withstand season transitions. Features heavy-duty YKK hardware, concealed pockets, and ribbed cuffs.",
+    "category_handles": [
+      "men-jackets",
+      "men-tops",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Outerwear",
+      "Winter"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1548883354-7622d03aca27?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Size",
+        "values": [
+          "M",
+          "L",
+          "XL"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Charcoal",
+          "Deep Olive",
+          "Black"
+        ]
+      }
+    ],
+    "base_price_inr": 2999,
+    "base_price_usd": 70,
+    "base_price_eur": 68
+  },
+  {
+    "title": "Men's Selvedge Denim Jeans No. 1",
+    "handle": "mens-selvedge-denim-jeans-1",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-jeans",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2319,
+    "base_price_usd": 42,
+    "base_price_eur": 40
+  },
+  {
+    "title": "Men's Selvedge Denim Jeans No. 2",
+    "handle": "mens-selvedge-denim-jeans-2",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-jeans",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2439,
+    "base_price_usd": 44,
+    "base_price_eur": 42
+  },
+  {
+    "title": "Men's Selvedge Denim Jeans No. 3",
+    "handle": "mens-selvedge-denim-jeans-3",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-jeans",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2559,
+    "base_price_usd": 46,
+    "base_price_eur": 44
+  },
+  {
+    "title": "Men's Selvedge Denim Jeans No. 4",
+    "handle": "mens-selvedge-denim-jeans-4",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-jeans",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2679,
+    "base_price_usd": 48,
+    "base_price_eur": 46
+  },
+  {
+    "title": "Men's Selvedge Denim Jeans No. 5",
+    "handle": "mens-selvedge-denim-jeans-5",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-jeans",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2799,
+    "base_price_usd": 50,
+    "base_price_eur": 48
+  },
+  {
+    "title": "Men's Pleated Cotton Chino No. 6",
+    "handle": "mens-pleated-cotton-chino-6",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-chinos",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2919,
+    "base_price_usd": 52,
+    "base_price_eur": 50
+  },
+  {
+    "title": "Men's Pleated Cotton Chino No. 7",
+    "handle": "mens-pleated-cotton-chino-7",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-chinos",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2239,
+    "base_price_usd": 54,
+    "base_price_eur": 52
+  },
+  {
+    "title": "Men's Pleated Cotton Chino No. 8",
+    "handle": "mens-pleated-cotton-chino-8",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-chinos",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2359,
+    "base_price_usd": 56,
+    "base_price_eur": 38
+  },
+  {
+    "title": "Men's Pleated Cotton Chino No. 9",
+    "handle": "mens-pleated-cotton-chino-9",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-chinos",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2479,
+    "base_price_usd": 40,
+    "base_price_eur": 40
+  },
+  {
+    "title": "Men's Pleated Cotton Chino No. 10",
+    "handle": "mens-pleated-cotton-chino-10",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-chinos",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2599,
+    "base_price_usd": 42,
+    "base_price_eur": 42
+  },
+  {
+    "title": "Men's Drawstring Leisure Shorts No. 11",
+    "handle": "mens-drawstring-leisure-shorts-11",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-shorts",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2719,
+    "base_price_usd": 44,
+    "base_price_eur": 44
+  },
+  {
+    "title": "Men's Drawstring Leisure Shorts No. 12",
+    "handle": "mens-drawstring-leisure-shorts-12",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-shorts",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2839,
+    "base_price_usd": 46,
+    "base_price_eur": 46
+  },
+  {
+    "title": "Men's Drawstring Leisure Shorts No. 13",
+    "handle": "mens-drawstring-leisure-shorts-13",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-shorts",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2959,
+    "base_price_usd": 48,
+    "base_price_eur": 48
+  },
+  {
+    "title": "Men's Drawstring Leisure Shorts No. 14",
+    "handle": "mens-drawstring-leisure-shorts-14",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-shorts",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1542272604-780c96856592?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2279,
+    "base_price_usd": 50,
+    "base_price_eur": 50
+  },
+  {
+    "title": "Men's Drawstring Leisure Shorts No. 15",
+    "handle": "mens-drawstring-leisure-shorts-15",
+    "subtitle": "Ergonomic fit with 2% comfort stretch",
+    "description": "Tailored for all-day mobility. Features reinforced stress points, custom metal rivets, and deep pockets.",
+    "category_handles": [
+      "men-shorts",
+      "men-bottoms",
+      "men"
+    ],
+    "tags": [
+      "Men",
+      "Bottoms",
+      "Pants"
+    ],
+    "thumbnail": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
+    ],
+    "options": [
+      {
+        "title": "Waist",
+        "values": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ]
+      },
+      {
+        "title": "Color",
+        "values": [
+          "Indigo",
+          "Washed Black",
+          "Khaki"
+        ]
+      }
+    ],
+    "base_price_inr": 2399,
+    "base_price_usd": 52,
+    "base_price_eur": 52
+  }
+]

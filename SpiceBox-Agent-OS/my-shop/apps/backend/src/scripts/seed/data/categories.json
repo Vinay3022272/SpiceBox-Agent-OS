@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Men",
+    "handle": "men",
+    "description": "Men's contemporary apparel and daily essentials"
+  },
+  {
+    "name": "Men's Tops",
+    "handle": "men-tops",
+    "parent": "men"
+  },
+  {
+    "name": "Men's T-Shirts",
+    "handle": "men-t-shirts",
+    "parent": "men-tops"
+  },
+  {
+    "name": "Men's Shirts",
+    "handle": "men-shirts",
+    "parent": "men-tops"
+  },
+  {
+    "name": "Men's Hoodies & Sweaters",
+    "handle": "men-hoodies",
+    "parent": "men-tops"
+  },
+  {
+    "name": "Men's Jackets",
+    "handle": "men-jackets",
+    "parent": "men-tops"
+  },
+  {
+    "name": "Men's Bottoms",
+    "handle": "men-bottoms",
+    "parent": "men"
+  },
+  {
+    "name": "Men's Jeans",
+    "handle": "men-jeans",
+    "parent": "men-bottoms"
+  },
+  {
+    "name": "Men's Trousers & Chinos",
+    "handle": "men-chinos",
+    "parent": "men-bottoms"
+  },
+  {
+    "name": "Men's Shorts",
+    "handle": "men-shorts",
+    "parent": "men-bottoms"
+  },
+  {
+    "name": "Men's Activewear",
+    "handle": "men-activewear",
+    "parent": "men"
+  },
+  {
+    "name": "Women",
+    "handle": "women",
+    "description": "Women's modern fashion, dresses, and timeless staples"
+  },
+  {
+    "name": "Women's Dresses",
+    "handle": "women-dresses",
+    "parent": "women"
+  },
+  {
+    "name": "Women's Tops",
+    "handle": "women-tops",
+    "parent": "women"
+  },
+  {
+    "name": "Women's T-Shirts & Tees",
+    "handle": "women-tees",
+    "parent": "women-tops"
+  },
+  {
+    "name": "Women's Blouses & Shirts",
+    "handle": "women-blouses",
+    "parent": "women-tops"
+  },
+  {
+    "name": "Women's Knitwear & Sweaters",
+    "handle": "women-knitwear",
+    "parent": "women-tops"
+  },
+  {
+    "name": "Women's Jackets & Outerwear",
+    "handle": "women-jackets",
+    "parent": "women-tops"
+  },
+  {
+    "name": "Women's Bottoms",
+    "handle": "women-bottoms",
+    "parent": "women"
+  },
+  {
+    "name": "Women's Jeans",
+    "handle": "women-jeans",
+    "parent": "women-bottoms"
+  },
+  {
+    "name": "Women's Trousers & Pants",
+    "handle": "women-trousers",
+    "parent": "women-bottoms"
+  },
+  {
+    "name": "Women's Skirts",
+    "handle": "women-skirts",
+    "parent": "women-bottoms"
+  },
+  {
+    "name": "Women's Activewear",
+    "handle": "women-activewear",
+    "parent": "women"
+  },
+  {
+    "name": "Kids & Teens",
+    "handle": "kids",
+    "description": "Comfortable, durable clothing designed for everyday play"
+  },
+  {
+    "name": "Baby & Toddler",
+    "handle": "kids-baby",
+    "parent": "kids"
+  },
+  {
+    "name": "Boys' Collection",
+    "handle": "kids-boys",
+    "parent": "kids"
+  },
+  {
+    "name": "Girls' Collection",
+    "handle": "kids-girls",
+    "parent": "kids"
+  },
+  {
+    "name": "Wearables & Tech",
+    "handle": "wearables",
+    "description": "Next-gen smart wearables, fitness trackers, and modern eyewear"
+  },
+  {
+    "name": "Smartwatches",
+    "handle": "smartwatches",
+    "parent": "wearables"
+  },
+  {
+    "name": "Fitness Bands",
+    "handle": "fitness-bands",
+    "parent": "wearables"
+  },
+  {
+    "name": "Eyewear & Sunglasses",
+    "handle": "eyewear",
+    "parent": "wearables"
+  },
+  {
+    "name": "Headwear & Caps",
+    "handle": "headwear",
+    "parent": "wearables"
+  },
+  {
+    "name": "Footwear & Lifestyle",
+    "handle": "lifestyle",
+    "description": "Minimalist sneakers, daily commuter bags, and leather accessories"
+  },
+  {
+    "name": "Sneakers & Footwear",
+    "handle": "sneakers",
+    "parent": "lifestyle"
+  },
+  {
+    "name": "Bags & Backpacks",
+    "handle": "bags",
+    "parent": "lifestyle"
+  },
+  {
+    "name": "Accessories",
+    "handle": "accessories",
+    "parent": "lifestyle"
+  }
+]

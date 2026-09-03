@@ -1,0 +1,181 @@
+"""
+tools.py — LangChain commerce tools for the Merchant Commerce Agent.
+Supports catalog search, upselling, real cart operations, address management, and QR payments.
+"""
+
+from pathlib import Path
+from typing import Dict, Any
+from langchain_core.tools import tool
+
+from ..utils.cart import (
+    add_item_to_cart,
+    get_cart_data,
+    remove_item_from_cart,
+    clear_cart_data,
+    set_cart_shipping_address,
+    create_payment_qr,
+)
+from ...store_manager_llm import query_knowledge_base, query_marketing_intelligence
+
+# Resolve backend root path: .../backend
+_BACKEND_DIR = Path(__file__).resolve().parents[4]
+_DEFAULT_WIKI_PATH = str(_BACKEND_DIR / "merchant_knowledge")
+
+
+@tool
+def add_to_cart(product_id: str, quantity: int = 1, name: str = "", price: float = 0.0) -> Dict[str, Any]:
+    """
+    Add a product to the customer's real shopping cart with the exact quantity requested.
+    Call this IMMEDIATELY whenever the customer confirms or asks to add an item to their cart.
+
+    Args:
+        product_id: Product ID, slug, or handle (e.g. 'apex-active-pulse-gps-watch-12', 'mens-organic-cotton-tee-4').
+        quantity: Exact number of units to add (e.g. 1, 2, 3). Defaults to 1.
+        name: Display title of the product.
+        price: Price per unit in INR.
+    """
+    return add_item_to_cart(product_id=product_id, quantity=quantity, name=name, price=price)
+
+
+@tool
+def get_cart() -> Dict[str, Any]:
+    """
+    Get the customer's current shopping cart, item list, quantities, prices, shipping address, and total amount.
+    Use this to review current cart state or calculate the final bill before payment.
+    """
+    return get_cart_data()
+
+
+@tool
+def remove_from_cart(product_id: str) -> Dict[str, Any]:
+    """
+    Remove an item from the customer's shopping cart matching product_id or product name.
+
+    Args:
+        product_id: Product ID, handle, or name to remove (e.g. 'mens-organic-cotton-tee-4').
+    """
+    return remove_item_from_cart(product_id=product_id)
+
+
+@tool
+def clear_cart() -> Dict[str, Any]:
+    """
+    Clear all items from the customer's shopping cart.
+    """
+    return clear_cart_data()
+
+
+@tool
+def set_shipping_address(
+    first_name: str,
+    last_name: str,
+    address_1: str,
+    city: str,
+    postal_code: str,
+    country_code: str = "in",
+    phone: str = "",
+    email: str = ""
+) -> str:
+    """
+    Save the customer's delivery/shipping address to the cart for checkout.
+    Use this when the customer provides their shipping address or confirms their delivery details.
+
+    Args:
+        first_name: First name of recipient (e.g. 'Amit').
+        last_name: Last name of recipient (e.g. 'Sharma').
+        address_1: Street address or flat/building (e.g. 'Flat 402, Sunshine Heights, MG Road').
+        city: City or town (e.g. 'Bengaluru', 'Mumbai', 'Delhi').
+        postal_code: PIN / Postal code (e.g. '560001').
+        country_code: Country code (defaults to 'in').
+        phone: Contact phone number (e.g. '+919876543210').
+        email: Contact email address.
+    """
+    res = set_cart_shipping_address(
+        first_name=first_name,
+        last_name=last_name,
+        address_1=address_1,
+        city=city,
+        postal_code=postal_code,
+        country_code=country_code,
+        phone=phone,
+        email=email,
+    )
+    return res.get("message", "Shipping address saved successfully.")
+
+
+@tool
+def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Order Payment") -> str:
+    """
+    Generate a Razorpay / UPI Payment QR Code and short URL for immediate checkout.
+    ONLY call this tool when the customer explicitly asks to pay, checkout, or generate payment QR.
+    If amount_inr is 0 or omitted, the tool automatically uses the current cart total.
+
+    Args:
+        amount_inr: Total amount in INR. If 0, uses the current cart total.
+        description: Description of the payment (e.g. "Order #1023 Checkout").
+    """
+    res = create_payment_qr(amount_inr=amount_inr, description=description)
+    if not res.get("success"):
+        return res.get("error", "Failed to generate payment QR.")
+
+    total = res["amount_inr"]
+    payment_url = res["payment_url"]
+    qr_data_url = res["qr_data_url"]
+
+    return (
+        f"### 🧾 Payment & Checkout Summary\n\n"
+        f"- **Total Amount Due**: ₹{total:,.2f} INR\n"
+        f"- **Payment Method**: UPI / Razorpay Direct Pay\n\n"
+        f"![Payment QR Code]({qr_data_url})\n\n"
+        f"📱 **Scan the QR code above with any UPI app (Google Pay, PhonePe, Paytm) to complete payment.**\n\n"
+        f"Or click here to open payment: [{payment_url}]({payment_url})"
+    )
+
+
+@tool
+def get_product_catalog(query: str, merchant_id: str = "default_merchant") -> str:
+    """
+    Search or query the store's product catalog (product names, specs, prices, categories, and reviews).
+    Use this to look up product information, find product handles, check prices, or verify availability.
+
+    Args:
+        query: The natural language search query (e.g. 'What GPS smartwatches do you have?').
+        merchant_id: Unique merchant store ID.
+    """
+    result = query_knowledge_base(
+        query=query,
+        wiki_base_path=_DEFAULT_WIKI_PATH,
+        merchant_id=merchant_id
+    )
+    return result.get("answer", "No product catalog data found.")
+
+
+@tool
+def get_upsell_products(product_id: str, merchant_id: str = "default_merchant") -> str:
+    """
+    Find complementary products, upsell opportunities, accessory recommendations, or promotional deals
+    related to a given product_id or category.
+
+    Args:
+        product_id: Product ID, handle, or category name to find recommendations for.
+        merchant_id: Unique merchant store ID.
+    """
+    query = f"What complementary accessories, protection items, discounts, or upsell recommendations exist for {product_id}?"
+    result = query_marketing_intelligence(
+        query=query,
+        wiki_base_path=_DEFAULT_WIKI_PATH,
+        merchant_id=merchant_id
+    )
+    return result.get("answer", "No upsell recommendations found.")
+
+
+all_tools = [
+    add_to_cart,
+    get_cart,
+    remove_from_cart,
+    clear_cart,
+    set_shipping_address,
+    generate_payment_qr,
+    get_product_catalog,
+    get_upsell_products,
+]

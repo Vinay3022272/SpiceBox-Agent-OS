@@ -1,0 +1,153 @@
+"use server"
+
+import { sdk } from "@lib/config"
+import { OptionValueIds } from "@lib/util/product-option-filters"
+import { HttpTypes } from "@medusajs/types"
+import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
+import { getAuthHeaders, getCacheOptions } from "./cookies"
+import { getRegion, retrieveRegion } from "./regions"
+
+type ProductListQueryParams = (HttpTypes.FindParams &
+  HttpTypes.StoreProductListParams) & {
+  options?: string[]
+  option_value_id?: string | string[]
+}
+
+export const listProducts = async ({
+  pageParam = 1,
+  queryParams,
+  countryCode,
+  regionId,
+}: {
+  pageParam?: number
+  queryParams?: ProductListQueryParams
+  countryCode?: string
+  regionId?: string
+}): Promise<{
+  response: { products: HttpTypes.StoreProduct[]; count: number }
+  nextPage: number | null
+  queryParams?: ProductListQueryParams
+}> => {
+  if (!countryCode && !regionId) {
+    throw new Error("Country code or region ID is required")
+  }
+
+  const limit = queryParams?.limit || 12
+  const _pageParam = Math.max(pageParam, 1)
+  const offset = queryParams?.offset !== undefined ? queryParams.offset : (_pageParam === 1 ? 0 : (_pageParam - 1) * limit)
+
+  let region: HttpTypes.StoreRegion | undefined | null
+
+  if (countryCode) {
+    region = await getRegion(countryCode)
+  } else {
+    region = await retrieveRegion(regionId!)
+  }
+
+  if (!region) {
+    return {
+      response: { products: [], count: 0 },
+      nextPage: null,
+    }
+  }
+
+  const headers = {
+    ...(await getAuthHeaders()),
+  }
+
+  return sdk.client
+    .fetch<{ products: HttpTypes.StoreProduct[]; count: number }>(
+      `/store/products`,
+      {
+        method: "GET",
+        query: {
+          limit,
+          offset,
+          region_id: region?.id,
+          fields:
+            "*variants.calculated_price,+variants.inventory_quantity,*variants.images,*variants.options,+metadata,+tags,",
+          ...queryParams,
+        },
+        headers,
+        cache: "no-store",
+      }
+    )
+    .then(({ products, count }) => {
+      const nextPage = count > offset + limit ? _pageParam + 1 : null
+
+      return {
+        response: {
+          products,
+          count,
+        },
+        nextPage: nextPage,
+        queryParams,
+      }
+    })
+    .catch(() => ({
+      response: { products: [], count: 0 },
+      nextPage: null,
+      queryParams,
+    }))
+}
+
+/**
+ * Server-side paginated and sorted products fetching
+ */
+export const listProductsWithSort = async ({
+  page = 1,
+  queryParams,
+  sortBy = "created_at",
+  countryCode,
+  optionValueIds,
+}: {
+  page?: number
+  queryParams?: ProductListQueryParams
+  sortBy?: SortOptions
+  countryCode: string
+  optionValueIds?: OptionValueIds
+}): Promise<{
+  response: { products: HttpTypes.StoreProduct[]; count: number }
+  nextPage: number | null
+  queryParams?: ProductListQueryParams
+}> => {
+  const limit = queryParams?.limit || 12
+  const currentPage = Math.max(Number(page) || 1, 1)
+  const offset = (currentPage - 1) * limit
+
+  let order = "-created_at"
+  if (sortBy === "price_asc") {
+    order = "variants.calculated_price"
+  } else if (sortBy === "price_desc") {
+    order = "-variants.calculated_price"
+  } else if (sortBy === "created_at") {
+    order = "-created_at"
+  }
+
+  const optionFilters = Array.from(
+    new Set((optionValueIds || []).filter(Boolean))
+  )
+
+  const { response } = await listProducts({
+    pageParam: currentPage,
+    queryParams: {
+      ...queryParams,
+      limit,
+      offset,
+      order,
+      ...(optionFilters.length ? { option_value_id: optionFilters } : {}),
+    },
+    countryCode,
+  })
+
+  const nextPage = response.count > offset + limit ? currentPage + 1 : null
+
+  return {
+    response: {
+      products: response.products,
+      count: response.count,
+    },
+    nextPage,
+    queryParams,
+  }
+}

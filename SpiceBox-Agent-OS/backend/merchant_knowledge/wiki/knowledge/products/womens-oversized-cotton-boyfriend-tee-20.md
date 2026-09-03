@@ -1,0 +1,39 @@
+---
+type: product
+slug: womens-oversized-cotton-boyfriend-tee-20
+name: Women's Oversized Cotton Boyfriend Tee Edition 20
+brand: Ultra-soft micro-modal touch with contour fit
+category: 
+last_updated: 2026-09-02
+sources: db_catalog_1
+---
+
+# Women's Oversized Cotton Boyfriend Tee Edition 20
+
+## Overview
+
+A chic basic that layers seamlessly. Breathable, stretchy, and holds its silhouette wash after wash.
+
+## Specifications
+
+
+
+## Pricing
+
+- **Price**: 1699 INR
+
+
+## Customer Sentiment
+
+
+_No review data available yet._
+
+## Related
+
+- [Women's Cropped Linen Blouse](./womens-cropped-linen-blouse-3.md) (Complementary)
+- [Women's Cropped Linen Blouse Edition 15](./womens-cropped-linen-blouse-15.md) (Complementary)
+
+## Sources
+
+
+- `db_catalog_1`
