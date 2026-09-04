@@ -4,7 +4,7 @@ slug: womens-waffle-knit-henley-18
 name: Women's Waffle Knit Henley Edition 18
 brand: Ultra-soft micro-modal touch with contour fit
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ A chic basic that layers seamlessly. Breathable, stretchy, and holds its silhoue
 
 - **Price**: 32 USD
 
+> ⚠️ **Data Conflict: price**
+> Previous: `32 USD` (Source: db_catalog_1)
+> New: `22 EUR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: latest_source
 
 ## Customer Sentiment
 

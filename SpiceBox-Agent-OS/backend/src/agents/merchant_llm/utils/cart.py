@@ -8,10 +8,15 @@ import io
 import base64
 from typing import Dict, Any, List, Optional
 import qrcode
-from dotenv import load_dotenv
+from pathlib import Path
+from dotenv import load_dotenv, find_dotenv
 
-# Load environment
-load_dotenv()
+# Try multiple locations to ensure .env is reliably loaded
+backend_env = Path(__file__).resolve().parents[3] / ".env"
+if backend_env.exists():
+    load_dotenv(backend_env)
+else:
+    load_dotenv(find_dotenv())
 
 # Global session cart store for fallback / conversation state
 _SESSION_CART: Dict[str, Any] = {
@@ -217,7 +222,7 @@ def create_payment_qr(
 ) -> Dict[str, Any]:
     """
     Generate a Razorpay payment link or UPI QR code for the given INR amount.
-    Returns base64 PNG data URL and payment link.
+    Returns base64 PNG data URL, saved QR file, and payment link.
     """
     target = cart if cart is not None else _SESSION_CART
 
@@ -226,11 +231,8 @@ def create_payment_qr(
         cart_info = get_cart_data(target)
         amount_inr = cart_info.get("total", 0.0)
 
-    # If amount is still 0 or empty, default to active store order amount
-    if amount_inr <= 0:
-        amount_inr = 1299.0
-
     payment_url = ""
+    plink_id = ""
     rzp_key = os.getenv("RAZORPAY_KEY_ID")
     rzp_secret = os.getenv("RAZORPAY_KEY_SECRET")
 
@@ -252,6 +254,7 @@ def create_payment_qr(
                 "notify": {"sms": False, "email": False},
             })
             payment_url = link.get("short_url", "")
+            plink_id = link.get("id", "")
         except Exception as e:
             print(f"  [Razorpay fallback] Error creating Razorpay link: {e}")
 
@@ -261,7 +264,16 @@ def create_payment_qr(
 
     # Generate QR Code in memory as base64 PNG
     img = qrcode.make(payment_url)
+
+    # Save to disk as payment_qr_<plink_id>.png if available
+    qr_filename = f"payment_qr_{plink_id}.png" if plink_id else "payment_qr.png"
+    try:
+        img.save(qr_filename)
+    except Exception:
+        pass
+
     buf = io.BytesIO()
+    # pyrefly: ignore [unexpected-keyword]
     img.save(buf, format="PNG")
     b64_qr = base64.b64encode(buf.getvalue()).decode("utf-8")
     qr_data_url = f"data:image/png;base64,{b64_qr}"
@@ -273,12 +285,16 @@ def create_payment_qr(
         "type": "payment_qr",
         "amount_inr": amount_inr,
         "payment_url": payment_url,
+        "payment_link_id": plink_id,
+        "qr_image_path": qr_filename,
     })
 
     return {
         "success": True,
         "amount_inr": amount_inr,
         "payment_url": payment_url,
+        "payment_link_id": plink_id,
+        "qr_image_path": qr_filename,
         "qr_data_url": qr_data_url,
         "message": f"Payment QR generated for ₹{amount_inr:,.2f}.",
     }

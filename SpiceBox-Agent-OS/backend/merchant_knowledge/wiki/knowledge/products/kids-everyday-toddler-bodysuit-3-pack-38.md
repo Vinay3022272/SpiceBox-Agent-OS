@@ -4,7 +4,7 @@ slug: kids-everyday-toddler-bodysuit-3-pack-38
 name: Everyday Toddler Bodysuit 3-Pack #38
 brand: Hypoallergenic, tagless comfort for sensitive skin
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons,
 
 - **Price**: 21 USD
 
+> ⚠️ **Data Conflict: price**
+> Previous: `21 USD` (Source: db_catalog_1)
+> New: `18 EUR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: latest_source
 
 ## Customer Sentiment
 

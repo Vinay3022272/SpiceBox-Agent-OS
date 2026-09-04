@@ -71,26 +71,28 @@ export default async function PaginatedProducts({
   const totalPages = Math.ceil(count / PRODUCT_LIMIT)
 
   return (
-    <>
+    <div className="flex flex-col gap-8 w-full">
       <ul
-        className="grid grid-cols-2 w-full small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full items-stretch"
         data-testid="products-list"
       >
         {products.map((p) => {
           return (
-            <li key={p.id}>
+            <li key={p.id} className="h-full flex flex-col">
               <ProductPreview product={p} region={region} />
             </li>
           )
         })}
       </ul>
       {totalPages > 1 && (
-        <Pagination
-          data-testid="product-pagination"
-          page={page}
-          totalPages={totalPages}
-        />
+        <div className="pt-4 border-t border-neutral-100 flex justify-center">
+          <Pagination
+            data-testid="product-pagination"
+            page={page}
+            totalPages={totalPages}
+          />
+        </div>
       )}
-    </>
+    </div>
   )
 }

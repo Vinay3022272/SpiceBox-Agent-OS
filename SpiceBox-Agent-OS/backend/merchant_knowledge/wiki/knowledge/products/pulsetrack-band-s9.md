@@ -4,7 +4,7 @@ slug: pulsetrack-band-s9
 name: PulseTrack Band S9 Slim Fitness Tracker
 brand: Ultra-lightweight 18g daily health tracker
 category: Wearables & Tech
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -14,6 +14,12 @@ sources: db_catalog_1
 
 Minimalist wrist tracker that monitors steps, calories, sleep cycles, and daily heart rate with vibrating silent haptic alarms.
 
+> ⚠️ **Data Conflict: category**  
+> Previous: `Wearables & Tech` (Source: db_catalog_1)  
+> New: `Fitness Bands` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: manufacturer_spec | latest_source | merchant_override  
+
 ## Specifications
 
 
@@ -22,6 +28,11 @@ Minimalist wrist tracker that monitors steps, calories, sleep cycles, and daily 
 
 - **Price**: 41 USD
 
+> ⚠️ **Data Conflict: price**  
+> Previous: `41 USD` (Source: db_catalog_1)  
+> New: `2279 INR` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: manufacturer_spec | latest_source | merchant_override  
 
 ## Customer Sentiment
 
@@ -31,14 +42,13 @@ _No review data available yet._
 ## Related
 
 - [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Slim Fit Elegance Smartwatch Gen 4](./apex-slim-fit-elegance-smartwatch-4.md) (Alternative)
-- [Apex Titanium Rugged Sports Watch Gen 8](./apex-titanium-rugged-sports-watch-8.md) (Alternative)
+- [Apex Pro Ultra AMOLED Smartwatch Gen 1](./apex-pro-ultra-amoled-smartwatch-1.md) (Alternative)
 - [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Alternative)
-- [Apex Titanium Rugged Sports Watch Gen 3](./apex-titanium-rugged-sports-watch-3.md) (Alternative)
-- [PulseTrack Band S1 Slim Fitness Tracker](./pulsetrack-band-s1.md) (Complementary)
+- [Apex Pro Ultra AMOLED Smartwatch Gen 6](./apex-pro-ultra-amoled-smartwatch-6.md) (Alternative)
+- [Apex Slim Fit Elegance Smartwatch Gen 9](./apex-slim-fit-elegance-smartwatch-9.md) (Alternative)
 - [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Complementary)
+- [PulseTrack Band S4 Slim Fitness Tracker](./pulsetrack-band-s4.md) (Complementary)
 
 ## Sources
-
 
 - `db_catalog_1`

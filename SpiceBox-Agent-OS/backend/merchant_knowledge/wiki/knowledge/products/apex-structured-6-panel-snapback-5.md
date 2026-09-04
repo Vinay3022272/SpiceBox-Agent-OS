@@ -4,7 +4,7 @@ slug: apex-structured-6-panel-snapback-5
 name: Apex Structured 6-Panel Snapback V5
 brand: Comfortable sweatband with breathable brass eyelets
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -20,8 +20,13 @@ Timeless headwear designed for everyday shade and streetwear pairing. Adjustable
 
 ## Pricing
 
-- **Price**: 19 USD
+- **Price**: 19 USD  
 
+> ⚠️ **Data Conflict: price**  
+> Previous: `19 USD` (Source: `db_catalog_1`)  
+> New: `1349 INR` (Source: `db_catalog_1`)  
+> Status: _Requires resolution_  
+> Preferred: latest_source
 
 ## Customer Sentiment
 
@@ -34,6 +39,5 @@ _No review data available yet._
 - [Apex Water-Repellent Bucket Hat V8](./apex-water-repellent-bucket-hat-8.md) (Complementary)
 
 ## Sources
-
 
 - `db_catalog_1`

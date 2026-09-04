@@ -4,7 +4,7 @@ slug: mens-textured-camp-collar-6
 name: Men's Textured Camp Collar
 brand: Breathable tailored silhouette for work and weekends
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -20,8 +20,13 @@ A versatile staple tailored with precision. Crafted from lightweight breathable 
 
 ## Pricing
 
-- **Price**: 1899 INR
+> ⚠️ **Data Conflict: price**  
+> Previous: `1899 INR` (Source: db_catalog_1)  
+> New: `32 EUR` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: _merchant_override_
 
+- **Price**: 1899 INR 📄 db_catalog_1
 
 ## Customer Sentiment
 
@@ -35,6 +40,5 @@ _No review data available yet._
 - [Men's Textured Camp Collar — Popular Item Intelligence](../../marketing/popular/mens-textured-camp-collar-6.md) (Market Intelligence)
 
 ## Sources
-
 
 - `db_catalog_1`

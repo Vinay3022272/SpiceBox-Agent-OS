@@ -4,7 +4,7 @@ slug: womens-mock-neck-longsleeve-5
 name: Women's Mock-Neck Longsleeve
 brand: Ultra-soft micro-modal touch with contour fit
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ A chic basic that layers seamlessly. Breathable, stretchy, and holds its silhoue
 
 - **Price**: 32 EUR
 
+> ⚠️ **Data Conflict: price**
+> Previous: `32 EUR` (Source: db_catalog_1)
+> New: `1799 INR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: latest_source
 
 ## Customer Sentiment
 
@@ -34,6 +39,5 @@ _No review data available yet._
 - [Women's Square-Neck Ribbed Top](./womens-square-neck-ribbed-top-1.md) (Complementary)
 
 ## Sources
-
 
 - `db_catalog_1`

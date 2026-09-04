@@ -23,13 +23,22 @@ const StoreTemplate = ({
 
   return (
     <div
-      className="flex flex-col small:flex-row small:items-start py-6 content-container"
+      className="flex flex-col small:flex-row small:items-start py-8 gap-8 content-container"
       data-testid="category-container"
     >
-      <RefinementList sortBy={sort} />
-      <div className="w-full">
-        <div className="mb-8 text-2xl-semi">
-          <h1 data-testid="store-page-title">All products</h1>
+      <div className="w-full small:w-64 shrink-0">
+        <RefinementList sortBy={sort} />
+      </div>
+      <div className="w-full flex-1">
+        <div className="mb-8 pb-4 border-b border-neutral-100 flex flex-wrap items-baseline justify-between gap-4">
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900" data-testid="store-page-title">
+              Featured Catalog
+            </h1>
+            <p className="text-xs text-neutral-500 mt-1">
+              Explore our verified catalog with live agent upselling & instant QR payments.
+            </p>
+          </div>
         </div>
         <Suspense fallback={<SkeletonProductGrid />}>
           <PaginatedProducts
@@ -45,3 +54,4 @@ const StoreTemplate = ({
 }
 
 export default StoreTemplate
+

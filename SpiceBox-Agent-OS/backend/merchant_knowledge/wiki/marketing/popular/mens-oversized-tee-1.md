@@ -55,11 +55,11 @@ High‑margin staple with strong potential for bundle promotions and repeat purc
 
 ## Related
 
-- [Men's Oversized Essential Tee](../../knowledge/products/mens-oversized-tee-11.md) (Primary Product Dossier)
+- [Men's Oversized Essential Tee](../../knowledge/products/mens-oversized-tee-1.md) (Primary Product Dossier)
 - [Men's Tops](../../knowledge/categories/men-s-tops.md) (Category)
-- [Men's Oversized Essential Tee](mens-oversized-tee-1.md) (Alternative Option)
 - [Men's Organic Cotton Essential Tee Edition 14](../../knowledge/products/mens-organic-cotton-tee-14.md) (Alternative Option)
 - [Men's Brushed Cotton Essential Tee Edition 19](../../knowledge/products/mens-brushed-cotton-tee-19.md) (Alternative Option)
+- [Men's Linen Resort Shirt](mens-linen-resort-shirt-2.md) (Alternative Option)
 
 ## Sources
 

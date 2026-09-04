@@ -4,7 +4,7 @@ slug: apex-ribbed-merino-wool-beanie-7
 name: Apex Ribbed Merino Wool Beanie V7
 brand: Comfortable sweatband with breathable brass eyelets
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Timeless headwear designed for everyday shade and streetwear pairing. Adjustable
 
 - **Price**: 1029 INR
 
+> ⚠️ **Data Conflict: price**
+> Previous: `1029 INR` (Source: db_catalog_1)
+> New: `23 USD` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
 
 ## Customer Sentiment
 

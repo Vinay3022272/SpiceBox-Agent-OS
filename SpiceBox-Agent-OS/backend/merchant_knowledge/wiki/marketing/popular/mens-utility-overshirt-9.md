@@ -55,7 +55,7 @@ Standard revenue potential.
 
 ## Related
 
-- [Men's Utility Overshirt Vol. 9](../../knowledge/products/mens-utility-overshirt-3.md) (Primary Product Dossier)
+- [Men's Utility Overshirt Vol. 9](../../knowledge/products/mens-utility-overshirt-9.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)

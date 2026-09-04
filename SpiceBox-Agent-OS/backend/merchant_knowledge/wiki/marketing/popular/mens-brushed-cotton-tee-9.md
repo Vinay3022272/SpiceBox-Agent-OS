@@ -64,7 +64,7 @@ Priced at ₹1099, this item occupies a high‑volume entry tier that encourages
 
 ## Related
 
-- [Men's Brushed Cotton Essential Tee](../../knowledge/products/mens-brushed-cotton-tee-19.md) (Primary Product Dossier)
+- [Men's Brushed Cotton Essential Tee](../../knowledge/products/mens-brushed-cotton-tee-9.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)

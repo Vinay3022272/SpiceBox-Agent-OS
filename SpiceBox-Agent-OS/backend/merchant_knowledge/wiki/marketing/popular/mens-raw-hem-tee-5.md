@@ -52,7 +52,7 @@ Positioned at ₹1,499, this tee sits in a high‑conversion mid‑tier price br
 
 ## Related
 
-- [Men's Raw Hem Essential Tee](../../knowledge/products/mens-raw-hem-tee-15.md) (Primary Product Dossier)
+- [Men's Raw Hem Essential Tee](../../knowledge/products/mens-raw-hem-tee-5.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)

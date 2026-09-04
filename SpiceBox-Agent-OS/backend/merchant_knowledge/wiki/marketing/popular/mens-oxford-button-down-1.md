@@ -51,7 +51,7 @@ Standard revenue potential.
 
 ## Related
 
-- [Men's Oxford Button-Down](../../knowledge/products/mens-oxford-button-down-7.md) (Primary Product Dossier)
+- [Men's Oxford Button-Down](../../knowledge/products/mens-oxford-button-down-1.md) (Primary Product Dossier)
 
 ## Sources
 

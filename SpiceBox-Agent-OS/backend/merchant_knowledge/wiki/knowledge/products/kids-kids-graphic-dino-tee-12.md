@@ -4,7 +4,7 @@ slug: kids-kids-graphic-dino-tee-12
 name: Kids Graphic Dino Tee #12
 brand: Hypoallergenic, tagless comfort for sensitive skin
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons,
 
 - **Price**: 19 USD
 
+> ⚠️ **Data Conflict: price**
+> Previous: `19 USD` (Source: db_catalog_1)
+> New: `1259 INR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: latest_source
 
 ## Customer Sentiment
 

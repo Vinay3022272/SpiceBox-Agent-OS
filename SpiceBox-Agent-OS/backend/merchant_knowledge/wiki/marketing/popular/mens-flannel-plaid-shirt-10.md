@@ -44,7 +44,7 @@ Standard revenue potential.
 
 - [Men's Flannel Plaid Shirt Vol. 10](../../knowledge/products/mens-flannel-plaid-shirt-10.md) (Primary Product Dossier)
 - [Men's Shirts](../../knowledge/categories/men-s-shirts.md) (Category)
-- [Men's Grandad Collar Shirt Vol. 11](../../knowledge/products/mens-grandad-collar-shirt-11.md) (Alternative Option)
+- [Men's Grandad Collar Shirt Vol. 11](mens-grandad-collar-shirt-11.md) (Alternative Option)
 
 ## Sources
 

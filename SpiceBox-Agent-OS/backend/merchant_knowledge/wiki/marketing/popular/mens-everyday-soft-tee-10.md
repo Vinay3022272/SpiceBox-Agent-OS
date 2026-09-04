@@ -48,7 +48,7 @@ Positioned at €28, this accessible premium basic encourages high cart frequenc
 
 ## Related
 
-- [Men's Everyday Soft Essential Tee](../../knowledge/products/mens-everyday-soft-tee-20.md) (Primary Product Dossier)
+- [Men's Everyday Soft Essential Tee](../../knowledge/products/mens-everyday-soft-tee-10.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)

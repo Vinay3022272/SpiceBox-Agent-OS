@@ -5,44 +5,45 @@ interface MinPricedProduct extends HttpTypes.StoreProduct {
   _minPrice?: number
 }
 
-/**
- * Helper function to sort products by price until the store API supports sorting by price
- * @param products
- * @param sortBy
- * @returns products sorted by price
- */
+function extractMinPrice(product: HttpTypes.StoreProduct): number {
+  if (!product?.variants || product.variants.length === 0) {
+    return 0
+  }
+  const prices: number[] = []
+  for (const v of product.variants as any[]) {
+    if (v?.calculated_price?.calculated_amount != null) {
+      prices.push(Number(v.calculated_price.calculated_amount))
+    } else if (Array.isArray(v?.prices)) {
+      for (const p of v.prices) {
+        if (p?.amount != null) prices.push(Number(p.amount))
+      }
+    }
+  }
+  return prices.length > 0 ? Math.min(...prices) : 0
+}
+
 export function sortProducts(
   products: HttpTypes.StoreProduct[],
   sortBy: SortOptions
 ): HttpTypes.StoreProduct[] {
-  const sortedProducts = products as MinPricedProduct[]
+  if (!products || !Array.isArray(products)) return []
+  const sortedProducts = [...products] as MinPricedProduct[]
 
   if (["price_asc", "price_desc"].includes(sortBy)) {
-    // Precompute the minimum price for each product
     sortedProducts.forEach((product) => {
-      if (product.variants && product.variants.length > 0) {
-        product._minPrice = Math.min(
-          ...product.variants.map(
-            (variant) => variant?.calculated_price?.calculated_amount || 0
-          )
-        )
-      } else {
-        product._minPrice = Infinity
-      }
+      product._minPrice = extractMinPrice(product)
     })
 
-    // Sort products based on the precomputed minimum prices
     sortedProducts.sort((a, b) => {
-      const diff = a._minPrice! - b._minPrice!
-      return sortBy === "price_asc" ? diff : -diff
+      const priceA = a._minPrice ?? 0
+      const priceB = b._minPrice ?? 0
+      return sortBy === "price_asc" ? priceA - priceB : priceB - priceA
     })
-  }
-
-  if (sortBy === "created_at") {
+  } else if (sortBy === "created_at") {
     sortedProducts.sort((a, b) => {
-      return (
-        new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime()
-      )
+      const dateA = a.created_at ? new Date(a.created_at).getTime() : 0
+      const dateB = b.created_at ? new Date(b.created_at).getTime() : 0
+      return dateB - dateA
     })
   }
 

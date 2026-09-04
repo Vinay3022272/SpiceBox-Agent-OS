@@ -53,7 +53,7 @@ Standard revenue potential.
 
 ## Related
 
-- [Men's Linen Resort Shirt](../../knowledge/products/mens-linen-resort-shirt-8.md) (Primary Product Dossier)
+- [Men's Linen Resort Shirt](../../knowledge/products/mens-linen-resort-shirt-2.md) (Primary Product Dossier)
 - [Men's Tops](../../knowledge/categories/men-s-tops.md) (Category)
 - [Men's Oversized Essential Tee](mens-oversized-tee-1.md) (Alternative Option)
 - [Men's Organic Cotton Essential Tee Edition 14](../../knowledge/products/mens-organic-cotton-tee-14.md) (Alternative Option)

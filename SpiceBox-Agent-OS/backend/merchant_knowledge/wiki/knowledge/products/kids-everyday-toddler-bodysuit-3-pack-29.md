@@ -4,7 +4,7 @@ slug: kids-everyday-toddler-bodysuit-3-pack-29
 name: Everyday Toddler Bodysuit 3-Pack #29
 brand: Hypoallergenic, tagless comfort for sensitive skin
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -12,7 +12,7 @@ sources: db_catalog_1
 
 ## Overview
 
-Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons, and stretchy flatlock seams.
+Safe for kids, tough on play. Made with OEKO‑TEX certified cotton, snap buttons, and stretchy flatlock seams.
 
 ## Specifications
 
@@ -20,8 +20,14 @@ Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons,
 
 ## Pricing
 
-- **Price**: 23 USD
+- **Price (USD)**: 23 USD 📄 db_catalog_1  
+- **Price (INR)**: 1119 INR 📄 db_catalog_1  
 
+> ⚠️ **Data Conflict: price**  
+> Previous: `23 USD` (Source: db_catalog_1)  
+> New: `1119 INR` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: latest_source  
 
 ## Customer Sentiment
 
@@ -34,6 +40,5 @@ _No review data available yet._
 - [Girls Soft Ribbed Cardigan #8](./kids-girls-soft-ribbed-cardigan-8.md) (Complementary)
 
 ## Sources
-
 
 - `db_catalog_1`

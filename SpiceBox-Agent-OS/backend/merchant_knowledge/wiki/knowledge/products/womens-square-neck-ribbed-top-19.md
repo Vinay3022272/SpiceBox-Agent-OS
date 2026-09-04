@@ -4,7 +4,7 @@ slug: womens-square-neck-ribbed-top-19
 name: Women's Square-Neck Ribbed Top Edition 19
 brand: Ultra-soft micro-modal touch with contour fit
 category: Women's T-Shirts & Tees
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ A chic basic that layers seamlessly. Breathable, stretchy, and holds its silhoue
 
 - **Price**: 24 EUR
 
+> ⚠️ **Data Conflict: price**  
+> Previous: `24 EUR` (Source: `db_catalog_1`)  
+> New: `1599 INR` (Source: `db_catalog_1`)  
+> Status: _Requires resolution_  
+> Preferred: latest_source
 
 ## Customer Sentiment
 
@@ -38,5 +43,10 @@ _No review data available yet._
 
 ## Sources
 
-
 - `db_catalog_1`
+
+> ⚠️ **Data Conflict: category**  
+> Previous: `Women's T-Shirts & Tees` (Source: `db_catalog_1`)  
+> New: `Women` (Source: `db_catalog_1`)  
+> Status: _Requires resolution_  
+> Preferred: latest_source

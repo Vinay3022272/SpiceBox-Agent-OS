@@ -140,10 +140,11 @@ def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Order
 def get_product_catalog(query: str, merchant_id: str = "default_merchant") -> str:
     """
     Search or query the store's product catalog (product names, specs, prices, categories, and reviews).
-    Use this to look up product information, find product handles, check prices, or verify availability.
+    Use this for GENERAL searches, category browsing, or listing products when a user asks what we have
+    (e.g. 'do you have smartphone', 'what watches do you sell', 'show me running shoes', 'what clothes do you have?').
 
     Args:
-        query: The natural language search query (e.g. 'What GPS smartwatches do you have?').
+        query: The natural language search query (e.g. 'What smartphones do you have?', 'GPS smartwatches').
         merchant_id: Unique merchant store ID.
     """
     result = query_knowledge_base(
@@ -157,13 +158,12 @@ def get_product_catalog(query: str, merchant_id: str = "default_merchant") -> st
 @tool
 def get_better_alternatives(product_name: str, merchant_id: str = "default_merchant") -> str:
     """
-    Find the requested product AND all better-priced, higher-tier alternatives in the same category.
-    Use this EVERY TIME a customer asks about, inquires, or wants to buy a specific product.
-    This is the Indian shopkeeper-style recommendation: show what they asked for,
-    then show them the superior premium options in the same category.
+    Find the requested specific product AND all better-priced, higher-tier alternatives in the same category.
+    Use this ONLY when the customer has specified or asked about a SPECIFIC product model/name (e.g. 'iPhone 15', 'Apex Pulse Watch', 'Samsung S24').
+    Do NOT use this tool for general category browsing questions like 'do you have smartphone'.
 
     Args:
-        product_name: Name, title, or keyword of the product the customer asked about.
+        product_name: Specific name or title of the product the customer asked about (e.g. 'iPhone 15').
         merchant_id: Unique merchant store ID.
     """
     result = query_upsell_alternatives(

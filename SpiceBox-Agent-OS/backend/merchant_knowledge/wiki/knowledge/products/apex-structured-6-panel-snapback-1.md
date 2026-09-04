@@ -4,7 +4,7 @@ slug: apex-structured-6-panel-snapback-1
 name: Apex Structured 6-Panel Snapback V1
 brand: Comfortable sweatband with breathable brass eyelets
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Timeless headwear designed for everyday shade and streetwear pairing. Adjustable
 
 - **Price**: 989 INR
 
+> ⚠️ **Data Conflict: price**
+> Previous: `989 INR` (Source: db_catalog_1)
+> New: `19 EUR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: _latest_source_
 
 ## Customer Sentiment
 

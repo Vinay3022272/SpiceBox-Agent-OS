@@ -141,12 +141,27 @@ def detect_upsell_intent(query: str) -> Optional[Tuple[float, str]]:
     return (price_value, cleaned)
 
 
+GENERIC_CATEGORY_WORDS = {
+    "smartphone", "smartphones", "phone", "phones", "mobile", "mobiles",
+    "watch", "watches", "smartwatch", "smartwatches",
+    "shirt", "shirts", "t-shirt", "t-shirts", "tshirt", "tshirts", "tee", "tees",
+    "clothes", "clothing", "dress", "dresses", "apparel",
+    "shoe", "shoes", "sneaker", "sneakers", "footwear",
+    "jean", "jeans", "pant", "pants", "trouser", "trousers", "bottom", "bottoms", "shorts",
+    "jacket", "jackets", "hoodie", "hoodies", "sweater", "sweaters",
+    "cap", "caps", "hat", "hats", "headwear",
+    "accessory", "accessories", "bag", "bags", "backpack", "backpacks",
+    "eyewear", "sunglasses", "glasses",
+    "item", "items", "product", "products", "stuff", "anything", "options",
+}
+
+
 def detect_product_purchase_intent(query: str) -> Optional[str]:
     """
-    Detect purchase intent WITHOUT an explicit price.
+    Detect purchase intent WITHOUT an explicit price for a SPECIFIC product.
     e.g. "I want to buy iPhone 15", "get me Samsung Galaxy S24"
 
-    Returns the cleaned product name hint, or None if no purchase intent.
+    Returns the cleaned product name hint, or None if no specific product purchase intent.
     """
     query_lower = query.lower()
 
@@ -163,11 +178,14 @@ def detect_product_purchase_intent(query: str) -> Optional[str]:
     for word in ["i", "want", "to", "buy", "purchase", "a", "an", "me",
                  "show", "get", "find", "some", "the", "please", "in",
                  "looking", "for", "suggest", "recommend", "need", "of",
-                 "can", "you", "could", "would", "like", "order"]:
+                 "can", "you", "could", "would", "like", "order", "do", "have"]:
         cleaned = re.sub(rf"\b{word}\b", "", cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r"\s+", " ", cleaned).strip().strip(".,;:-")
 
-    return cleaned if cleaned else None
+    if not cleaned or cleaned.lower() in GENERIC_CATEGORY_WORDS:
+        return None
+
+    return cleaned
 
 
 def resolve_product_for_upsell(
@@ -175,13 +193,16 @@ def resolve_product_for_upsell(
 ) -> Optional[Tuple[float, str]]:
     """
     Given a product name hint (e.g. "iPhone 15"), fuzzy-match it against
-    wiki product pages.  If a match is found, return
+    wiki product pages. If a match is found, return
     (product_price, product_category) so the caller can upsell all items
     in the same category at or above that price.
 
     Returns None if no matching product is found.
     """
-    hint_lower = product_hint.lower()
+    hint_lower = product_hint.lower().strip()
+    if hint_lower in GENERIC_CATEGORY_WORDS:
+        return None
+
     best_match = None
     best_score = 0.0
 
@@ -218,7 +239,7 @@ def resolve_product_for_upsell(
             best_score = score
             best_match = page
 
-    if best_match is None or best_score < 65:
+    if best_match is None or best_score < 80:
         return None
 
     price = extract_price_from_page(best_match)
@@ -479,12 +500,13 @@ def query_wiki(
         "1. Base your answer on the facts, product specifications, prices, reviews, categories, or promotions in the context.\n"
         "2. Be concise, structured, and helpful.\n"
         "3. Explicitly cite the source markdown files (e.g. `knowledge/products/iphone-15.md`) where appropriate.\n"
+        "4. For general browsing or category queries (e.g. 'do you have smartphones', 'what clothes do you sell', 'show me watches', 'what products do you have'): List all the relevant matching models and items available with their names, prices in INR, and key highlights. Do not assume the user selected a specific model.\n"
     )
 
     if is_upsell:
         price_threshold, category_hint = upsell_info  # guaranteed set when is_upsell=True
         upsell_guideline = (
-            f"4. MUST — Upsell Mode is ACTIVE. The user asked for products"
+            f"5. MUST — Upsell Mode is ACTIVE. The user asked for products"
             f" in '{category_hint or 'all categories'}' priced at or above ₹{price_threshold:,.0f}.\n"
             "   The context below contains ONLY the pre-filtered qualifying products.\n"
             "   a) Present EVERY product from the context in a structured table: Product Name | Price (INR) | Key Highlights | Source Page.\n"
@@ -496,7 +518,7 @@ def query_wiki(
         system_prompt = base_guidelines + upsell_guideline
     else:
         system_prompt = base_guidelines + (
-            "4. If the requested information is not in the wiki, state clearly that it is not present in the store knowledge base.\n"
+            "5. If the requested information is not in the wiki, state clearly that it is not present in the store knowledge base.\n"
         )
 
 

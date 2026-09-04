@@ -11,13 +11,56 @@ import CountrySelect from "../country-select"
 import LanguageSelect from "../language-select"
 import { Locale } from "@lib/data/locales"
 
-
-const SideMenuItems = {
-  Home: "/",
-  Store: "/store",
-  Account: "/account",
-  Cart: "/cart",
+// Shadcn / Lucide-style crisp SVG icons
+const Icons = {
+  Home: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      <polyline points="9 22 9 12 15 12 15 22"/>
+    </svg>
+  ),
+  Store: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+      <path d="M3 6h18"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </svg>
+  ),
+  Account: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+      <circle cx="12" cy="7" r="4"/>
+    </svg>
+  ),
+  Cart: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="8" cy="21" r="1"/>
+      <circle cx="19" cy="21" r="1"/>
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+    </svg>
+  ),
+  Menu: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <line x1="4" x2="20" y1="12" y2="12"/>
+      <line x1="4" x2="20" y1="6" y2="6"/>
+      <line x1="4" x2="20" y1="18" y2="18"/>
+    </svg>
+  ),
+  Layers: () => (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+      <polyline points="2 17 12 22 22 17"/>
+      <polyline points="2 12 12 17 22 12"/>
+    </svg>
+  ),
 }
+
+const SideMenuItems = [
+  { name: "Home", href: "/", icon: Icons.Home },
+  { name: "All Products", href: "/store", icon: Icons.Store },
+  { name: "My Account", href: "/account", icon: Icons.Account },
+  { name: "Shopping Cart", href: "/cart", icon: Icons.Cart },
+]
 
 type SideMenuProps = {
   regions: HttpTypes.StoreRegion[] | null
@@ -38,15 +81,17 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
               <div className="relative flex h-full">
                 <Popover.Button
                   data-testid="nav-menu-button"
-                  className="relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none hover:text-ui-fg-base"
+                  suppressHydrationWarning
+                  className="relative h-full flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider text-neutral-800 hover:text-neutral-950 hover:bg-neutral-100 transition-all focus:outline-none"
                 >
-                  Menu
+                  <Icons.Menu />
+                  <span>Menu</span>
                 </Popover.Button>
               </div>
 
               {open && (
                 <div
-                  className="fixed inset-0 z-[50] bg-black/0 pointer-events-auto"
+                  className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-sm pointer-events-auto transition-opacity"
                   onClick={close}
                   data-testid="side-menu-backdrop"
                 />
@@ -55,82 +100,107 @@ const SideMenu = ({ regions, locales, currentLocale }: SideMenuProps) => {
               <Transition
                 show={open}
                 as={Fragment}
-                enter="transition ease-out duration-150"
-                enterFrom="opacity-0"
-                enterTo="opacity-100 backdrop-blur-2xl"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 backdrop-blur-2xl"
-                leaveTo="opacity-0"
+                enter="transition ease-out duration-250"
+                enterFrom="-translate-x-full opacity-0"
+                enterTo="translate-x-0 opacity-100"
+                leave="transition ease-in duration-200"
+                leaveFrom="translate-x-0 opacity-100"
+                leaveTo="-translate-x-full opacity-0"
               >
-                <PopoverPanel className="flex flex-col absolute w-full pr-4 sm:pr-0 sm:w-1/3 2xl:w-1/4 sm:min-w-min h-[calc(100vh-1rem)] z-[51] inset-x-0 text-sm text-ui-fg-on-color m-2 backdrop-blur-2xl">
-                  <div
-                    data-testid="nav-menu-popup"
-                    className="flex flex-col h-full bg-[rgba(3,7,18,0.5)] rounded-rounded justify-between p-6"
-                  >
-                    <div className="flex justify-end" id="xmark">
-                      <button data-testid="close-menu-button" onClick={close}>
-                        <XMark />
-                      </button>
+                <PopoverPanel
+                  static
+                  className="fixed inset-y-0 left-0 w-80 sm:w-96 h-screen z-[1000] bg-neutral-950 text-white shadow-2xl flex flex-col justify-between p-6 sm:p-8 border-r border-neutral-800"
+                >
+                  {/* Drawer Header */}
+                  <div className="flex items-center justify-between pb-6 border-b border-neutral-800">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-7 h-7 rounded-lg bg-white text-neutral-950 flex items-center justify-center font-black text-xs shadow-xs">
+                        S
+                      </span>
+                      <span className="text-xs font-black tracking-widest uppercase text-white">
+                        SpiceBox Store
+                      </span>
                     </div>
-                    <ul className="flex flex-col gap-6 items-start justify-start">
-                      {Object.entries(SideMenuItems).map(([name, href]) => {
+                    <button
+                      data-testid="close-menu-button"
+                      onClick={close}
+                      suppressHydrationWarning
+                      className="p-1.5 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"
+                      title="Close Navigation"
+                    >
+                      <XMark className="w-5 h-5" />
+                    </button>
+                  </div>
+
+                  {/* Main Navigation with Shadcn Icons */}
+                  <div className="flex flex-col gap-6 py-6 my-auto">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-500">
+                      Explore Store
+                    </span>
+                    <ul className="flex flex-col gap-2">
+                      {SideMenuItems.map((item) => {
+                        const IconComponent = item.icon
                         return (
-                          <li key={name}>
+                          <li key={item.name}>
                             <LocalizedClientLink
-                              href={href}
-                              className="text-3xl leading-10 hover:text-ui-fg-disabled"
+                              href={item.href}
+                              className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-base font-semibold tracking-tight text-neutral-300 hover:text-white hover:bg-neutral-900 border border-transparent hover:border-neutral-800 transition-all group"
                               onClick={close}
-                              data-testid={`${name.toLowerCase()}-link`}
+                              data-testid={`${item.name.toLowerCase()}-link`}
                             >
-                              {name}
+                              <div className="p-1.5 rounded-lg bg-neutral-900 group-hover:bg-neutral-800 text-neutral-400 group-hover:text-white transition-colors">
+                                <IconComponent />
+                              </div>
+                              <span>{item.name}</span>
                             </LocalizedClientLink>
                           </li>
                         )
                       })}
                     </ul>
-                    <div className="flex flex-col gap-y-6">
-                      {!!locales?.length && (
-                        <div
-                          className="flex justify-between"
-                          onMouseEnter={languageToggleState.open}
-                          onMouseLeave={languageToggleState.close}
-                        >
-                          <LanguageSelect
-                            toggleState={languageToggleState}
-                            locales={locales}
-                            currentLocale={currentLocale}
-                          />
-                          <ArrowRightMini
-                            className={clx(
-                              "transition-transform duration-150",
-                              languageToggleState.state ? "-rotate-90" : ""
-                            )}
-                          />
-                        </div>
-                      )}
+                  </div>
+
+                  {/* Footer Settings */}
+                  <div className="flex flex-col gap-y-4 pt-6 border-t border-neutral-800">
+                    {!!locales?.length && (
                       <div
-                        className="flex justify-between"
-                        onMouseEnter={countryToggleState.open}
-                        onMouseLeave={countryToggleState.close}
+                        className="flex justify-between items-center text-xs text-neutral-300"
+                        onMouseEnter={languageToggleState.open}
+                        onMouseLeave={languageToggleState.close}
                       >
-                        {regions && (
-                          <CountrySelect
-                            toggleState={countryToggleState}
-                            regions={regions}
-                          />
-                        )}
+                        <LanguageSelect
+                          toggleState={languageToggleState}
+                          locales={locales}
+                          currentLocale={currentLocale}
+                        />
                         <ArrowRightMini
                           className={clx(
                             "transition-transform duration-150",
-                            countryToggleState.state ? "-rotate-90" : ""
+                            languageToggleState.state ? "-rotate-90" : ""
                           )}
                         />
                       </div>
-                      <Text className="flex justify-between txt-compact-small">
-                        © {new Date().getFullYear()} Medusa Store. All rights
-                        reserved.
-                      </Text>
+                    )}
+                    <div
+                      className="flex justify-between items-center text-xs text-neutral-300"
+                      onMouseEnter={countryToggleState.open}
+                      onMouseLeave={countryToggleState.close}
+                    >
+                      {regions && (
+                        <CountrySelect
+                          toggleState={countryToggleState}
+                          regions={regions}
+                        />
+                      )}
+                      <ArrowRightMini
+                        className={clx(
+                          "transition-transform duration-150",
+                          countryToggleState.state ? "-rotate-90" : ""
+                        )}
+                      />
                     </div>
+                    <Text className="text-[11px] text-neutral-500 pt-2">
+                      © {new Date().getFullYear()} SpiceBox Store. All rights reserved.
+                    </Text>
                   </div>
                 </PopoverPanel>
               </Transition>

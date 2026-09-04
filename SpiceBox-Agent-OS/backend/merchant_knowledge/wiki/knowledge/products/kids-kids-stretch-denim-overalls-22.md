@@ -4,7 +4,7 @@ slug: kids-kids-stretch-denim-overalls-22
 name: Kids Stretch Denim Overalls #22
 brand: Hypoallergenic, tagless comfort for sensitive skin
 category: 
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons,
 
 - **Price**: 22 EUR
 
+> ⚠️ **Data Conflict: price**
+> Previous: `22 EUR` (Source: db_catalog_1)
+> New: `1059 INR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
 
 ## Customer Sentiment
 

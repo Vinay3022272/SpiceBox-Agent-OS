@@ -41,6 +41,10 @@ DEFAULT_MODELS = [
 ]
 
 
+_last_call_time = 0.0
+_MIN_INTERVAL = 0.5
+
+
 def _rate_limit():
     """Enforce minimum interval between API calls."""
     global _last_call_time

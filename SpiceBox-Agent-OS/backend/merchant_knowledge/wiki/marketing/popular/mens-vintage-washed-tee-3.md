@@ -54,7 +54,7 @@ Priced at €22 (or ₹1 499 per the latest catalog), this item offers strong 
 
 ## Related
 
-- [Men's Vintage Washed Essential Tee](../../knowledge/products/mens-vintage-washed-tee-13.md) (Primary Product Dossier)
+- [Men's Vintage Washed Essential Tee](../../knowledge/products/mens-vintage-washed-tee-3.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)

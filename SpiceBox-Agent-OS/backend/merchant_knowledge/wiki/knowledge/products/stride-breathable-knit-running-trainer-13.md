@@ -4,7 +4,7 @@ slug: stride-breathable-knit-running-trainer-13
 name: Stride Breathable Knit Running Trainer Edition 13
 brand: Cushioned memory foam insole with vulcanized rubber grip
 category: Sneakers & Footwear
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Combines timeless athletic silhouette with orthopedic daily comfort. Hand-finish
 
 - **Price**: 70 USD
 
+> ⚠️ **Data Conflict: price**
+> Previous: `70 USD` (Source: db_catalog_1)
+> New: `4749 INR` (Source: db_catalog_1)
+> Status: _Requires resolution_
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
 
 ## Customer Sentiment
 
@@ -33,12 +38,11 @@ _No review data available yet._
 - [Sneakers & Footwear](../categories/sneakers-footwear.md) (Category)
 - [Stride Breathable Knit Running Trainer Edition 8](./stride-breathable-knit-running-trainer-8.md) (Alternative)
 - [Stride Court Minimalist Leather Sneaker Edition 6](./stride-court-minimalist-leather-sneaker-6.md) (Alternative)
-- [Stride Breathable Knit Running Trainer Edition 3](./stride-breathable-knit-running-trainer-3.md) (Alternative)
-- [Stride Everyday Foam Slide Edition 5](./stride-everyday-foam-slide-5.md) (Alternative)
+- [Stride Suede Skate Cupsole Sneaker Edition 4](./stride-suede-skate-cupsole-sneaker-4.md) (Alternative)
+- [Stride Suede Skate Cupsole Sneaker Edition 9](./stride-suede-skate-cupsole-sneaker-9.md) (Alternative)
 - [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Complementary)
 - [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Complementary)
 
 ## Sources
-
 
 - `db_catalog_1`

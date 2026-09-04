@@ -52,11 +52,11 @@ High repeat‑purchase potential due to consistent fit and durability. Position 
 
 ## Related
 
-- [Men's Heavyweight Essential Tee](../../knowledge/products/mens-heavyweight-tee-12.md) (Primary Product Dossier)
+- [Men's Heavyweight Essential Tee](../../knowledge/products/mens-heavyweight-tee-2.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
-- [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)
 - [Men's Organic Cotton Essential Tee](mens-organic-cotton-tee-4.md) (Alternative Option)
+- [Men's Raw Hem Essential Tee](mens-raw-hem-tee-5.md) (Alternative Option)
 
 ## Sources
 

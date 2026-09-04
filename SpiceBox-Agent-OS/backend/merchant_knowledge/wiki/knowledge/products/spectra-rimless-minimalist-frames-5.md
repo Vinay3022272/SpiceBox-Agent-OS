@@ -4,7 +4,7 @@ slug: spectra-rimless-minimalist-frames-5
 name: Spectra Rimless Minimalist Frames Series 5
 brand: UV400 Category 3 polarized optical lenses
 category: Eyewear & Sunglasses
-last_updated: 2026-09-03
+last_updated: 2026-09-04
 sources: db_catalog_1
 ---
 
@@ -22,6 +22,11 @@ Crafted with lightweight Italian acetate and durable stainless steel barrel hing
 
 - **Price**: 2249 INR
 
+> ⚠️ **Data Conflict: price**  
+> Previous: `2249 INR` (Source: db_catalog_1)  
+> New: `36 EUR` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
 
 ## Customer Sentiment
 
@@ -32,13 +37,18 @@ _No review data available yet._
 
 - [Eyewear & Sunglasses](../categories/eyewear-sunglasses.md) (Category)
 - [Spectra Round Vintage Tortoise Sunnies Series 3](./spectra-round-vintage-tortoise-sunnies-3.md) (Alternative)
-- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Alternative)
-- [Spectra Polarized Aviator Sunglasses Series 11](./spectra-polarized-aviator-sunglasses-11.md) (Alternative)
-- [Spectra Blue-Light Computer Glasses Series 9](./spectra-blue-light-computer-glasses-9.md) (Alternative)
-- [Spectra Polarized Aviator Sunglasses Series 1](./spectra-polarized-aviator-sunglasses-1.md) (Complementary)
+- [Spectra Polarized Aviator Sunglasses Series 1](./spectra-polarized-aviator-sunglasses-1.md) (Alternative)
+- [Spectra Polarized Aviator Sunglasses Series 6](./spectra-polarized-aviator-sunglasses-6.md) (Alternative)
+- [Spectra Round Vintage Tortoise Sunnies Series 8](./spectra-round-vintage-tortoise-sunnies-8.md) (Alternative)
+- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Complementary)
 - [Spectra Blue-Light Computer Glasses Series 4](./spectra-blue-light-computer-glasses-4.md) (Complementary)
 
 ## Sources
 
-
 - `db_catalog_1`
+
+> ⚠️ **Data Conflict: category**  
+> Previous: `Eyewear & Sunglasses` (Source: db_catalog_1)  
+> New: `Wearables & Tech` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: {manufacturer_spec | latest_source | merchant_override}

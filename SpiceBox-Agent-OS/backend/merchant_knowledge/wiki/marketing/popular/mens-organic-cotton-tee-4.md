@@ -65,11 +65,11 @@ Priced at €24, this item delivers strong margin potential and high repeat purc
 
 ## Related
 
-- [Men's Organic Cotton Essential Tee](../../knowledge/products/mens-organic-cotton-tee-14.md) (Primary Product Dossier)
+- [Men's Organic Cotton Essential Tee](../../knowledge/products/mens-organic-cotton-tee-4.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
 - [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)
-- [Men's Organic Cotton Essential Tee](mens-organic-cotton-tee-4.md) (Alternative Option)
+- [Men's Raw Hem Essential Tee](mens-raw-hem-tee-5.md) (Alternative Option)
 
 ## Sources  
 
