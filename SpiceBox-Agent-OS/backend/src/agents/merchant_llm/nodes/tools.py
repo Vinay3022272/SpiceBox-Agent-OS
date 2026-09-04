@@ -108,32 +108,55 @@ def set_shipping_address(
 
 
 @tool
-def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Order Payment") -> str:
+def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Purchase") -> str:
     """
-    Generate a Razorpay / UPI Payment QR Code and short URL for immediate checkout.
-    Call this tool IMMEDIATELY whenever the customer asks to checkout, proceed to checkout, pay, buy, view bill, or get payment QR.
-    If amount_inr is 0 or omitted, the tool automatically uses the current cart total.
+    Generate a Razorpay payment link and QR code for checkout.
+
+    ONLY call this tool when the customer explicitly asks to pay, checkout, view bill, or
+    proceed to payment. If amount_inr is 0 or not provided, the tool will
+    automatically use the current cart total.
 
     Args:
-        amount_inr: Total amount in INR. If 0, uses the current cart total.
-        description: Description of the payment (e.g. "Order #1023 Checkout").
+        amount_inr: The payment amount in INR. If 0, uses the cart total.
+        description: A short description for the payment (e.g. "Order Checkout").
     """
     res = create_payment_qr(amount_inr=amount_inr, description=description)
     if not res.get("success"):
-        return res.get("error", "Failed to generate payment QR.")
+        return res.get("error", "Failed to generate payment QR. Please ensure items are in the cart.")
 
     total = res["amount_inr"]
     payment_url = res["payment_url"]
     qr_data_url = res["qr_data_url"]
+    plink_id = res.get("payment_link_id", "")
+    qr_file = res.get("qr_image_path", "")
 
+    link_info = f" (Link ID: `{plink_id}`)" if plink_id else ""
     return (
-        f"### 🧾 Payment & Checkout Summary\n\n"
+        f"### 🧾 Payment & Checkout Summary{link_info}\n\n"
         f"- **Total Amount Due**: ₹{total:,.2f} INR\n"
-        f"- **Payment Method**: UPI / Razorpay Direct Pay\n\n"
+        f"- **Payment Method**: Razorpay Live Payment Gateway (UPI / Cards / NetBanking)\n\n"
         f"![Payment QR Code]({qr_data_url})\n\n"
-        f"📱 **Scan the QR code above with any UPI app (Google Pay, PhonePe, Paytm) to complete payment.**\n\n"
-        f"Or click here to open payment: [{payment_url}]({payment_url})"
+        f"📱 **Scan the QR code above with any UPI app (Google Pay, PhonePe, Paytm) or phone camera to complete payment.**\n\n"
+        f"🔗 **Direct Payment Link**: [{payment_url}]({payment_url})\n"
+        + (f"💾 *Saved QR image file*: `{qr_file}`" if qr_file else "")
     )
+
+
+@tool
+def show_receipt_image(file_path: str) -> str:
+    """
+    Returns the image file from disk (e.g. payment QR code or invoice) as an embedded base64 markdown string to display directly in chat.
+
+    Args:
+        file_path: Path to the image file (e.g. 'payment_qr_plink_TWSoZE6An115Lz.png').
+    """
+    import base64
+    try:
+        with open(file_path, "rb") as img_file:
+            b64_string = base64.b64encode(img_file.read()).decode("utf-8")
+        return f"![Receipt](data:image/png;base64,{b64_string})"
+    except Exception as e:
+        return f"Could not load image at '{file_path}': {e}"
 
 
 @tool
@@ -200,6 +223,7 @@ all_tools = [
     clear_cart,
     set_shipping_address,
     generate_payment_qr,
+    show_receipt_image,
     get_product_catalog,
     get_better_alternatives,
     get_upsell_products,

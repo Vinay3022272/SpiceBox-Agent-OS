@@ -56,13 +56,15 @@ def invoke_merchant_agent(
             from .utils.cart import create_payment_qr
             qr_res = create_payment_qr(amount_inr=0.0)
             if qr_res.get("success"):
+                plink_id = qr_res.get("payment_link_id", "")
+                link_info = f" (Link ID: `{plink_id}`)" if plink_id else ""
                 qr_block = (
-                    f"\n\n### 🧾 Payment & Checkout Summary\n\n"
+                    f"\n\n### 🧾 Payment & Checkout Summary{link_info}\n\n"
                     f"- **Total Amount Due**: ₹{qr_res['amount_inr']:,.2f} INR\n"
-                    f"- **Payment Method**: UPI / Razorpay Direct Pay\n\n"
+                    f"- **Payment Method**: Razorpay Live Payment Gateway (UPI / Cards / NetBanking)\n\n"
                     f"![Payment QR Code]({qr_res['qr_data_url']})\n\n"
-                    f"📱 **Scan the QR code above with any UPI app (Google Pay, PhonePe, Paytm) to complete payment.**\n\n"
-                    f"Or click here to open payment: [{qr_res['payment_url']}]({qr_res['payment_url']})"
+                    f"📱 **Scan the QR code above with any UPI app (Google Pay, PhonePe, Paytm) or phone camera to complete payment.**\n\n"
+                    f"🔗 **Direct Payment Link**: [{qr_res['payment_url']}]({qr_res['payment_url']})"
                 )
                 last_ai_msg.content += qr_block
 
