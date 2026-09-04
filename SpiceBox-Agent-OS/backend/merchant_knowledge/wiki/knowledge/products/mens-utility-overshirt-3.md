@@ -4,7 +4,7 @@ slug: mens-utility-overshirt-3
 name: Men's Utility Overshirt
 brand: Breathable tailored silhouette for work and weekends
 category: Men
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,11 +31,11 @@ _No review data available yet._
 ## Related
 
 - [Men](../categories/men.md) (Category)
-- [Men's Classic Crew Essential Tee Edition 17](./mens-classic-crew-tee-17.md) (Alternative)
-- [Men's Drop Shoulder Essential Tee](./mens-drop-shoulder-tee-8.md) (Alternative)
-- [Men's Drop Shoulder Essential Tee Edition 18](./mens-drop-shoulder-tee-18.md) (Alternative)
-- [Men's French Terry Fleece Hoodie 1](./mens-fleece-hoodie-1.md) (Alternative)
-- [Men's Flannel Plaid Shirt](./mens-flannel-plaid-shirt-4.md) (Complementary)
+- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
+- [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Oxford Button-Down](./mens-oxford-button-down-1.md) (Complementary)
 - [Men's Flannel Plaid Shirt Vol. 10](./mens-flannel-plaid-shirt-10.md) (Complementary)
 
 ## Sources

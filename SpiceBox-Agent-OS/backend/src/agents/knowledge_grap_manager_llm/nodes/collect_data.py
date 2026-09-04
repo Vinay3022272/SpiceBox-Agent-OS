@@ -6,7 +6,7 @@ import requests
 from ..state import WikiState, DBSource
 
 
-def fetch_db_data(merchant_id: str, section: str, limit: int = 500) -> list[dict[str, Any]]:
+def fetch_db_data(merchant_id: str, section: str, limit: int = 2000) -> list[dict[str, Any]]:
     """
     Fetch live commerce datasets for merchant from Medusa extraction API.
     Returns list of dicts: [{"category": "catalog", "data": "csv_data...", "format": "csv"}, ...]
@@ -58,8 +58,19 @@ def fetch_db_data(merchant_id: str, section: str, limit: int = 500) -> list[dict
         for m in mappings:
             domain = m["domain"]
             src_table = m["source_table"]
-            # Basic fallback query if needed
-            cur.execute(f"SELECT * FROM {src_table} LIMIT {limit};")
+            fm = m.get("field_mappings") or {}
+            custom_sql = fm.get("custom_sql") if isinstance(fm, dict) else None
+
+            if custom_sql and custom_sql.strip():
+                clean_sql = custom_sql.strip().rstrip(";")
+                if domain == "catalog" and "distinct" not in clean_sql.lower() and "group by" not in clean_sql.lower():
+                    import re
+                    clean_sql = re.sub(r"select\s+", "SELECT DISTINCT ON (p.id) ", clean_sql, count=1, flags=re.IGNORECASE)
+                    if "order by" not in clean_sql.lower():
+                        clean_sql += "\nORDER BY p.id"
+                cur.execute(f"{clean_sql} LIMIT {limit};")
+            else:
+                cur.execute(f"SELECT * FROM {src_table} LIMIT {limit};")
             rows = cur.fetchall()
             if rows:
                 output = io.StringIO()

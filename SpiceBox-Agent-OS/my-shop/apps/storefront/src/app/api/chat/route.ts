@@ -6,7 +6,9 @@ import { getAuthHeaders, getCacheTag } from "@lib/data/cookies"
 import { revalidateTag } from "next/cache"
 
 const WIKI_RUNNER_URLS = [
-  process.env.WIKI_RUNNER_URL || "http://host.docker.internal:8002",
+  process.env.WIKI_RUNNER_URL || "http://wiki_runner:8002",
+  "http://spicebox_wiki_runner:8002",
+  "http://host.docker.internal:8002",
   "http://172.17.0.1:8002",
   "http://localhost:8002",
 ]

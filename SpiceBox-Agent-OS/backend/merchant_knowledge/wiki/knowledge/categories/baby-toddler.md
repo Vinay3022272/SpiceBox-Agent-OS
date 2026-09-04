@@ -2,8 +2,8 @@
 type: category
 slug: baby-toddler
 name: Baby & Toddler
-last_updated: 2026-09-02
-product_count: 2
+last_updated: 2026-09-03
+product_count: 3
 ---
 
 # Baby & Toddler
@@ -17,9 +17,11 @@ Products in the Baby & Toddler category.
 | Product | Brand | Price | Rating | Reviews |
 | --- | --- | --- | --- | --- |
 
-| [Organic Cotton Baby Romper #1](../products/kids-organic-cotton-baby-romper-1.md) | Hypoallergenic, tagless comfort for sensitive skin | 879 INR | N/A/5 | 0 |
-
 | [Organic Cotton Baby Romper #10](../products/kids-organic-cotton-baby-romper-10.md) | Hypoallergenic, tagless comfort for sensitive skin | 1099 INR | N/A/5 | 0 |
+
+| [Organic Cotton Baby Romper #19](../products/kids-organic-cotton-baby-romper-19.md) | Hypoallergenic, tagless comfort for sensitive skin | 23 USD | N/A/5 | 0 |
+
+| [Organic Cotton Baby Romper #37](../products/kids-organic-cotton-baby-romper-37.md) | Hypoallergenic, tagless comfort for sensitive skin | 1259 INR | N/A/5 | 0 |
 
 
 
@@ -28,7 +30,7 @@ Products in the Baby & Toddler category.
 
 ## Category Trends
 
-Category contains 2 products.
+Category contains 3 products.
 
 ## Sources
 

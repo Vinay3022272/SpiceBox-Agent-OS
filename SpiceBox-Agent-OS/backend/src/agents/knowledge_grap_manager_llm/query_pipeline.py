@@ -562,3 +562,143 @@ def query_marketing_intelligence(
         top_k=top_k,
     )
 
+
+def query_upsell_alternatives(
+    product_name: str,
+    wiki_base_path: str = "./merchant_knowledge_test",
+    merchant_id: str = "default_merchant",
+) -> Dict[str, Any]:
+    """
+    Indian shopkeeper-style upsell: Given a product, find the exact product
+    AND all better-priced alternatives in the same category.
+    Searches both knowledge/ and marketing/ sections.
+    """
+    all_pages = get_all_wiki_pages(wiki_base_path, section=None)
+    if not all_pages:
+        return {
+            "query": product_name,
+            "answer": f"No wiki pages found at path '{wiki_base_path}'.",
+            "sources": [],
+            "alternatives_count": 0,
+        }
+
+    # 1. Fuzzy match target product
+    resolved = resolve_product_for_upsell(all_pages, product_name)
+    target_price = None
+    target_category = ""
+    target_page = None
+
+    if resolved:
+        target_price, target_category = resolved
+        for p in all_pages:
+            if target_category and extract_category_from_page(p) == target_category:
+                p_price = extract_price_from_page(p)
+                if p_price == target_price:
+                    target_page = p
+                    break
+
+    if not target_page:
+        best_pages = retrieve_relevant_pages(all_pages, product_name, top_k=1)
+        if best_pages:
+            target_page = best_pages[0]
+            target_price = extract_price_from_page(target_page) or 0.0
+            target_category = extract_category_from_page(target_page)
+
+    if not target_page:
+        return query_wiki(
+            query=f"Find {product_name} and any similar items",
+            wiki_base_path=wiki_base_path,
+            merchant_id=merchant_id,
+        )
+
+    # 2. Retrieve same-category products priced higher (upsell candidates)
+    threshold = target_price or 0.0
+    upsell_candidates = []
+    if target_category:
+        upsell_candidates = retrieve_upsell_pages(all_pages, threshold, target_category)
+        upsell_candidates = [
+            p for p in upsell_candidates
+            if p.get("slug") != target_page.get("slug") and (extract_price_from_page(p) or 0.0) >= threshold
+        ]
+
+    if not upsell_candidates and threshold > 0:
+        upsell_candidates = retrieve_upsell_pages(all_pages, threshold, "")
+        upsell_candidates = [
+            p for p in upsell_candidates
+            if p.get("slug") != target_page.get("slug")
+        ]
+
+    alternatives = upsell_candidates[:4]
+
+    # 3. Build context blocks
+    sources = [target_page["rel_path"]]
+    target_snippet = target_page["content"][:800]
+    context_blocks = [
+        f"--- ASKED PRODUCT ({target_page['rel_path']}) ---\n{target_snippet}\n--- END ASKED PRODUCT ---"
+    ]
+
+    for alt in alternatives:
+        sources.append(alt["rel_path"])
+        alt_snippet = alt["content"][:650]
+        context_blocks.append(
+            f"--- BETTER ALTERNATIVE ({alt['rel_path']}) ---\n{alt_snippet}\n--- END ALTERNATIVE ---"
+        )
+
+    context_str = "\n\n".join(context_blocks)
+
+    # 4. Natural Shopkeeper System Prompt (English only)
+    system_prompt = (
+        "You are a friendly, street-smart shopkeeper who genuinely loves helping customers find the perfect product.\n"
+        "When a customer asks about a product, respond like a real person — NOT like a product catalog:\n\n"
+        "1. FIRST, show them the exact product they asked for with its key specs and price in INR. Genuinely compliment their choice.\n"
+        "2. THEN, casually and naturally suggest 1-3 better alternatives from the same category — like it just occurred to you:\n"
+        "   Example: 'That's a great pick! But you know what, since you're looking at [category], you might also want to check out [Alternative]. "
+        "It's got [specific advantage] and for just a bit more, it's honestly a fantastic upgrade.'\n\n"
+        "IMPORTANT RULES:\n"
+        "- Talk like a real person having a conversation, NOT like a bot listing items.\n"
+        "- Do NOT dump alternatives in a formal comparison table. Weave them naturally into your response.\n"
+        "- You can use bullet points for product specs, but alternatives should be mentioned conversationally.\n"
+        "- Only use a comparison table if the customer explicitly asks to compare products.\n"
+        "- Language: ALWAYS respond in English only.\n"
+        "- Facts: Use ONLY real details from the provided wiki pages. Never invent prices or specs.\n"
+        "- Do NOT add anything to cart — always ask what they'd like to do."
+    )
+
+    user_prompt = (
+        f"Customer asked about: '{product_name}'\n\n"
+        f"Wiki Store Context:\n{context_str}\n\n"
+        "Respond naturally — compliment their choice, show the product details, then casually suggest the better alternatives "
+        "like a friendly shopkeeper who just thought of something. Keep it conversational, not listy."
+    )
+
+    try:
+        answer = call_llm(
+            prompt=user_prompt,
+            system=system_prompt,
+            temperature=0.5,
+            include_schema=False,
+        )
+    except Exception as e:
+        print(f"  [query_upsell_alternatives] LLM fallback: {e}")
+        t_name = target_page.get("slug", "").replace("-", " ").title()
+        lines = [f"### 🛍️ {t_name}"]
+        if target_price:
+            lines.append(f"- **Price**: ₹{target_price:,.2f} INR")
+        lines.append("- High-quality store item with full warranty.")
+
+        if alternatives:
+            lines.append(f"\nGreat choice on the **{t_name}**! But since you're here, let me show you a couple more options you might love:\n")
+            for alt in alternatives:
+                a_name = alt.get("slug", "").replace("-", " ").title()
+                a_price = extract_price_from_page(alt) or 0.0
+                lines.append(f"- **{a_name}** at ₹{a_price:,.2f} — premium build with superior performance")
+            lines.append("\nSo what do you think — want me to add the original to your cart, or would you rather go with one of these?")
+        answer = "\n".join(lines)
+
+    return {
+        "query": product_name,
+        "answer": answer,
+        "sources": sources,
+        "alternatives_count": len(alternatives),
+    }
+

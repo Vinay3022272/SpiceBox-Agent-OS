@@ -3,8 +3,8 @@ type: product
 slug: kids-organic-cotton-baby-romper-19
 name: Organic Cotton Baby Romper #19
 brand: Hypoallergenic, tagless comfort for sensitive skin
-category: Kids & Teens
-last_updated: 2026-09-02
+category: Baby & Toddler
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Safe for kids, tough on play. Made with OEKO-TEX certified cotton, snap buttons,
 
 ## Pricing
 
-- **Price**: 819 INR
+- **Price**: 23 USD
 
 
 ## Customer Sentiment
@@ -30,13 +30,11 @@ _No review data available yet._
 
 ## Related
 
-- [Kids & Teens](../categories/kids-teens.md) (Category)
-- [Boys Cargo Fleece Joggers #23](./kids-boys-cargo-fleece-joggers-23.md) (Alternative)
-- [Boys Cargo Fleece Joggers #32](./kids-boys-cargo-fleece-joggers-32.md) (Alternative)
-- [Boys Colorblock Zip Hoodie #15](./kids-boys-colorblock-zip-hoodie-15.md) (Alternative)
-- [Boys Colorblock Zip Hoodie #24](./kids-boys-colorblock-zip-hoodie-24.md) (Alternative)
-- [Boys Cargo Fleece Joggers #14](./kids-boys-cargo-fleece-joggers-14.md) (Complementary)
-- [Boys Cargo Fleece Joggers #41](./kids-boys-cargo-fleece-joggers-41.md) (Complementary)
+- [Baby & Toddler](../categories/baby-toddler.md) (Category)
+- [Organic Cotton Baby Romper #10](./kids-organic-cotton-baby-romper-10.md) (Alternative)
+- [Organic Cotton Baby Romper #37](./kids-organic-cotton-baby-romper-37.md) (Alternative)
+- [Kids Cotton Pajama Set #9](./kids-kids-cotton-pajama-set-9.md) (Complementary)
+- [Girls Soft Ribbed Cardigan #8](./kids-girls-soft-ribbed-cardigan-8.md) (Complementary)
 
 ## Sources
 

@@ -35,11 +35,13 @@ def _extract_from_csv_rows(rows: list[dict], source_name: str = "db_catalog") ->
     has_structured_fields = any(k in sample for k in ["name", "title", "product_name"]) and any(k in sample for k in ["slug", "handle", "product_slug", "price", "description"])
 
     if has_structured_fields:
+        seen_slugs: set[str] = set()
         for r in rows:
             name = (r.get("name") or r.get("title") or r.get("product_name") or "").strip()
             slug = (r.get("slug") or r.get("handle") or r.get("product_slug") or slugify(name)).strip()
-            if not name or not slug:
+            if not name or not slug or slug in seen_slugs:
                 continue
+            seen_slugs.add(slug)
 
             brand = (r.get("brand") or r.get("subtitle") or "SpiceBox").strip()
             category = (r.get("category") or "").strip()

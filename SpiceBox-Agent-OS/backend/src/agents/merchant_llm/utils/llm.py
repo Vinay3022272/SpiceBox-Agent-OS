@@ -1,11 +1,7 @@
-"""
-llm.py — LLM client & system prompt helper for the Merchant Commerce Agent.
-Includes multi-model fallback chain to safeguard against Groq TPM/TPD rate limits.
-"""
-
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from langchain_ollama import ChatOllama
 from langchain_groq import ChatGroq
 
 # Ensure .env is loaded from backend directory (5 levels up from utils/llm.py)
@@ -14,11 +10,20 @@ _env_path = _backend_dir / ".env"
 if _env_path.exists():
     load_dotenv(str(_env_path))
 
-DEFAULT_MODELS = [
-    "qwen/qwen3.8-27b",
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
+
+# Primary Ollama models
+OLLAMA_MODELS = [
+    "gpt-oss:120b-cloud",
+    "gpt-oss:20b-cloud",
+]
+
+# Secondary Groq backup models
+GROQ_MODELS = [
+    "openai/gpt-oss-20b",
     "openai/gpt-oss-120b",
     "qwen/qwen3.6-27b",
-    "openai/gpt-oss-20b",
+    "qwen/qwen3.8-27b",
 ]
 
 
@@ -32,29 +37,59 @@ def get_system_prompt() -> str:
     return "You are the Merchant Commerce Agent assisting customers with purchases and product information."
 
 
-def get_merchant_llm(model: str = "qwen/qwen3.8-27b", temperature: float = 0.0) -> ChatGroq:
+def get_merchant_llm(model: str = "gpt-oss:120b-cloud", temperature: float = 0.0):
     """
-    Instantiate ChatGroq model instance with environment key check.
+    Instantiate ChatOllama (or ChatGroq fallback) model instance.
     """
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        print("Warning: GROQ_API_KEY environment variable is missing.")
-
-    return ChatGroq(
-        model=model,
-        temperature=temperature,
-        max_retries=3,
-    )
+    try:
+        return ChatOllama(
+            base_url=OLLAMA_BASE_URL,
+            model=model,
+            temperature=temperature,
+        )
+    except Exception:
+        return ChatGroq(
+            model="openai/gpt-oss-20b",
+            temperature=temperature,
+            max_retries=1,
+        )
 
 
 def get_resilient_merchant_llm(tools: list, temperature: float = 0.0):
     """
     Build a multi-model fallback chain bound with tools.
-    If the primary model exhausts rate limits (429 TPM/TPD), it seamlessly
-    falls back to secondary and tertiary models with separate token pools.
+    Prioritizes Ollama models (no TPM/TPD rate limits) with secondary Groq fallbacks.
     """
-    bound_models = [
-        ChatGroq(model=m, temperature=temperature, max_retries=2).bind_tools(tools)
-        for m in DEFAULT_MODELS
-    ]
+    bound_models = []
+
+    # 1. Ollama models
+    for m in OLLAMA_MODELS:
+        try:
+            bound_models.append(
+                ChatOllama(
+                    base_url=OLLAMA_BASE_URL,
+                    model=m,
+                    temperature=temperature,
+                ).bind_tools(tools)
+            )
+        except Exception as e:
+            print(f"Warning: could not bind Ollama model {m}: {e}")
+
+    # 2. Groq models as secondary backup
+    api_key = os.getenv("GROQ_API_KEY")
+    if api_key:
+        for m in GROQ_MODELS:
+            try:
+                bound_models.append(
+                    ChatGroq(model=m, temperature=temperature, max_retries=0).bind_tools(tools)
+                )
+            except Exception as e:
+                print(f"Warning: could not bind Groq model {m}: {e}")
+
+    if not bound_models:
+        raise RuntimeError("No LLM models could be bound with tools.")
+
+    if len(bound_models) == 1:
+        return bound_models[0]
+
     return bound_models[0].with_fallbacks(bound_models[1:])

@@ -4,7 +4,7 @@ slug: mens-drawstring-leisure-shorts-11
 name: Men's Drawstring Leisure Shorts No. 11
 brand: Ergonomic fit with 2% comfort stretch
 category: Men's Shorts
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,9 +31,8 @@ _No review data available yet._
 ## Related
 
 - [Men's Shorts](../categories/men-s-shorts.md) (Category)
-- [Men's Drawstring Leisure Shorts No. 14](./mens-drawstring-leisure-shorts-14.md) (Alternative)
-- [Men's Drawstring Leisure Shorts No. 12](./mens-drawstring-leisure-shorts-12.md) (Complementary)
-- [Men's Drawstring Leisure Shorts No. 13](./mens-drawstring-leisure-shorts-13.md) (Complementary)
+- [Men's Selvedge Denim Jeans No. 1](./mens-selvedge-denim-jeans-1.md) (Complementary)
+- [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Complementary)
 
 ## Sources
 

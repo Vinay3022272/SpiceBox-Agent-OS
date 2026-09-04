@@ -4,7 +4,7 @@ slug: pulsetrack-band-s1
 name: PulseTrack Band S1 Slim Fitness Tracker
 brand: Ultra-lightweight 18g daily health tracker
 category: Fitness Bands
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Minimalist wrist tracker that monitors steps, calories, sleep cycles, and daily 
 
 ## Pricing
 
-- **Price**: 2119 INR
+- **Price**: 30 EUR
 
 
 ## Customer Sentiment
@@ -31,12 +31,11 @@ _No review data available yet._
 ## Related
 
 - [Fitness Bands](../categories/fitness-bands.md) (Category)
-- [PulseTrack Band S11 Slim Fitness Tracker](./pulsetrack-band-s11.md) (Alternative)
 - [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Alternative)
-- [PulseTrack Band S6 Slim Fitness Tracker](./pulsetrack-band-s6.md) (Alternative)
 - [PulseTrack Band S7 Slim Fitness Tracker](./pulsetrack-band-s7.md) (Alternative)
-- [PulseTrack Band S10 Slim Fitness Tracker](./pulsetrack-band-s10.md) (Complementary)
-- [PulseTrack Band S12 Slim Fitness Tracker](./pulsetrack-band-s12.md) (Complementary)
+- [PulseTrack Band S8 Slim Fitness Tracker](./pulsetrack-band-s8.md) (Alternative)
+- [PulseTrack Band S3 Slim Fitness Tracker](./pulsetrack-band-s3.md) (Complementary)
+- [PulseTrack Band S5 Slim Fitness Tracker](./pulsetrack-band-s5.md) (Complementary)
 
 ## Sources
 

@@ -3,8 +3,8 @@ type: product
 slug: mens-vintage-washed-tee-13
 name: Men's Vintage Washed Essential Tee Edition 13
 brand: 240 GSM combed cotton with relaxed daily drape
-category: Men's T-Shirts
-last_updated: 2026-09-02
+category: Men
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -26,35 +26,17 @@ Engineered for everyday durability. This vintage washed tee is cut from premium 
 ## Customer Sentiment
 
 
-- **Overall Rating**: 5.0/5 (1 reviews)
-- **Summary**: Average rating: 5.0/5. "Best purchase this month: Priya K." (5.0/5)
-
-### What Customers Like
-
-
-- Best purchase this month
-
-
-### Common Complaints
-
-
-
-### Best Reviews
-
-
-> **"Best purchase this month"** — Priya K. (5.0/5)
-> Priya K.
+_No review data available yet._
 
 ## Related
 
-- [Men's T-Shirts](../categories/men-s-t-shirts.md) (Category)
-- [Men's Boxy Fit Essential Tee Edition 16](./mens-boxy-fit-tee-16.md) (Alternative)
-- [Men's Brushed Cotton Essential Tee Edition 19](./mens-brushed-cotton-tee-19.md) (Alternative)
-- [Men's Classic Crew Essential Tee](./mens-classic-crew-tee-7.md) (Alternative)
-- [Men's Everyday Soft Essential Tee](./mens-everyday-soft-tee-10.md) (Alternative)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Complementary)
-- [Men's Brushed Cotton Essential Tee](./mens-brushed-cotton-tee-9.md) (Complementary)
-- [Men's Vintage Washed Essential Tee Edition 13 — Popular Item Intelligence](../../marketing/popular/mens-vintage-washed-tee-13.md) (Market Intelligence)
+- [Men](../categories/men.md) (Category)
+- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
+- [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Oversized Essential Tee](./mens-oversized-tee-1.md) (Complementary)
+- [Men's Organic Cotton Essential Tee Edition 14](./mens-organic-cotton-tee-14.md) (Complementary)
 
 ## Sources
 

@@ -15,7 +15,11 @@ from ..utils.cart import (
     set_cart_shipping_address,
     create_payment_qr,
 )
-from ...store_manager_llm import query_knowledge_base, query_marketing_intelligence
+from ...knowledge_grap_manager_llm.query_pipeline import (
+    query_knowledge_base,
+    query_marketing_intelligence,
+    query_upsell_alternatives,
+)
 
 # Resolve backend root path: .../backend
 _BACKEND_DIR = Path(__file__).resolve().parents[4]
@@ -107,7 +111,7 @@ def set_shipping_address(
 def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Order Payment") -> str:
     """
     Generate a Razorpay / UPI Payment QR Code and short URL for immediate checkout.
-    ONLY call this tool when the customer explicitly asks to pay, checkout, or generate payment QR.
+    Call this tool IMMEDIATELY whenever the customer asks to checkout, proceed to checkout, pay, buy, view bill, or get payment QR.
     If amount_inr is 0 or omitted, the tool automatically uses the current cart total.
 
     Args:
@@ -151,13 +155,33 @@ def get_product_catalog(query: str, merchant_id: str = "default_merchant") -> st
 
 
 @tool
-def get_upsell_products(product_id: str, merchant_id: str = "default_merchant") -> str:
+def get_better_alternatives(product_name: str, merchant_id: str = "default_merchant") -> str:
     """
-    Find complementary products, upsell opportunities, accessory recommendations, or promotional deals
-    related to a given product_id or category.
+    Find the requested product AND all better-priced, higher-tier alternatives in the same category.
+    Use this EVERY TIME a customer asks about, inquires, or wants to buy a specific product.
+    This is the Indian shopkeeper-style recommendation: show what they asked for,
+    then show them the superior premium options in the same category.
 
     Args:
-        product_id: Product ID, handle, or category name to find recommendations for.
+        product_name: Name, title, or keyword of the product the customer asked about.
+        merchant_id: Unique merchant store ID.
+    """
+    result = query_upsell_alternatives(
+        product_name=product_name,
+        wiki_base_path=_DEFAULT_WIKI_PATH,
+        merchant_id=merchant_id,
+    )
+    return result.get("answer", "No alternatives found.")
+
+
+@tool
+def get_upsell_products(product_id: str, merchant_id: str = "default_merchant") -> str:
+    """
+    Find complementary products, cross-sells, accessory recommendations, or promotional deals
+    (e.g., cases, chargers, or bundles) related to a given product_id or category.
+
+    Args:
+        product_id: Product ID, handle, or category name to find accessories/bundles for.
         merchant_id: Unique merchant store ID.
     """
     query = f"What complementary accessories, protection items, discounts, or upsell recommendations exist for {product_id}?"
@@ -177,5 +201,6 @@ all_tools = [
     set_shipping_address,
     generate_payment_qr,
     get_product_catalog,
+    get_better_alternatives,
     get_upsell_products,
 ]

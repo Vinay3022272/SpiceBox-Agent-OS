@@ -4,7 +4,7 @@ slug: spectra-polarized-aviator-sunglasses-1
 name: Spectra Polarized Aviator Sunglasses Series 1
 brand: UV400 Category 3 polarized optical lenses
 category: Wearables & Tech
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,12 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
-- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 15](./apex-explorer-multi-sport-watch-15.md) (Alternative)
-- [Spectra Blue-Light Computer Glasses Series 4](./spectra-blue-light-computer-glasses-4.md) (Complementary)
-- [Spectra Blue-Light Computer Glasses Series 9](./spectra-blue-light-computer-glasses-9.md) (Complementary)
+- [Apex Slim Fit Elegance Smartwatch Gen 4](./apex-slim-fit-elegance-smartwatch-4.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 8](./apex-titanium-rugged-sports-watch-8.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 3](./apex-titanium-rugged-sports-watch-3.md) (Alternative)
+- [Spectra Round Vintage Tortoise Sunnies Series 3](./spectra-round-vintage-tortoise-sunnies-3.md) (Complementary)
+- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Complementary)
 
 ## Sources
 

@@ -3,7 +3,7 @@ type: product
 slug: poze
 name: Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men
 brand: SpiceBox
-category: Wearables & Tech
+category: Men
 last_updated: 2026-09-03
 sources: db_catalog_1
 ---
@@ -16,33 +16,45 @@ Classic styling gets a modern touch in this SF Dreamer edition, where a deep bla
 
 ## Specifications
 
-*No detailed specifications provided in source.*
+
 
 ## Pricing
 
-- **Price**: 1445 INR 📄 db_catalog_1
+- **Price**: 1445 INR
+
 
 ## Customer Sentiment
 
-- **Average Rating**: 4.0/5 (1 review) 📄 db_catalog_1
 
-### Review Highlights
+- **Overall Rating**: 5.0/5 (1 reviews)
+- **Summary**: Average rating: 5.0/5. "Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men: Verified purchase" (5.0/5)
 
-> "Very Nice watch, the metal strap quality is impressive. But the dial seems a bit off but decent" (4.0/5) 📄 db_catalog_1
+### What Customers Like
 
-**Key Takeaways:**
-- **Pros**: Impressive metal strap quality.
-- **Cons**: Dial alignment/appearance noted as "a bit off" by the reviewer.
+
+- Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men
+
+
+### Common Complaints
+
+
+
+### Best Reviews
+
+
+> **"Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men"** — Verified Customer (5.0/5)
+> Verified purchase
 
 ## Related
 
-- [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
-- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 15](./apex-explorer-multi-sport-watch-15.md) (Alternative)
+- [Men](../categories/men.md) (Category)
+- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
+- [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
 - [Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men — Popular Item Intelligence](../../marketing/popular/poze.md) (Market Intelligence)
 
 ## Sources
+
 
 - `db_catalog_1`

@@ -2,7 +2,7 @@
 type: category
 slug: bags-backpacks
 name: Bags & Backpacks
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 product_count: 3
 ---
 
@@ -17,11 +17,11 @@ Products in the Bags & Backpacks category.
 | Product | Brand | Price | Rating | Reviews |
 | --- | --- | --- | --- | --- |
 
-| [Nomad Waterproof 25L Commuter Backpack Mk.1](../products/nomad-waterproof-25l-commuter-backpack-1.md) | Dedicated 16” padded laptop compartment and weatherproofing | 3199 INR | N/A/5 | 0 |
+| [Nomad Heavyweight Waxed Canvas Tote Mk.6](../products/nomad-heavyweight-waxed-canvas-tote-6.md) | Dedicated 16??? padded laptop compartment and weatherproofing | 52 EUR | N/A/5 | 0 |
 
-| [Nomad Waterproof 25L Commuter Backpack Mk.5](../products/nomad-waterproof-25l-commuter-backpack-5.md) | Dedicated 16” padded laptop compartment and weatherproofing | 3999 INR | N/A/5 | 0 |
+| [Nomad Heavyweight Waxed Canvas Tote Mk.10](../products/nomad-heavyweight-waxed-canvas-tote-10.md) | Dedicated 16??? padded laptop compartment and weatherproofing | 3499 INR | N/A/5 | 0 |
 
-| [Nomad Weekend Leather Duffle Bag Mk.4](../products/nomad-weekend-leather-duffle-bag-4.md) | Dedicated 16” padded laptop compartment and weatherproofing | 3799 INR | N/A/5 | 0 |
+| [Nomad Waterproof 25L Commuter Backpack Mk.13](../products/nomad-waterproof-25l-commuter-backpack-13.md) | Dedicated 16??? padded laptop compartment and weatherproofing | 4099 INR | N/A/5 | 0 |
 
 
 

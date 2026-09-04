@@ -3,8 +3,8 @@ type: product
 slug: womens-high-waist-wide-leg-jeans-3
 name: Women's High-Waist Wide Leg Jeans 3
 brand: Designed for sculpt, comfort, and zero restriction
-category: Women's Jeans
-last_updated: 2026-09-02
+category: Women
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,10 +30,13 @@ _No review data available yet._
 
 ## Related
 
-- [Women's Jeans](../categories/women-s-jeans.md) (Category)
-- [Women's High-Waist Wide Leg Jeans 2](./womens-high-waist-wide-leg-jeans-2.md) (Alternative)
-- [Women's High-Waist Wide Leg Jeans 1](./womens-high-waist-wide-leg-jeans-1.md) (Complementary)
+- [Women](../categories/women.md) (Category)
+- [Women's Satin Cocktail Dress](./womens-satin-cocktail-dress-5.md) (Alternative)
+- [Women's Wrap Slip Dress Series 9](./womens-wrap-slip-dress-9.md) (Alternative)
+- [Women's Wrap Slip Dress](./womens-wrap-slip-dress-3.md) (Alternative)
+- [Women's Tiered Maxi Dress Series 10](./womens-tiered-maxi-dress-10.md) (Alternative)
 - [Women's High-Waist Wide Leg Jeans 4](./womens-high-waist-wide-leg-jeans-4.md) (Complementary)
+- [Women's High-Waist Wide Leg Jeans 2](./womens-high-waist-wide-leg-jeans-2.md) (Complementary)
 
 ## Sources
 

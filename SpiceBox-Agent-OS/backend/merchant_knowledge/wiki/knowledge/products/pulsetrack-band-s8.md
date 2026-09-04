@@ -3,8 +3,8 @@ type: product
 slug: pulsetrack-band-s8
 name: PulseTrack Band S8 Slim Fitness Tracker
 brand: Ultra-lightweight 18g daily health tracker
-category: Wearables & Tech
-last_updated: 2026-09-02
+category: Fitness Bands
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Minimalist wrist tracker that monitors steps, calories, sleep cycles, and daily 
 
 ## Pricing
 
-- **Price**: 2159 INR
+- **Price**: 37 EUR
 
 
 ## Customer Sentiment
@@ -30,13 +30,12 @@ _No review data available yet._
 
 ## Related
 
-- [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
-- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 15](./apex-explorer-multi-sport-watch-15.md) (Alternative)
-- [PulseTrack Band S11 Slim Fitness Tracker](./pulsetrack-band-s11.md) (Complementary)
-- [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Complementary)
+- [Fitness Bands](../categories/fitness-bands.md) (Category)
+- [PulseTrack Band S1 Slim Fitness Tracker](./pulsetrack-band-s1.md) (Alternative)
+- [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Alternative)
+- [PulseTrack Band S7 Slim Fitness Tracker](./pulsetrack-band-s7.md) (Alternative)
+- [PulseTrack Band S3 Slim Fitness Tracker](./pulsetrack-band-s3.md) (Complementary)
+- [PulseTrack Band S5 Slim Fitness Tracker](./pulsetrack-band-s5.md) (Complementary)
 
 ## Sources
 

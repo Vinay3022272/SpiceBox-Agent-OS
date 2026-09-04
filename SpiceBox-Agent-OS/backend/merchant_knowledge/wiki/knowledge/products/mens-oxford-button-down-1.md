@@ -4,7 +4,7 @@ slug: mens-oxford-button-down-1
 name: Men's Oxford Button-Down
 brand: Breathable tailored silhouette for work and weekends
 category: 
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,8 +30,9 @@ _No review data available yet._
 
 ## Related
 
-- [Men's Flannel Plaid Shirt](./mens-flannel-plaid-shirt-4.md) (Complementary)
 - [Men's Flannel Plaid Shirt Vol. 10](./mens-flannel-plaid-shirt-10.md) (Complementary)
+- [Men's Linen Resort Shirt](./mens-linen-resort-shirt-2.md) (Complementary)
+- [Men's Oxford Button-Down — Popular Item Intelligence](../../marketing/popular/mens-oxford-button-down-1.md) (Market Intelligence)
 
 ## Sources
 

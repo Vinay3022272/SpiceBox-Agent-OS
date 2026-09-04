@@ -1,6 +1,6 @@
 # Product Knowledge Index
 
-_Last updated: 2026-09-03 16:44_
+_Last updated: 2026-09-03 20:17_
 
 ## Categories
 
@@ -17,7 +17,6 @@ _Last updated: 2026-09-03 16:44_
 - [Men](./categories/men.md)
 - [Men's Bottoms](./categories/men-s-bottoms.md)
 - [Men's Hoodies & Sweaters](./categories/men-s-hoodies-sweaters.md)
-- [Men's Jackets](./categories/men-s-jackets.md)
 - [Men's Jeans](./categories/men-s-jeans.md)
 - [Men's Shirts](./categories/men-s-shirts.md)
 - [Men's Shorts](./categories/men-s-shorts.md)
@@ -28,10 +27,12 @@ _Last updated: 2026-09-03 16:44_
 - [Sneakers & Footwear](./categories/sneakers-footwear.md)
 - [Wearables & Tech](./categories/wearables-tech.md)
 - [Women](./categories/women.md)
+- [Women's Activewear](./categories/women-s-activewear.md)
+- [Women's Blouses & Shirts](./categories/women-s-blouses-shirts.md)
 - [Women's Bottoms](./categories/women-s-bottoms.md)
 - [Women's Dresses](./categories/women-s-dresses.md)
 - [Women's Jeans](./categories/women-s-jeans.md)
-- [Women's Tops](./categories/women-s-tops.md)
+- [Women's T-Shirts & Tees](./categories/women-s-t-shirts-tees.md)
 - [Women's Trousers & Pants](./categories/women-s-trousers-pants.md)
 
 ## Products
@@ -94,8 +95,9 @@ _Last updated: 2026-09-03 16:44_
 - [Kids Cotton Pajama Set #9](./products/kids-kids-cotton-pajama-set-9.md)
 - [Kids Graphic Dino Tee #12](./products/kids-kids-graphic-dino-tee-12.md)
 - [Kids Graphic Dino Tee #21](./products/kids-kids-graphic-dino-tee-21.md)
+- [Kids Graphic Dino Tee #3](./products/kids-kids-graphic-dino-tee-3.md)
 - [Kids Graphic Dino Tee #30](./products/kids-kids-graphic-dino-tee-30.md)
-- [Kids Graphic Dino Tee #39](./products/kids-kids-graphic-dino-tee-3.md)
+- [Kids Graphic Dino Tee #39](./products/kids-kids-graphic-dino-tee-39.md)
 - [Kids Stretch Denim Overalls #13](./products/kids-kids-stretch-denim-overalls-13.md)
 - [Kids Stretch Denim Overalls #22](./products/kids-kids-stretch-denim-overalls-22.md)
 - [Kids Stretch Denim Overalls #31](./products/kids-kids-stretch-denim-overalls-31.md)
@@ -265,3 +267,24 @@ _Last updated: 2026-09-03 16:44_
 - [Women's Satin Cocktail Dress Series 11](./products/womens-satin-cocktail-dress-11.md)
 - [Women's Seamless Performance Biker Tights 15](./products/womens-seamless-performance-biker-tights-15.md)
 - [Women's Seamless Performance Biker Tights 16](./products/womens-seamless-performance-biker-tights-16.md)
+- [Women's Seamless Performance Biker Tights 17](./products/womens-seamless-performance-biker-tights-17.md)
+- [Women's Seamless Performance Biker Tights 18](./products/womens-seamless-performance-biker-tights-18.md)
+- [Women's Seamless Performance Biker Tights 19](./products/womens-seamless-performance-biker-tights-19.md)
+- [Women's Seamless Performance Biker Tights 20](./products/womens-seamless-performance-biker-tights-20.md)
+- [Women's Silk Blend Satin Shirt](./products/womens-silk-blend-satin-shirt-4.md)
+- [Women's Silk Blend Satin Shirt Edition 10](./products/womens-silk-blend-satin-shirt-10.md)
+- [Women's Silk Blend Satin Shirt Edition 16](./products/womens-silk-blend-satin-shirt-16.md)
+- [Women's Smocked A-Line Dress](./products/womens-smocked-a-line-dress-6.md)
+- [Women's Smocked A-Line Dress Series 12](./products/womens-smocked-a-line-dress-12.md)
+- [Women's Square-Neck Ribbed Top](./products/womens-square-neck-ribbed-top-1.md)
+- [Women's Square-Neck Ribbed Top Edition 13](./products/womens-square-neck-ribbed-top-13.md)
+- [Women's Square-Neck Ribbed Top Edition 19](./products/womens-square-neck-ribbed-top-19.md)
+- [Women's Square-Neck Ribbed Top Edition 7](./products/womens-square-neck-ribbed-top-7.md)
+- [Women's Tiered Maxi Dress](./products/womens-tiered-maxi-dress-4.md)
+- [Women's Tiered Maxi Dress Series 10](./products/womens-tiered-maxi-dress-10.md)
+- [Women's Waffle Knit Henley](./products/womens-waffle-knit-henley-6.md)
+- [Women's Waffle Knit Henley Edition 12](./products/womens-waffle-knit-henley-12.md)
+- [Women's Waffle Knit Henley Edition 18](./products/womens-waffle-knit-henley-18.md)
+- [Women's Wrap Slip Dress](./products/womens-wrap-slip-dress-3.md)
+- [Women's Wrap Slip Dress Series 15](./products/womens-wrap-slip-dress-15.md)
+- [Women's Wrap Slip Dress Series 9](./products/womens-wrap-slip-dress-9.md)

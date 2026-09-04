@@ -4,7 +4,7 @@ slug: mens-textured-camp-collar-12
 name: Men's Textured Camp Collar Vol. 12
 brand: Breathable tailored silhouette for work and weekends
 category: 
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,8 +30,9 @@ _No review data available yet._
 
 ## Related
 
-- [Men's Flannel Plaid Shirt](./mens-flannel-plaid-shirt-4.md) (Complementary)
 - [Men's Flannel Plaid Shirt Vol. 10](./mens-flannel-plaid-shirt-10.md) (Complementary)
+- [Men's Linen Resort Shirt](./mens-linen-resort-shirt-2.md) (Complementary)
+- [Men's Textured Camp Collar Vol. 12 — Popular Item Intelligence](../../marketing/popular/mens-textured-camp-collar-12.md) (Market Intelligence)
 
 ## Sources
 

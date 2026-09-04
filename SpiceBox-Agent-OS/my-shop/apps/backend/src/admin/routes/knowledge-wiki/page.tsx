@@ -44,6 +44,23 @@ interface WikiTreeResponse {
   pages: WikiPageItem[]
 }
 
+export interface IndexItem {
+  title: string
+  path: string
+  slug: string
+}
+
+export interface IndexData {
+  is_index: boolean
+  last_updated: string
+  total_products: number
+  total_categories: number
+  total_marketing: number
+  categories: IndexItem[]
+  products: IndexItem[]
+  marketing: IndexItem[]
+}
+
 interface WikiPageDetail {
   path: string
   raw: string
@@ -65,10 +82,279 @@ interface WikiPageDetail {
   }>
   primary_product_path?: string | null
   marketing_intelligence_path?: string | null
+  index_data?: IndexData | null
   last_modified: string
 }
 
 type FilterTab = "all" | "products" | "categories" | "popular" | "reviews" | "system"
+
+const IndexDirectoryView: React.FC<{
+  indexData: IndexData
+  onSelectItem: (path: string) => void
+}> = ({ indexData, onSelectItem }) => {
+  const [activeFilter, setActiveFilter] = useState<"all" | "categories" | "products" | "marketing">("all")
+  const [filterQuery, setFilterQuery] = useState("")
+
+  const q = filterQuery.toLowerCase().trim()
+  const filteredCategories = useMemo(() => {
+    return indexData.categories.filter(
+      (c) => !q || c.title.toLowerCase().includes(q) || c.slug.toLowerCase().includes(q)
+    )
+  }, [indexData.categories, q])
+
+  const filteredProducts = useMemo(() => {
+    return indexData.products.filter(
+      (p) => !q || p.title.toLowerCase().includes(q) || p.slug.toLowerCase().includes(q)
+    )
+  }, [indexData.products, q])
+
+  const filteredMarketing = useMemo(() => {
+    return indexData.marketing.filter(
+      (m) => !q || m.title.toLowerCase().includes(q) || m.slug.toLowerCase().includes(q)
+    )
+  }, [indexData.marketing, q])
+
+  return (
+    <div className="space-y-6">
+      {/* Header Banner */}
+      <div className="border-b border-neutral-200 pb-4">
+        <div className="flex items-center gap-2 mb-1 text-[11px] font-mono text-neutral-500">
+          <span className="uppercase tracking-wider px-2 py-0.5 bg-neutral-900 text-white rounded font-semibold text-[9px]">
+            Master Directory
+          </span>
+          <span className="ml-auto text-neutral-400">
+            Synced: {indexData.last_updated || "Live"}
+          </span>
+        </div>
+        <h2 className="text-xl font-bold tracking-tight text-neutral-900 mt-1">
+          Merchant Knowledge Index
+        </h2>
+        <p className="text-xs text-neutral-500 mt-1">
+          Central navigation index linking all synthesized catalog products, category clusters, and marketing intelligence dossiers.
+        </p>
+      </div>
+
+      {/* Summary Stats Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div
+          onClick={() => setActiveFilter("products")}
+          className={`p-3 rounded-lg border cursor-pointer transition-all ${
+            activeFilter === "products"
+              ? "border-neutral-900 bg-neutral-50 ring-1 ring-neutral-900"
+              : "border-neutral-200 hover:border-neutral-400 bg-white"
+          }`}
+        >
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+            Catalog Products
+          </span>
+          <div className="text-2xl font-bold text-neutral-900 mt-0.5">
+            {indexData.total_products}
+          </div>
+          <span className="text-[10px] text-neutral-500">Indexed dossiers</span>
+        </div>
+
+        <div
+          onClick={() => setActiveFilter("categories")}
+          className={`p-3 rounded-lg border cursor-pointer transition-all ${
+            activeFilter === "categories"
+              ? "border-neutral-900 bg-neutral-50 ring-1 ring-neutral-900"
+              : "border-neutral-200 hover:border-neutral-400 bg-white"
+          }`}
+        >
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+            Categories
+          </span>
+          <div className="text-2xl font-bold text-neutral-900 mt-0.5">
+            {indexData.total_categories}
+          </div>
+          <span className="text-[10px] text-neutral-500">Canonical groups</span>
+        </div>
+
+        <div
+          onClick={() => setActiveFilter("marketing")}
+          className={`p-3 rounded-lg border cursor-pointer transition-all ${
+            activeFilter === "marketing"
+              ? "border-neutral-900 bg-neutral-50 ring-1 ring-neutral-900"
+              : "border-neutral-200 hover:border-neutral-400 bg-white"
+          }`}
+        >
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+            Marketing Intel
+          </span>
+          <div className="text-2xl font-bold text-neutral-900 mt-0.5">
+            {indexData.total_marketing}
+          </div>
+          <span className="text-[10px] text-neutral-500">Promotions & popular</span>
+        </div>
+
+        <div
+          onClick={() => setActiveFilter("all")}
+          className={`p-3 rounded-lg border cursor-pointer transition-all ${
+            activeFilter === "all"
+              ? "border-neutral-900 bg-neutral-50 ring-1 ring-neutral-900"
+              : "border-neutral-200 hover:border-neutral-400 bg-white"
+          }`}
+        >
+          <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+            Total Entries
+          </span>
+          <div className="text-2xl font-bold text-neutral-900 mt-0.5">
+            {indexData.total_products + indexData.total_categories + indexData.total_marketing}
+          </div>
+          <span className="text-[10px] text-neutral-500">View all items</span>
+        </div>
+      </div>
+
+      {/* Directory Filter & Search */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-1">
+        <div className="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+          {(
+            [
+              { key: "all", label: "All Items", count: indexData.total_products + indexData.total_categories + indexData.total_marketing },
+              { key: "categories", label: "Categories", count: indexData.total_categories },
+              { key: "products", label: "Products", count: indexData.total_products },
+              { key: "marketing", label: "Marketing", count: indexData.total_marketing },
+            ] as const
+          ).map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveFilter(tab.key)}
+              className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
+                activeFilter === tab.key
+                  ? "bg-neutral-900 text-white"
+                  : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200"
+              }`}
+            >
+              {tab.label} <span className="text-[10px] opacity-75">({tab.count})</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="relative w-full sm:w-64">
+          <MagnifyingGlass className="absolute left-2.5 top-2.5 w-3.5 h-3.5 text-neutral-400" />
+          <input
+            type="text"
+            placeholder="Filter index entries..."
+            value={filterQuery}
+            onChange={(e) => setFilterQuery(e.target.value)}
+            className="w-full pl-8 pr-3 py-1.5 text-xs bg-neutral-50 border border-neutral-200 rounded-md focus:bg-white focus:outline-none"
+          />
+        </div>
+      </div>
+
+      {/* Categories Section */}
+      {(activeFilter === "all" || activeFilter === "categories") && filteredCategories.length > 0 && (
+        <div className="space-y-2.5">
+          <div className="flex items-center justify-between border-b border-neutral-100 pb-1.5">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-600 font-semibold flex items-center gap-1.5">
+              <span>Category Dossiers</span>
+              <span className="text-[10px] font-normal text-neutral-400">({filteredCategories.length})</span>
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+            {filteredCategories.map((cat, idx) => (
+              <div
+                key={idx}
+                onClick={() => onSelectItem(cat.path)}
+                className="p-3 rounded-lg border border-neutral-200 hover:border-neutral-900 hover:shadow-xs transition-all cursor-pointer bg-white group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-[9px] font-mono px-1.5 py-0.2 bg-neutral-100 text-neutral-600 rounded uppercase">
+                    Category
+                  </span>
+                  <h4 className="font-semibold text-xs text-neutral-900 group-hover:text-black mt-1">
+                    {cat.title}
+                  </h4>
+                  <p className="text-[10px] font-mono text-neutral-400 mt-0.5 truncate">
+                    {cat.slug}
+                  </p>
+                </div>
+                <div className="mt-2 pt-2 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500 font-medium">
+                  <span>Explore Dossier</span>
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Products Section */}
+      {(activeFilter === "all" || activeFilter === "products") && filteredProducts.length > 0 && (
+        <div className="space-y-2.5">
+          <div className="flex items-center justify-between border-b border-neutral-100 pb-1.5">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-600 font-semibold flex items-center gap-1.5">
+              <span>Product Dossiers</span>
+              <span className="text-[10px] font-normal text-neutral-400">({filteredProducts.length})</span>
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 max-h-[520px] overflow-y-auto pr-1">
+            {filteredProducts.map((prod, idx) => (
+              <div
+                key={idx}
+                onClick={() => onSelectItem(prod.path)}
+                className="p-2.5 rounded-lg border border-neutral-200 hover:border-neutral-900 hover:shadow-xs transition-all cursor-pointer bg-white group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-[9px] font-mono px-1.5 py-0.2 bg-neutral-100 text-neutral-600 rounded uppercase">
+                    Product
+                  </span>
+                  <h4 className="font-medium text-xs text-neutral-900 group-hover:text-black line-clamp-2 mt-1" title={prod.title}>
+                    {prod.title}
+                  </h4>
+                  <p className="text-[10px] font-mono text-neutral-400 mt-0.5 truncate" title={prod.slug}>
+                    {prod.slug}
+                  </p>
+                </div>
+                <div className="mt-2 pt-1.5 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500 font-medium">
+                  <span>View Product</span>
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Marketing Section */}
+      {(activeFilter === "all" || activeFilter === "marketing") && filteredMarketing.length > 0 && (
+        <div className="space-y-2.5">
+          <div className="flex items-center justify-between border-b border-neutral-100 pb-1.5">
+            <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-600 font-semibold flex items-center gap-1.5">
+              <span>Marketing Intelligence</span>
+              <span className="text-[10px] font-normal text-neutral-400">({filteredMarketing.length})</span>
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+            {filteredMarketing.map((item, idx) => (
+              <div
+                key={idx}
+                onClick={() => onSelectItem(item.path)}
+                className="p-3 rounded-lg border border-neutral-200 hover:border-neutral-900 hover:shadow-xs transition-all cursor-pointer bg-white group flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-[9px] font-mono px-1.5 py-0.2 bg-neutral-100 text-neutral-600 rounded uppercase">
+                    Marketing
+                  </span>
+                  <h4 className="font-medium text-xs text-neutral-900 group-hover:text-black line-clamp-2 mt-1" title={item.title}>
+                    {item.title}
+                  </h4>
+                  <p className="text-[10px] font-mono text-neutral-400 mt-0.5 truncate" title={item.slug}>
+                    {item.slug}
+                  </p>
+                </div>
+                <div className="mt-2 pt-2 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500 font-medium">
+                  <span>View Marketing Dossier</span>
+                  <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
 
 const KnowledgeWikiPage = () => {
   const [tree, setTree] = useState<WikiTreeResponse | null>(null)
@@ -319,6 +605,116 @@ const KnowledgeWikiPage = () => {
     return rawOverview.replace(/^#\s+[^\n]+\n*/, "").trim()
   }, [pageDetail])
 
+  const isCategoryDossier = useMemo(() => {
+    if (!pageDetail) return false
+    return (
+      pageDetail.frontmatter?.type === "category" ||
+      selectedPath.includes("categories/") ||
+      Boolean(pageDetail.sections["Products in this Category"]) ||
+      Boolean(pageDetail.sections["Products in this category"])
+    )
+  }, [pageDetail, selectedPath])
+
+  // Parse products in this category for Category dossiers
+  const categoryProducts = useMemo(() => {
+    if (!pageDetail || !isCategoryDossier) return []
+
+    const items: Array<{
+      title: string
+      targetPath: string
+      brand: string
+      price: string
+      rating: string
+      reviews: string
+      highlights: string
+    }> = []
+
+    const seenPaths = new Set<string>()
+
+    // 1. Parse markdown table in "Products in this Category" if present
+    const rawSection =
+      pageDetail.sections["Products in this Category"] ||
+      pageDetail.sections["Products in this category"] ||
+      ""
+
+    if (rawSection) {
+      const lines = rawSection.split("\n")
+      for (const line of lines) {
+        const trimmed = line.trim()
+        if (
+          !trimmed.startsWith("|") ||
+          trimmed.includes("---") ||
+          trimmed.toLowerCase().includes("| product |")
+        ) {
+          continue
+        }
+        const cells = trimmed.split("|").map((c) => c.trim()).filter(Boolean)
+        if (cells.length >= 1) {
+          const productCell = cells[0]
+          const linkMatch = productCell.match(/\[([^\]]+)\]\(([^)]+)\)/)
+          const title = linkMatch ? linkMatch[1] : productCell
+          let rawTarget = linkMatch ? linkMatch[2] : ""
+
+          let cleanTarget = ""
+          if (rawTarget) {
+            const filename = rawTarget.split("/").pop() || ""
+            cleanTarget = `knowledge/products/${filename}`
+          }
+
+          const brand = cells[1] || ""
+          const price = cells[2] || ""
+          const rating = cells[3] || ""
+          const reviews = cells[4] || ""
+
+          if (title && !seenPaths.has(cleanTarget || title)) {
+            if (cleanTarget) seenPaths.add(cleanTarget)
+            seenPaths.add(title)
+            items.push({
+              title,
+              targetPath: cleanTarget || "",
+              brand,
+              price,
+              rating: rating !== "N/A/5" && rating !== "N/A" ? rating : "",
+              reviews: reviews || "0",
+              highlights: brand,
+            })
+          }
+        }
+      }
+    }
+
+    // 2. Also match from tree.pages in this category
+    const catName = (pageDetail.frontmatter?.name || pageDetail.title || "").toLowerCase().trim()
+    const catSlug = (pageDetail.frontmatter?.slug || "").toLowerCase().trim()
+
+    if (tree?.pages) {
+      for (const p of tree.pages) {
+        if (p.group !== "products") continue
+        const pCat = (p.category || "").toLowerCase().trim()
+        const isMatch =
+          (catName && pCat === catName) ||
+          (catSlug && pCat.includes(catSlug)) ||
+          (catName && pCat.includes(catName))
+
+        if (isMatch && !seenPaths.has(p.path) && !seenPaths.has(p.title)) {
+          seenPaths.add(p.path)
+          seenPaths.add(p.title)
+          items.push({
+            title: p.title,
+            targetPath: p.path,
+            brand: p.brand || "",
+            price: p.price ? `₹${p.price} INR` : "",
+            rating: p.rating ? `${p.rating}/5` : "",
+            reviews: "0",
+            highlights: p.brand || "",
+          })
+        }
+      }
+    }
+
+    return items
+  }, [pageDetail, isCategoryDossier, selectedPath, tree])
+
   return (
     <div className="flex flex-col gap-y-3 w-full font-sans text-neutral-900">
       <Toaster />
@@ -375,46 +771,56 @@ const KnowledgeWikiPage = () => {
           topbarTarget
         )}
 
-      {/* Fallback header ONLY if topbar is not yet mounted */}
-      {!topbarTarget && (
-        <div className="flex items-center justify-between pb-2 border-b border-neutral-200">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-neutral-900">Knowledge Wiki</span>
-            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-600 border border-neutral-200">
-              {tree?.total_pages || 0}
+      {/* Top Header with permanent View Mode Switcher */}
+      <div className="flex flex-wrap items-center justify-between pb-2.5 border-b border-neutral-200 gap-2">
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-bold text-neutral-900 tracking-tight">Knowledge Wiki</span>
+          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-neutral-100 text-neutral-600 border border-neutral-200">
+            {tree?.total_pages || 0} dossiers
+          </span>
+          {reviewedCount > 0 && (
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-neutral-900 text-white">
+              {reviewedCount} with reviews
             </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center bg-neutral-100 p-0.5 rounded-md text-[11px] font-medium border border-neutral-200">
-              <button
-                onClick={() => setViewMode("explorer")}
-                className={`px-2 py-0.5 rounded ${
-                  viewMode === "explorer" ? "bg-white text-neutral-900 font-semibold shadow-xs" : "text-neutral-500"
-                }`}
-              >
-                Dossier Explorer
-              </button>
-              <button
-                onClick={() => setViewMode("graph")}
-                className={`px-2 py-0.5 rounded ${
-                  viewMode === "graph" ? "bg-neutral-900 text-white font-semibold shadow-xs" : "text-neutral-500"
-                }`}
-              >
-                Neo4j Graph
-              </button>
-            </div>
-            <Button
-              variant="secondary"
-              size="small"
-              onClick={() => fetchTree(false)}
-              disabled={isLoadingTree}
-            >
-              <ArrowPath className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTree ? "animate-spin" : ""}`} />
-              Sync
-            </Button>
-          </div>
+          )}
         </div>
-      )}
+        <div className="flex items-center gap-2">
+          <div className="flex items-center bg-neutral-100 p-0.5 rounded-lg text-xs font-medium border border-neutral-200 shadow-2xs">
+            <button
+              onClick={() => setViewMode("explorer")}
+              className={`px-3 py-1 rounded-md transition-all flex items-center gap-1.5 ${
+                viewMode === "explorer"
+                  ? "bg-white text-neutral-900 font-semibold shadow-xs"
+                  : "text-neutral-500 hover:text-neutral-800"
+              }`}
+            >
+              <DocumentText className="w-3.5 h-3.5" />
+              <span>Dossier Explorer</span>
+            </button>
+            <button
+              onClick={() => setViewMode("graph")}
+              className={`px-3 py-1 rounded-md transition-all flex items-center gap-1.5 ${
+                viewMode === "graph"
+                  ? "bg-neutral-900 text-white font-semibold shadow-xs"
+                  : "text-neutral-500 hover:text-neutral-800"
+              }`}
+            >
+              <span className="text-amber-400">●</span>
+              <span>Neo4j Graph</span>
+            </button>
+          </div>
+          <Button
+            variant="secondary"
+            size="small"
+            onClick={() => fetchTree(false)}
+            disabled={isLoadingTree}
+            className="flex items-center gap-1 text-xs"
+          >
+            <ArrowPath className={`w-3.5 h-3.5 ${isLoadingTree ? "animate-spin" : ""}`} />
+            <span>Sync</span>
+          </Button>
+        </div>
+      </div>
 
       {/* View Mode Switching */}
       {viewMode === "graph" ? (
@@ -645,6 +1051,21 @@ const KnowledgeWikiPage = () => {
                 ))}
               </div>
             </div>
+          ) : (pageDetail?.index_data?.is_index || selectedPath.endsWith("index.md")) ? (
+            /* Master Catalog & Knowledge Directory View */
+            <IndexDirectoryView
+              indexData={pageDetail.index_data || {
+                is_index: true,
+                last_updated: pageDetail.last_modified,
+                total_products: 0,
+                total_categories: 0,
+                total_marketing: 0,
+                categories: [],
+                products: [],
+                marketing: [],
+              }}
+              onSelectItem={(targetPath) => setSelectedPath(targetPath)}
+            />
           ) : (
             /* Clean Minimalist Dossier View */
             <div className="space-y-6">
@@ -713,55 +1134,96 @@ const KnowledgeWikiPage = () => {
               </div>
 
               {/* Key Figures Strip - Flat, Unboxed Layout */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-3 border-b border-neutral-100">
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
-                    Price
-                  </span>
-                  <div className="text-lg font-bold text-neutral-900 mt-0.5">
-                    {pageDetail.price || pageDetail.frontmatter.price ? (
-                      <>₹{pageDetail.price || pageDetail.frontmatter.price} <span className="text-xs font-normal text-neutral-500">INR</span></>
-                    ) : (
-                      "Standard"
-                    )}
+              {isCategoryDossier ? (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-3 border-b border-neutral-100">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Total Products
+                    </span>
+                    <div className="text-lg font-bold text-neutral-900 mt-0.5">
+                      {categoryProducts.length || pageDetail.frontmatter.product_count || 0}{" "}
+                      <span className="text-xs font-normal text-neutral-500">items</span>
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
-                    Rating
-                  </span>
-                  <div className="text-lg font-bold text-neutral-900 mt-0.5 flex items-center gap-1">
-                    {pageDetail.sentiment.rating ? (
-                      <>
-                        <span>★ {pageDetail.sentiment.rating.toFixed(1)}</span>
-                        <span className="text-xs font-normal text-neutral-500">/ 5.0</span>
-                      </>
-                    ) : (
-                      <span className="text-xs text-neutral-400 font-normal">No rating yet</span>
-                    )}
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Category Type
+                    </span>
+                    <div className="text-sm font-semibold text-neutral-800 mt-0.5">
+                      Canonical Group
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
-                    Reviews
-                  </span>
-                  <div className="text-lg font-bold text-neutral-900 mt-0.5">
-                    {pageDetail.sentiment.review_count || (pageDetail.sentiment.rating ? 1 : 0)}{" "}
-                    <span className="text-xs font-normal text-neutral-500">verified</span>
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Category Slug
+                    </span>
+                    <div className="text-sm font-mono text-neutral-800 mt-0.5 truncate" title={pageDetail.frontmatter.slug || selectedPath.split('/').pop()?.replace('.md', '')}>
+                      {pageDetail.frontmatter.slug || selectedPath.split('/').pop()?.replace('.md', '')}
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
-                    Category
-                  </span>
-                  <div className="text-sm font-semibold text-neutral-800 mt-0.5 truncate" title={pageDetail.frontmatter.category || "General"}>
-                    {pageDetail.frontmatter.category || "General"}
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Last Updated
+                    </span>
+                    <div className="text-sm font-semibold text-neutral-800 mt-0.5">
+                      {pageDetail.frontmatter.last_updated || pageDetail.last_modified}
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-3 border-b border-neutral-100">
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Price
+                    </span>
+                    <div className="text-lg font-bold text-neutral-900 mt-0.5">
+                      {pageDetail.price || pageDetail.frontmatter.price ? (
+                        <>₹{pageDetail.price || pageDetail.frontmatter.price} <span className="text-xs font-normal text-neutral-500">INR</span></>
+                      ) : (
+                        "Standard"
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Rating
+                    </span>
+                    <div className="text-lg font-bold text-neutral-900 mt-0.5 flex items-center gap-1">
+                      {pageDetail.sentiment.rating ? (
+                        <>
+                          <span>★ {pageDetail.sentiment.rating.toFixed(1)}</span>
+                          <span className="text-xs font-normal text-neutral-500">/ 5.0</span>
+                        </>
+                      ) : (
+                        <span className="text-xs text-neutral-400 font-normal">No rating yet</span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Reviews
+                    </span>
+                    <div className="text-lg font-bold text-neutral-900 mt-0.5">
+                      {pageDetail.sentiment.review_count || (pageDetail.sentiment.rating ? 1 : 0)}{" "}
+                      <span className="text-xs font-normal text-neutral-500">verified</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-400 block">
+                      Category
+                    </span>
+                    <div className="text-sm font-semibold text-neutral-800 mt-0.5 truncate" title={pageDetail.frontmatter.category || "General"}>
+                      {pageDetail.frontmatter.category || "General"}
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Customer Reviews & Feedback Section - Highlighted if present */}
               {(pageDetail.sentiment.rating || pageDetail.sentiment.highlights.length > 0) && (
@@ -842,6 +1304,74 @@ const KnowledgeWikiPage = () => {
                 </div>
               )}
 
+              {/* Products in this Category Table (for category dossiers) */}
+              {(isCategoryDossier || categoryProducts.length > 0) && (
+                <div className="border-b border-neutral-100 pb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-900 font-bold">
+                        Products in this Category
+                      </h3>
+                      <span className="text-[10px] font-mono bg-neutral-900 text-white px-2 py-0.5 rounded-full font-semibold">
+                        {categoryProducts.length} items
+                      </span>
+                    </div>
+                  </div>
+
+                  {categoryProducts.length > 0 ? (
+                    <div className="overflow-x-auto rounded-lg border border-neutral-200 bg-white shadow-sm">
+                      <table className="min-w-full text-left text-xs">
+                        <thead className="bg-neutral-50 text-neutral-600 font-semibold border-b border-neutral-200 text-[11px] font-mono uppercase">
+                          <tr>
+                            <th className="px-3 py-2.5">Product</th>
+                            <th className="px-3 py-2.5">Price</th>
+                            <th className="px-3 py-2.5">Rating</th>
+                            <th className="px-3 py-2.5">Brand / Highlights</th>
+                            <th className="px-3 py-2.5 text-right">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-neutral-100">
+                          {categoryProducts.map((prod, idx) => (
+                            <tr key={idx} className="hover:bg-neutral-50/80 transition-colors">
+                              <td className="px-3 py-2.5 font-medium text-neutral-900">
+                                <span className="font-semibold text-neutral-900 block">{prod.title}</span>
+                              </td>
+                              <td className="px-3 py-2.5 whitespace-nowrap font-semibold text-neutral-900">
+                                {prod.price || "Standard"}
+                              </td>
+                              <td className="px-3 py-2.5 whitespace-nowrap text-neutral-600">
+                                {prod.rating ? (
+                                  <span className="text-amber-600 font-medium">★ {prod.rating}</span>
+                                ) : (
+                                  <span className="text-neutral-400 text-[11px]">-</span>
+                                )}
+                              </td>
+                              <td className="px-3 py-2.5 text-neutral-600 max-w-xs text-[11px] truncate" title={prod.highlights}>
+                                {prod.highlights || "-"}
+                              </td>
+                              <td className="px-3 py-2.5 text-right whitespace-nowrap">
+                                <button
+                                  onClick={() => {
+                                    if (prod.targetPath) {
+                                      setSelectedPath(prod.targetPath)
+                                    }
+                                  }}
+                                  className="px-2.5 py-1 bg-neutral-900 hover:bg-neutral-800 text-white rounded text-[11px] font-medium transition-colors"
+                                >
+                                  View Dossier →
+                                </button>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ) : (
+                    <p className="text-xs text-neutral-500 italic">No products indexed in this category yet.</p>
+                  )}
+                </div>
+              )}
+
               {/* Key Selling Points (if present in marketing dossier) */}
               {pageDetail.sections["Key Selling Points"] && (
                 <div className="border-b border-neutral-100 pb-5">
@@ -866,6 +1396,35 @@ const KnowledgeWikiPage = () => {
                     </div>
                   </div>
                 )}
+
+              {/* Other Dynamic Sections (e.g. Category Trends, Sources, etc.) */}
+              {Object.entries(pageDetail.sections).map(([sTitle, sContent]) => {
+                if (
+                  [
+                    "Overview",
+                    "Customer Sentiment",
+                    "Customer Highlights",
+                    "Key Selling Points",
+                    "Specifications",
+                    "Related",
+                    "Products in this Category",
+                    "Products in this category",
+                  ].includes(sTitle)
+                ) {
+                  return null
+                }
+                if (!sContent || !sContent.trim()) return null
+                return (
+                  <div key={sTitle} className="border-b border-neutral-100 pb-5">
+                    <h3 className="text-xs font-mono uppercase tracking-wider text-neutral-400 mb-2">
+                      {sTitle}
+                    </h3>
+                    <div className="text-xs text-neutral-700 leading-relaxed whitespace-pre-line">
+                      {sContent}
+                    </div>
+                  </div>
+                )
+              })}
 
               {/* Related Knowledge Links */}
               {pageDetail.related_links.length > 0 && (

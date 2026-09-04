@@ -2,9 +2,9 @@
 type: product
 slug: nomad-waterproof-25l-commuter-backpack-5
 name: Nomad Waterproof 25L Commuter Backpack Mk.5
-brand: Dedicated 16” padded laptop compartment and weatherproofing
-category: Bags & Backpacks
-last_updated: 2026-09-02
+brand: Dedicated 16??? padded laptop compartment and weatherproofing
+category: Footwear & Lifestyle
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Engineered for city travel. YKK Aquaguard zips, ergonomic shoulder straps, and m
 
 ## Pricing
 
-- **Price**: 3999 INR
+- **Price**: 70 EUR
 
 
 ## Customer Sentiment
@@ -30,12 +30,12 @@ _No review data available yet._
 
 ## Related
 
-- [Bags & Backpacks](../categories/bags-backpacks.md) (Category)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.10](./nomad-heavyweight-waxed-canvas-tote-10.md) (Alternative)
-- [Nomad Waterproof 25L Commuter Backpack Mk.9](./nomad-waterproof-25l-commuter-backpack-9.md) (Alternative)
-- [Nomad Weekend Leather Duffle Bag Mk.4](./nomad-weekend-leather-duffle-bag-4.md) (Alternative)
-- [Nomad Weekend Leather Duffle Bag Mk.8](./nomad-weekend-leather-duffle-bag-8.md) (Alternative)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.14](./nomad-heavyweight-waxed-canvas-tote-14.md) (Complementary)
+- [Footwear & Lifestyle](../categories/footwear-lifestyle.md) (Category)
+- [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Alternative)
+- [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Alternative)
+- [Stride Everyday Foam Slide Edition 10](./stride-everyday-foam-slide-10.md) (Alternative)
+- [Stride Suede Skate Cupsole Sneaker Edition 4](./stride-suede-skate-cupsole-sneaker-4.md) (Alternative)
+- [Nomad Waterproof 25L Commuter Backpack Mk.1](./nomad-waterproof-25l-commuter-backpack-1.md) (Complementary)
 - [Nomad Heavyweight Waxed Canvas Tote Mk.2](./nomad-heavyweight-waxed-canvas-tote-2.md) (Complementary)
 
 ## Sources

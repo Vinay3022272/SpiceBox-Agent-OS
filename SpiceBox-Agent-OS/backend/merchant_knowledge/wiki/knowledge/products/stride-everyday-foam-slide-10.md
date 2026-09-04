@@ -4,7 +4,7 @@ slug: stride-everyday-foam-slide-10
 name: Stride Everyday Foam Slide Edition 10
 brand: Cushioned memory foam insole with vulcanized rubber grip
 category: Footwear & Lifestyle
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,12 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Footwear & Lifestyle](../categories/footwear-lifestyle.md) (Category)
-- [Nomad Braided Paracord Key Lanyard 6](./nomad-braided-paracord-key-lanyard-6.md) (Alternative)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.14](./nomad-heavyweight-waxed-canvas-tote-14.md) (Alternative)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.2](./nomad-heavyweight-waxed-canvas-tote-2.md) (Alternative)
-- [Nomad Leather Travel Tech Organizer 4](./nomad-leather-travel-tech-organizer-4.md) (Alternative)
-- [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Complementary)
-- [Stride Court Minimalist Leather Sneaker Edition 11](./stride-court-minimalist-leather-sneaker-11.md) (Complementary)
+- [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Alternative)
+- [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Alternative)
+- [Stride Suede Skate Cupsole Sneaker Edition 4](./stride-suede-skate-cupsole-sneaker-4.md) (Alternative)
+- [Stride Suede Skate Cupsole Sneaker Edition 9](./stride-suede-skate-cupsole-sneaker-9.md) (Alternative)
+- [Stride Breathable Knit Running Trainer Edition 8](./stride-breathable-knit-running-trainer-8.md) (Complementary)
+- [Stride Court Minimalist Leather Sneaker Edition 6](./stride-court-minimalist-leather-sneaker-6.md) (Complementary)
 
 ## Sources
 

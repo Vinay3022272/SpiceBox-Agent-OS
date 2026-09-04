@@ -95,7 +95,7 @@ const MEDUSA_PRESETS: Record<
       description: { table: "product", column: "description" },
       brand: { table: "product", column: "subtitle" },
     },
-    sql: `SELECT 
+    sql: `SELECT DISTINCT ON (p.id)
   p.title AS name,
   p.handle AS slug,
   pr.amount AS price,
@@ -109,7 +109,8 @@ LEFT JOIN product_variant_price_set pvps ON pvps.variant_id = pv.id
 LEFT JOIN price pr ON pr.price_set_id = pvps.price_set_id AND pr.price_list_id IS NULL
 LEFT JOIN product_category_product pcp ON pcp.product_id = p.id
 LEFT JOIN product_category cat ON cat.id = pcp.product_category_id
-WHERE p.deleted_at IS NULL`,
+WHERE p.deleted_at IS NULL
+ORDER BY p.id`,
   },
   inventory: {
     primaryTable: "product",
@@ -126,13 +127,14 @@ WHERE p.deleted_at IS NULL`,
     },
     sql: `SELECT 
   p.handle AS product_slug,
-  COALESCE(il.stocked_quantity, 0) AS stock_quantity,
-  il.location_id AS location
+  COALESCE(SUM(il.stocked_quantity), 0) AS stock_quantity,
+  MAX(il.location_id) AS location
 FROM product p
 LEFT JOIN product_variant pv ON pv.product_id = p.id
 LEFT JOIN product_variant_inventory_item pvii ON pvii.variant_id = pv.id
 LEFT JOIN inventory_level il ON il.inventory_item_id = pvii.inventory_item_id
-WHERE p.deleted_at IS NULL`,
+WHERE p.deleted_at IS NULL
+GROUP BY p.id, p.handle`,
   },
   promotions: {
     primaryTable: "promotion",

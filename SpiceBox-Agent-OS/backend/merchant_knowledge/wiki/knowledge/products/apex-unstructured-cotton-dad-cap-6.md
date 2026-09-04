@@ -4,7 +4,7 @@ slug: apex-unstructured-cotton-dad-cap-6
 name: Apex Unstructured Cotton Dad Cap V6
 brand: Comfortable sweatband with breathable brass eyelets
 category: Wearables & Tech
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Timeless headwear designed for everyday shade and streetwear pairing. Adjustable
 
 ## Pricing
 
-- **Price**: 939 INR
+- **Price**: 20 EUR
 
 
 ## Customer Sentiment
@@ -31,13 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
-- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 15](./apex-explorer-multi-sport-watch-15.md) (Alternative)
-- [Apex Ribbed Merino Wool Beanie V11](./apex-ribbed-merino-wool-beanie-11.md) (Complementary)
-- [Apex Ribbed Merino Wool Beanie V3](./apex-ribbed-merino-wool-beanie-3.md) (Complementary)
-- [Apex Unstructured Cotton Dad Cap V6 — Popular Item Intelligence](../../marketing/popular/apex-unstructured-cotton-dad-cap-6.md) (Market Intelligence)
+- [Apex Slim Fit Elegance Smartwatch Gen 4](./apex-slim-fit-elegance-smartwatch-4.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 8](./apex-titanium-rugged-sports-watch-8.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 3](./apex-titanium-rugged-sports-watch-3.md) (Alternative)
+- [Apex Structured 6-Panel Snapback V1](./apex-structured-6-panel-snapback-1.md) (Complementary)
+- [Apex Unstructured Cotton Dad Cap V2](./apex-unstructured-cotton-dad-cap-2.md) (Complementary)
 
 ## Sources
 

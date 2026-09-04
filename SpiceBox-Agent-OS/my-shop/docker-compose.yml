@@ -35,6 +35,7 @@ services:
     depends_on:
       - postgres
       - redis
+      - wiki_runner
     ports:
       - "9001:9000"
       - "5174:5173"
@@ -43,12 +44,35 @@ services:
       - PORT=9000
       - DATABASE_URL=postgres://postgres:postgres@postgres:5432/medusa-store
       - REDIS_URL=redis://redis:6379
+      - WIKI_RUNNER_URL=http://wiki_runner:8002
     env_file:
       - apps/backend/.env
     volumes:
       - .:/server
       - /server/node_modules
       - /server/apps/backend/node_modules
+    networks:
+      - medusa_network
+
+  # Wiki Runner (SpiceBox Agent OS Backend)
+  # Runs the Knowledge Graph & LLM Wiki Runner on port 8002
+  wiki_runner:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: spicebox_wiki_runner
+    restart: unless-stopped
+    ports:
+      - "8002:8002"
+    environment:
+      - WIKI_SERVER_PORT=8002
+      - PYTHONUNBUFFERED=1
+      - MEDUSA_URL=http://medusa:9000
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/medusa-store
+    env_file:
+      - ../backend/.env
+    volumes:
+      - ../backend:/app
     networks:
       - medusa_network
 
@@ -65,6 +89,7 @@ services:
     environment:
       - MEDUSA_BACKEND_URL=http://medusa:9000
       - NEXT_PUBLIC_MEDUSA_BACKEND_URL=http://localhost:9001
+      - WIKI_RUNNER_URL=http://wiki_runner:8002
     env_file:
       - apps/storefront/.env
     volumes:

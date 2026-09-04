@@ -67,6 +67,16 @@ export function buildSqlFromMapping(
 
   if (explicitSql && typeof explicitSql === "string" && explicitSql.trim() !== "") {
     let cleanSql = explicitSql.trim().replace(/;+\s*$/, "")
+    if (
+      cleanSql.toLowerCase().includes("from product") &&
+      !cleanSql.toLowerCase().includes("distinct") &&
+      !cleanSql.toLowerCase().includes("group by")
+    ) {
+      cleanSql = cleanSql.replace(/select\s+/i, "SELECT DISTINCT ON (p.id) ")
+      if (!cleanSql.toLowerCase().includes("order by")) {
+        cleanSql += "\nORDER BY p.id"
+      }
+    }
     if (limit !== undefined) {
       cleanSql += `\nLIMIT ${limit}`
     }

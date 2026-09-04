@@ -4,7 +4,7 @@ slug: stride-retro-high-top-basketball-sneaker-17
 name: Stride Retro High-Top Basketball Sneaker Edition 17
 brand: Cushioned memory foam insole with vulcanized rubber grip
 category: Sneakers & Footwear
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,12 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Sneakers & Footwear](../categories/sneakers-footwear.md) (Category)
-- [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Alternative)
-- [Stride Court Minimalist Leather Sneaker Edition 11](./stride-court-minimalist-leather-sneaker-11.md) (Alternative)
-- [Stride Everyday Foam Slide Edition 15](./stride-everyday-foam-slide-15.md) (Alternative)
-- [Stride Everyday Foam Slide Edition 20](./stride-everyday-foam-slide-20.md) (Alternative)
-- [Stride Breathable Knit Running Trainer Edition 13](./stride-breathable-knit-running-trainer-13.md) (Complementary)
-- [Stride Breathable Knit Running Trainer Edition 18](./stride-breathable-knit-running-trainer-18.md) (Complementary)
+- [Stride Breathable Knit Running Trainer Edition 8](./stride-breathable-knit-running-trainer-8.md) (Alternative)
+- [Stride Court Minimalist Leather Sneaker Edition 6](./stride-court-minimalist-leather-sneaker-6.md) (Alternative)
+- [Stride Breathable Knit Running Trainer Edition 3](./stride-breathable-knit-running-trainer-3.md) (Alternative)
+- [Stride Everyday Foam Slide Edition 5](./stride-everyday-foam-slide-5.md) (Alternative)
+- [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Complementary)
+- [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Complementary)
 
 ## Sources
 

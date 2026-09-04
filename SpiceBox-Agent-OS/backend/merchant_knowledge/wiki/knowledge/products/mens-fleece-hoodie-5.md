@@ -3,8 +3,8 @@ type: product
 slug: mens-fleece-hoodie-5
 name: Men's French Terry Fleece Hoodie 5
 brand: 420 GSM ultra-dense loopback French terry
-category: Men's Tops
-last_updated: 2026-09-02
+category: Men's Hoodies & Sweaters
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,11 +30,7 @@ _No review data available yet._
 
 ## Related
 
-- [Men's Tops](../categories/men-s-tops.md) (Category)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
-- [Men's Brushed Cotton Essential Tee](./mens-brushed-cotton-tee-9.md) (Alternative)
-- [Men's Commuter Harrington Jacket 6](./mens-harrington-jacket-6.md) (Alternative)
-- [Men's Commuter Harrington Jacket 8](./mens-harrington-jacket-8.md) (Alternative)
+- [Men's Hoodies & Sweaters](../categories/men-s-hoodies-sweaters.md) (Category)
 - [Men's French Terry Fleece Hoodie 1](./mens-fleece-hoodie-1.md) (Complementary)
 - [Men's French Terry Fleece Hoodie 3](./mens-fleece-hoodie-3.md) (Complementary)
 

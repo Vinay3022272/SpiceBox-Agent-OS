@@ -3,8 +3,8 @@ type: product
 slug: mens-raw-hem-tee-15
 name: Men's Raw Hem Essential Tee Edition 15
 brand: 240 GSM combed cotton with relaxed daily drape
-category: Men's Tops
-last_updated: 2026-09-02
+category: Men
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -26,35 +26,17 @@ Engineered for everyday durability. This raw hem tee is cut from premium organic
 ## Customer Sentiment
 
 
-- **Overall Rating**: 5.0/5 (1 reviews)
-- **Summary**: Average rating: 5.0/5. "Tech features work flawlessly: Karan M." (5.0/5)
-
-### What Customers Like
-
-
-- Tech features work flawlessly
-
-
-### Common Complaints
-
-
-
-### Best Reviews
-
-
-> **"Tech features work flawlessly"** — Karan M. (5.0/5)
-> Karan M.
+_No review data available yet._
 
 ## Related
 
-- [Men's Tops](../categories/men-s-tops.md) (Category)
+- [Men](../categories/men.md) (Category)
 - [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
-- [Men's Brushed Cotton Essential Tee](./mens-brushed-cotton-tee-9.md) (Alternative)
-- [Men's Commuter Harrington Jacket 6](./mens-harrington-jacket-6.md) (Alternative)
-- [Men's Commuter Harrington Jacket 8](./mens-harrington-jacket-8.md) (Alternative)
-- [Men's Boxy Fit Essential Tee Edition 16](./mens-boxy-fit-tee-16.md) (Complementary)
-- [Men's Brushed Cotton Essential Tee Edition 19](./mens-brushed-cotton-tee-19.md) (Complementary)
-- [Men's Raw Hem Essential Tee Edition 15 — Popular Item Intelligence](../../marketing/popular/mens-raw-hem-tee-15.md) (Market Intelligence)
+- [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Oversized Essential Tee](./mens-oversized-tee-1.md) (Complementary)
+- [Men's Organic Cotton Essential Tee Edition 14](./mens-organic-cotton-tee-14.md) (Complementary)
 
 ## Sources
 

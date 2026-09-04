@@ -3,8 +3,8 @@ type: product
 slug: spectra-polarized-aviator-sunglasses-6
 name: Spectra Polarized Aviator Sunglasses Series 6
 brand: UV400 Category 3 polarized optical lenses
-category: Eyewear & Sunglasses
-last_updated: 2026-09-02
+category: Wearables & Tech
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Crafted with lightweight Italian acetate and durable stainless steel barrel hing
 
 ## Pricing
 
-- **Price**: 2399 INR
+- **Price**: 41 USD
 
 
 ## Customer Sentiment
@@ -30,11 +30,12 @@ _No review data available yet._
 
 ## Related
 
-- [Eyewear & Sunglasses](../categories/eyewear-sunglasses.md) (Category)
-- [Spectra Blue-Light Computer Glasses Series 4](./spectra-blue-light-computer-glasses-4.md) (Alternative)
-- [Spectra Blue-Light Computer Glasses Series 9](./spectra-blue-light-computer-glasses-9.md) (Alternative)
-- [Spectra Rimless Minimalist Frames Series 10](./spectra-rimless-minimalist-frames-10.md) (Alternative)
-- [Spectra Classic Matte Wayfarers Series 12](./spectra-classic-matte-wayfarers-12.md) (Complementary)
+- [Wearables & Tech](../categories/wearables-tech.md) (Category)
+- [Apex Slim Fit Elegance Smartwatch Gen 4](./apex-slim-fit-elegance-smartwatch-4.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 8](./apex-titanium-rugged-sports-watch-8.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 3](./apex-titanium-rugged-sports-watch-3.md) (Alternative)
+- [Spectra Round Vintage Tortoise Sunnies Series 3](./spectra-round-vintage-tortoise-sunnies-3.md) (Complementary)
 - [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Complementary)
 
 ## Sources

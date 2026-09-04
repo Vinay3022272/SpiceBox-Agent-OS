@@ -3,8 +3,8 @@ type: product
 slug: womens-ribbed-knit-midi-dress-7
 name: Women's Ribbed Knit Midi Dress Series 7
 brand: Fluid drape crafted from sustainably sourced fibers
-category: Women
-last_updated: 2026-09-02
+category: Women's Dresses
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Effortlessly elegant. Cut with flattering proportions and breathable texture, pe
 
 ## Pricing
 
-- **Price**: 3899 INR
+- **Price**: 48 EUR
 
 
 ## Customer Sentiment
@@ -30,13 +30,11 @@ _No review data available yet._
 
 ## Related
 
-- [Women](../categories/women.md) (Category)
-- [Women's Cropped Linen Blouse Edition 15](./womens-cropped-linen-blouse-15.md) (Alternative)
-- [Women's High-Waist Wide Leg Jeans 3](./womens-high-waist-wide-leg-jeans-3.md) (Alternative)
-- [Women's High-Waist Wide Leg Jeans 4](./womens-high-waist-wide-leg-jeans-4.md) (Alternative)
-- [Women's High-Waist Wide Leg Jeans 7](./womens-high-waist-wide-leg-jeans-7.md) (Alternative)
-- [Women's Floral Linen Sundress](./womens-floral-linen-sundress-2.md) (Complementary)
-- [Women's Floral Linen Sundress Series 14](./womens-floral-linen-sundress-14.md) (Complementary)
+- [Women's Dresses](../categories/women-s-dresses.md) (Category)
+- [Women's Smocked A-Line Dress Series 12](./womens-smocked-a-line-dress-12.md) (Alternative)
+- [Women's Floral Linen Sundress Series 14](./womens-floral-linen-sundress-14.md) (Alternative)
+- [Women's Satin Cocktail Dress](./womens-satin-cocktail-dress-5.md) (Complementary)
+- [Women's Wrap Slip Dress Series 9](./womens-wrap-slip-dress-9.md) (Complementary)
 
 ## Sources
 

@@ -3,8 +3,8 @@ type: product
 slug: stride-breathable-knit-running-trainer-13
 name: Stride Breathable Knit Running Trainer Edition 13
 brand: Cushioned memory foam insole with vulcanized rubber grip
-category: Footwear & Lifestyle
-last_updated: 2026-09-02
+category: Sneakers & Footwear
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Combines timeless athletic silhouette with orthopedic daily comfort. Hand-finish
 
 ## Pricing
 
-- **Price**: 4749 INR
+- **Price**: 70 USD
 
 
 ## Customer Sentiment
@@ -30,13 +30,13 @@ _No review data available yet._
 
 ## Related
 
-- [Footwear & Lifestyle](../categories/footwear-lifestyle.md) (Category)
-- [Nomad Braided Paracord Key Lanyard 6](./nomad-braided-paracord-key-lanyard-6.md) (Alternative)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.14](./nomad-heavyweight-waxed-canvas-tote-14.md) (Alternative)
-- [Nomad Heavyweight Waxed Canvas Tote Mk.2](./nomad-heavyweight-waxed-canvas-tote-2.md) (Alternative)
-- [Nomad Leather Travel Tech Organizer 4](./nomad-leather-travel-tech-organizer-4.md) (Alternative)
+- [Sneakers & Footwear](../categories/sneakers-footwear.md) (Category)
+- [Stride Breathable Knit Running Trainer Edition 8](./stride-breathable-knit-running-trainer-8.md) (Alternative)
+- [Stride Court Minimalist Leather Sneaker Edition 6](./stride-court-minimalist-leather-sneaker-6.md) (Alternative)
+- [Stride Breathable Knit Running Trainer Edition 3](./stride-breathable-knit-running-trainer-3.md) (Alternative)
+- [Stride Everyday Foam Slide Edition 5](./stride-everyday-foam-slide-5.md) (Alternative)
 - [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Complementary)
-- [Stride Court Minimalist Leather Sneaker Edition 11](./stride-court-minimalist-leather-sneaker-11.md) (Complementary)
+- [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Complementary)
 
 ## Sources
 

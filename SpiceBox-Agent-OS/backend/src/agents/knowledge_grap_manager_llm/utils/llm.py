@@ -26,9 +26,12 @@ for _ep in _env_paths:
         load_dotenv(str(_ep))
         break
 
-# Rate limiting
-_last_call_time: float = 0
-_MIN_INTERVAL: float = 1.0  
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434")
+
+OLLAMA_MODELS = [
+    "gpt-oss:120b-cloud",
+    "gpt-oss:20b-cloud",
+]
 
 DEFAULT_MODELS = [
     "qwen/qwen3.8-27b",
@@ -97,6 +100,32 @@ def call_llm(
 
     system_prompt = "\n\n---\n\n".join(system_parts)
 
+    # 1. Try Ollama models first
+    import requests
+    for o_model in OLLAMA_MODELS:
+        try:
+            o_res = requests.post(
+                f"{OLLAMA_BASE_URL}/v1/chat/completions",
+                json={
+                    "model": o_model,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt},
+                    ],
+                    "temperature": temperature,
+                },
+                timeout=15,
+            )
+            if o_res.status_code == 200:
+                data = o_res.json()
+                content = data["choices"][0]["message"]["content"]
+                if content:
+                    return content
+        except Exception:
+            pass
+
+    # 2. Fall back to Groq models
+    client = _get_client()
     models_to_try = [model] + [m for m in DEFAULT_MODELS if m != model]
 
     last_error = None
@@ -135,8 +164,6 @@ def call_llm_json(
     include_schema: bool = True,
 ) -> dict | list:
 
-    client = _get_client()
-
     system_parts = []
     if include_schema:
         schema = get_schema()
@@ -152,6 +179,36 @@ def call_llm_json(
     )
 
     system_prompt = "\n\n---\n\n".join(system_parts)
+
+    # 1. Try Ollama models first
+    import requests
+    for o_model in OLLAMA_MODELS:
+        try:
+            o_res = requests.post(
+                f"{OLLAMA_BASE_URL}/v1/chat/completions",
+                json={
+                    "model": o_model,
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": prompt},
+                    ],
+                    "temperature": temperature,
+                    "response_format": {"type": "json_object"},
+                },
+                timeout=15,
+            )
+            if o_res.status_code == 200:
+                text = o_res.json()["choices"][0]["message"]["content"].strip()
+                if text.startswith("```"):
+                    text = text.split("```")[1]
+                    if text.startswith("json"):
+                        text = text[4:]
+                return json.loads(text.strip())
+        except Exception:
+            pass
+
+    # 2. Fall back to Groq models
+    client = _get_client()
 
     models_to_try = [model] + [m for m in DEFAULT_MODELS if m != model]
 

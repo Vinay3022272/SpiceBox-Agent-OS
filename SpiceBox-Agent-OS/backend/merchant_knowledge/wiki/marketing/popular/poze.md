@@ -2,7 +2,7 @@
 type: popular
 slug: poze
 name: Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men
-category: Wearables & Tech
+category: Men
 ranking: 0
 last_updated: 2026-09-03
 ---
@@ -11,29 +11,33 @@ last_updated: 2026-09-03
 
 ## Why It's Popular
 
-Combines classic analog aesthetics with digital functionality, offering high value for money and broad demographic appeal.
+The watch's popularity is driven by its timeless design, practical hybrid functionality, and competitive pricing, making it a trusted choice for customers who prioritize durability, readability, and style without compromising on budget.
 
 ## Quick Stats
 
-- **Category**: [Wearables & Tech](../../knowledge/categories/wearables-tech.md)
-- **Rating**: N/A/5
-- **Reviews**: 0
+- **Category**: [Men](../../knowledge/categories/men.md)
+- **Rating**: 5.0/5
+- **Reviews**: 1
 - **Price**: 1445 INR
 
 ## Key Selling Points
 
 
-- Ana-digi layout for functional readability and modern style
+- Classic black dial with subtle silver detailing for a refined, modern look
 
-- Unisex design suitable for both men and women
+- Versatile ana-digi layout combining analog elegance with digital functionality
 
-- Sturdy round case with a comfortable black strap for all-day wear
+- Durable metal strap and sturdy round case designed for all-day comfort
 
-- Refined black dial with subtle silver detailing for a professional look
+- Highly affordable at ₹1,445, offering exceptional value for everyday wear
+
+- Unisex styling that seamlessly transitions from work routines to casual weekend wear
 
 
 ## Customer Highlights
 
+
+> "Verified purchase"
 
 
 ## Recommended Pairings
@@ -42,15 +46,15 @@ Combines classic analog aesthetics with digital functionality, offering high val
 
 ## Revenue Recommendation
 
-High-volume potential due to unisex appeal and competitive pricing point of INR 1445, suitable for bundle promotions with other SpiceBox wearables.
+Positioned in the high-volume, low-to-mid price bracket, this product is well-suited to drive unit sales and increase cart conversion rates. Featuring it as a popular item can boost average order value when cross-sold with watch straps or accessories, while its accessible price point minimizes purchase hesitation.
 
 ## Related
 
 - [Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men](../../knowledge/products/poze.md) (Primary Product Dossier)
-- [Wearables & Tech](../../knowledge/categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](apex-active-pulse-gps-watch-12.md) (Alternative Option)
-- [Apex Active Pulse GPS Watch Gen 7](apex-active-pulse-gps-watch-7.md) (Alternative Option)
-- [Apex Explorer Multi-Sport Watch Gen 10](apex-explorer-multi-sport-watch-10.md) (Alternative Option)
+- [Men](../../knowledge/categories/men.md) (Category)
+- [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
+- [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)
+- [Men's Organic Cotton Essential Tee](mens-organic-cotton-tee-4.md) (Alternative Option)
 
 ## Sources
 

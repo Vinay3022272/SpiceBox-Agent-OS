@@ -4,7 +4,7 @@ slug: kids-girls-soft-ribbed-cardigan-17
 name: Girls Soft Ribbed Cardigan #17
 brand: Hypoallergenic, tagless comfort for sensitive skin
 category: Kids & Teens
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,13 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Kids & Teens](../categories/kids-teens.md) (Category)
-- [Boys Cargo Fleece Joggers #23](./kids-boys-cargo-fleece-joggers-23.md) (Alternative)
-- [Boys Cargo Fleece Joggers #32](./kids-boys-cargo-fleece-joggers-32.md) (Alternative)
+- [Boys Cargo Fleece Joggers #5](./kids-boys-cargo-fleece-joggers-5.md) (Alternative)
+- [Boys Colorblock Zip Hoodie #6](./kids-boys-colorblock-zip-hoodie-6.md) (Alternative)
+- [Organic Cotton Baby Romper #1](./kids-organic-cotton-baby-romper-1.md) (Alternative)
 - [Boys Colorblock Zip Hoodie #15](./kids-boys-colorblock-zip-hoodie-15.md) (Alternative)
-- [Boys Colorblock Zip Hoodie #24](./kids-boys-colorblock-zip-hoodie-24.md) (Alternative)
-- [Boys Cargo Fleece Joggers #14](./kids-boys-cargo-fleece-joggers-14.md) (Complementary)
-- [Boys Cargo Fleece Joggers #41](./kids-boys-cargo-fleece-joggers-41.md) (Complementary)
-- [Girls Soft Ribbed Cardigan #17 — Popular Item Intelligence](../../marketing/popular/kids-girls-soft-ribbed-cardigan-17.md) (Market Intelligence)
+- [Kids Cotton Pajama Set #9](./kids-kids-cotton-pajama-set-9.md) (Complementary)
+- [Organic Cotton Baby Romper #10](./kids-organic-cotton-baby-romper-10.md) (Complementary)
 
 ## Sources
 

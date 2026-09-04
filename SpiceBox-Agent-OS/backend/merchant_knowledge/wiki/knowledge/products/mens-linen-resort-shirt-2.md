@@ -3,8 +3,8 @@ type: product
 slug: mens-linen-resort-shirt-2
 name: Men's Linen Resort Shirt
 brand: Breathable tailored silhouette for work and weekends
-category: Men's Shirts
-last_updated: 2026-09-02
+category: Men's Tops
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,13 +30,14 @@ _No review data available yet._
 
 ## Related
 
-- [Men's Shirts](../categories/men-s-shirts.md) (Category)
-- [Men's Flannel Plaid Shirt](./mens-flannel-plaid-shirt-4.md) (Alternative)
-- [Men's Grandad Collar Shirt Vol. 11](./mens-grandad-collar-shirt-11.md) (Alternative)
-- [Men's Linen Resort Shirt Vol. 8](./mens-linen-resort-shirt-8.md) (Alternative)
-- [Men's Utility Overshirt Vol. 9](./mens-utility-overshirt-9.md) (Alternative)
+- [Men's Tops](../categories/men-s-tops.md) (Category)
+- [Men's Oversized Essential Tee](./mens-oversized-tee-1.md) (Alternative)
+- [Men's Organic Cotton Essential Tee Edition 14](./mens-organic-cotton-tee-14.md) (Alternative)
+- [Men's Brushed Cotton Essential Tee Edition 19](./mens-brushed-cotton-tee-19.md) (Alternative)
+- [Men's Grandad Collar Shirt](./mens-grandad-collar-shirt-5.md) (Alternative)
+- [Men's Oxford Button-Down](./mens-oxford-button-down-1.md) (Complementary)
 - [Men's Flannel Plaid Shirt Vol. 10](./mens-flannel-plaid-shirt-10.md) (Complementary)
-- [Men's Grandad Collar Shirt](./mens-grandad-collar-shirt-5.md) (Complementary)
+- [Men's Linen Resort Shirt — Popular Item Intelligence](../../marketing/popular/mens-linen-resort-shirt-2.md) (Market Intelligence)
 
 ## Sources
 

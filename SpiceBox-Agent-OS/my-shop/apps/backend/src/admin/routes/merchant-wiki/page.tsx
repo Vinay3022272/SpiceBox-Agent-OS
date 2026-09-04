@@ -170,9 +170,10 @@ const MerchantWikiPage = () => {
     }
   }, [isGenerating])
 
-  const handleGenerateWiki = async () => {
+  const handleGenerateWiki = async (section: "knowledge" | "marketing" = "knowledge") => {
     setIsGenerating(true)
-    toast.info("Generating Merchant Knowledge Wiki...", {
+    const label = section === "marketing" ? "Marketing & Promotions Intelligence" : "Knowledge Base"
+    toast.info(`Generating ${label}...`, {
       description: "Extracting live DB data and synthesizing markdown dossiers in background.",
     })
     try {
@@ -181,7 +182,7 @@ const MerchantWikiPage = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           merchant_id: "default_merchant",
-          section: "both",
+          section: section,
         }),
       })
 
@@ -332,11 +333,22 @@ const MerchantWikiPage = () => {
               size="small"
               variant="primary"
               className="flex items-center gap-x-1.5 font-medium shadow-sm"
-              onClick={handleGenerateWiki}
+              onClick={() => handleGenerateWiki("knowledge")}
               disabled={isGenerating}
             >
               <Sparkles className={`w-3.5 h-3.5 ${isGenerating ? "animate-spin" : ""}`} />
-              <span>{isGenerating ? "Generating Wiki..." : "Generate LLM Wiki"}</span>
+              <span>{isGenerating ? "Generating..." : "Generate Knowledge Base"}</span>
+            </Button>
+
+            <Button
+              size="small"
+              variant="secondary"
+              className="flex items-center gap-x-1.5 font-medium border-neutral-300"
+              onClick={() => handleGenerateWiki("marketing")}
+              disabled={isGenerating}
+              title="Enhances marketing dossiers using promotions, campaigns, and high-rating feedback."
+            >
+              <span>Enhance Marketing</span>
             </Button>
 
             <Button

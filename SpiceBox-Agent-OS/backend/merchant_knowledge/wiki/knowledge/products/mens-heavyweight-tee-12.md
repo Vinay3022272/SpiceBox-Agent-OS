@@ -4,7 +4,7 @@ slug: mens-heavyweight-tee-12
 name: Men's Heavyweight Essential Tee Edition 12
 brand: 240 GSM combed cotton with relaxed daily drape
 category: Men
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,41 +20,23 @@ Engineered for everyday durability. This heavyweight tee is cut from premium org
 
 ## Pricing
 
-- **Price**: 1399 INR
+- **Price**: 27 USD
 
 
 ## Customer Sentiment
 
 
-- **Overall Rating**: 4.0/5 (1 reviews)
-- **Summary**: Average rating: 4.0/5. "Great style, slightly relaxed: Amit V." (4.0/5)
-
-### What Customers Like
-
-
-- Great style, slightly relaxed
-
-
-### Common Complaints
-
-
-
-### Best Reviews
-
-
-> **"Great style, slightly relaxed"** — Amit V. (4.0/5)
-> Amit V.
+_No review data available yet._
 
 ## Related
 
 - [Men](../categories/men.md) (Category)
-- [Men's Classic Crew Essential Tee Edition 17](./mens-classic-crew-tee-17.md) (Alternative)
-- [Men's Drop Shoulder Essential Tee](./mens-drop-shoulder-tee-8.md) (Alternative)
-- [Men's Drop Shoulder Essential Tee Edition 18](./mens-drop-shoulder-tee-18.md) (Alternative)
-- [Men's French Terry Fleece Hoodie 1](./mens-fleece-hoodie-1.md) (Alternative)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Complementary)
-- [Men's Boxy Fit Essential Tee Edition 16](./mens-boxy-fit-tee-16.md) (Complementary)
-- [Men's Heavyweight Essential Tee Edition 12 — Popular Item Intelligence](../../marketing/popular/mens-heavyweight-tee-12.md) (Market Intelligence)
+- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
+- [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Oversized Essential Tee](./mens-oversized-tee-1.md) (Complementary)
+- [Men's Organic Cotton Essential Tee Edition 14](./mens-organic-cotton-tee-14.md) (Complementary)
 
 ## Sources
 

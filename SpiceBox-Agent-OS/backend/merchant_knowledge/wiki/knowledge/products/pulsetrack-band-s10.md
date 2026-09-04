@@ -3,8 +3,8 @@ type: product
 slug: pulsetrack-band-s10
 name: PulseTrack Band S10 Slim Fitness Tracker
 brand: Ultra-lightweight 18g daily health tracker
-category: Fitness Bands
-last_updated: 2026-09-02
+category: Wearables & Tech
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -30,13 +30,13 @@ _No review data available yet._
 
 ## Related
 
-- [Fitness Bands](../categories/fitness-bands.md) (Category)
-- [PulseTrack Band S11 Slim Fitness Tracker](./pulsetrack-band-s11.md) (Alternative)
-- [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Alternative)
-- [PulseTrack Band S6 Slim Fitness Tracker](./pulsetrack-band-s6.md) (Alternative)
-- [PulseTrack Band S7 Slim Fitness Tracker](./pulsetrack-band-s7.md) (Alternative)
+- [Wearables & Tech](../categories/wearables-tech.md) (Category)
+- [Apex Slim Fit Elegance Smartwatch Gen 4](./apex-slim-fit-elegance-smartwatch-4.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 8](./apex-titanium-rugged-sports-watch-8.md) (Alternative)
+- [Apex Active Pulse GPS Watch Gen 2](./apex-active-pulse-gps-watch-2.md) (Alternative)
+- [Apex Titanium Rugged Sports Watch Gen 3](./apex-titanium-rugged-sports-watch-3.md) (Alternative)
 - [PulseTrack Band S1 Slim Fitness Tracker](./pulsetrack-band-s1.md) (Complementary)
-- [PulseTrack Band S12 Slim Fitness Tracker](./pulsetrack-band-s12.md) (Complementary)
+- [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Complementary)
 
 ## Sources
 

@@ -37,6 +37,7 @@ from .query_pipeline import (
     query_wiki,
     query_knowledge_base,
     query_marketing_intelligence,
+    query_upsell_alternatives,
 )
 
 
@@ -172,7 +173,7 @@ def _run_single_section(
 def run_wiki_agent(
     merchant_id: str = "default_merchant",
     wiki_base_path: str = "./merchant_knowledge",
-    wiki_section: str = "both",
+    wiki_section: str = "knowledge",
     collected_data: list[dict[str, Any]] | None = None,
     on_progress: Optional[Callable[[str, dict], None]] = None,
 ) -> WikiState:
@@ -270,4 +271,5 @@ __all__ = [
     "query_wiki",
     "query_knowledge_base",
     "query_marketing_intelligence",
+    "query_upsell_alternatives",
 ]

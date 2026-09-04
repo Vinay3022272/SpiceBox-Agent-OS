@@ -4,14 +4,18 @@ slug: mens-brushed-cotton-tee-9
 name: Men's Brushed Cotton Essential Tee
 category: Men
 ranking: 0
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 ---
 
 # Men's Brushed Cotton Essential Tee — Popular Item
 
 ## Why It's Popular
 
-Strong sales volume driven by its blend of sustainability, comfort, and price, making it a top‑selling item in the Men’s category. 📄 db_catalog_1
+As a foundational men's essential, its combination of organic material, shrink‑resistant treatment, and reinforced construction aligns with high‑demand criteria for everyday apparel, driving consistent sales volume in the basics category. 📄 db_catalog_1
+
+## Description
+
+Engineered for everyday durability. This brushed cotton tee is cut from premium organic cotton, pre‑shrunk, and finished with a double‑needle ribbed collar. It features a 240 GSM combed cotton fabric with a relaxed daily drape for soft, breathable comfort. 📄 db_catalog_1
 
 ## Quick Stats
 
@@ -20,17 +24,31 @@ Strong sales volume driven by its blend of sustainability, comfort, and price, m
 - **Reviews**: 0
 - **Price**: 1099 INR
 
+> ⚠️ **Data Conflict: name**  
+> Previous: `Men's Brushed Cotton Essential Tee` (Source: db_catalog_1)  
+> New: `Men's Brushed Cotton Essential Tee Edition 19` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
+
+> ⚠️ **Data Conflict: category**  
+> Previous: `Men` (Source: db_catalog_1)  
+> New: `Men's Tops` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
+
+> ⚠️ **Data Conflict: price**  
+> Previous: `1099 INR` (Source: db_catalog_1)  
+> New: `26 USD` (Source: db_catalog_1)  
+> Status: _Requires resolution_  
+> Preferred: {manufacturer_spec | latest_source | merchant_override}
+
 ## Key Selling Points
 
-
-- 240 GSM combed organic cotton for softness and durability 📄 db_catalog_1
-
-- Pre‑shrunk construction with double‑needle ribbed collar for lasting fit 📄 db_catalog_1
-
-- Relaxed daily drape suitable for casual and semi‑formal looks 📄 db_catalog_1
-
-- Affordable premium pricing at 1,099 INR 📄 db_catalog_1
-
+- 240 GSM combed cotton fabric for soft, breathable comfort  
+- Pre‑shrunk treatment guarantees consistent fit after washing  
+- Double‑needle ribbed collar engineered for long‑lasting durability  
+- Premium organic cotton construction for everyday wear  
+- Relaxed daily drape designed for versatile, comfortable styling  
 
 ## Customer Highlights
 
@@ -42,17 +60,17 @@ Strong sales volume driven by its blend of sustainability, comfort, and price, m
 
 ## Revenue Recommendation
 
-High turnover potential due to its low price point and broad appeal, driving repeat purchases and cross‑selling opportunities with other men’s accessories. 📄 db_catalog_1
-
-## Sources
-
-
-- `db_catalog_1`
+Priced at ₹1099, this item occupies a high‑volume entry tier that encourages repeat purchases and serves as an effective anchor for cross‑selling complementary men's apparel. 📄 db_catalog_1
 
 ## Related
 
-- [Men's Brushed Cotton Essential Tee](../../knowledge/products/mens-brushed-cotton-tee-9.md) (Primary Product Dossier)
+- [Men's Brushed Cotton Essential Tee](../../knowledge/products/mens-brushed-cotton-tee-19.md) (Primary Product Dossier)
 - [Men](../../knowledge/categories/men.md) (Category)
-- [Men's Commuter Harrington Jacket 2](../../knowledge/products/mens-harrington-jacket-2.md) (Alternative Option)
-- [Men's Flannel Plaid Shirt](../../knowledge/products/mens-flannel-plaid-shirt-4.md) (Alternative Option)
-- [Men's Grandad Collar Shirt](../../knowledge/products/mens-grandad-collar-shirt-5.md) (Alternative Option)
+- [Men's Boxy Fit Essential Tee](mens-boxy-fit-tee-6.md) (Alternative Option)
+- [Men's Heavyweight Essential Tee](mens-heavyweight-tee-2.md) (Alternative Option)
+- [Men's Organic Cotton Essential Tee](mens-organic-cotton-tee-4.md) (Alternative Option)
+
+## Sources
+
+- `db_catalog_1`   (original)  
+- `db_catalog_1`   (new information)  

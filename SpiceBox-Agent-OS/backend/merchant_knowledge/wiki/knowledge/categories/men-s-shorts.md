@@ -2,8 +2,8 @@
 type: category
 slug: men-s-shorts
 name: Men's Shorts
-last_updated: 2026-09-02
-product_count: 2
+last_updated: 2026-09-03
+product_count: 1
 ---
 
 # Men's Shorts
@@ -19,8 +19,6 @@ Products in the Men's Shorts category.
 
 | [Men's Drawstring Leisure Shorts No. 11](../products/mens-drawstring-leisure-shorts-11.md) | Ergonomic fit with 2% comfort stretch | 2719 INR | N/A/5 | 0 |
 
-| [Men's Drawstring Leisure Shorts No. 12](../products/mens-drawstring-leisure-shorts-12.md) | Ergonomic fit with 2% comfort stretch | 2839 INR | N/A/5 | 0 |
-
 
 
 
@@ -28,7 +26,7 @@ Products in the Men's Shorts category.
 
 ## Category Trends
 
-Category contains 2 products.
+Category contains 1 products.
 
 ## Sources
 

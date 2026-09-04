@@ -33,14 +33,15 @@ def knowledge_diff(state: WikiState) -> dict:
         # Determine page type for marketing section
         if section == "marketing":
             raw_data = str(product.get("raw_data", {})).lower()
-            rated_slugs = {r.get("product_slug") for r in review_syntheses if r.get("avg_rating", 0) >= 4.0}
-            if any(k in raw_data for k in ["promotion", "discount", "offer", "deal"]):
+            rated_slugs = {r.get("product_slug") for r in review_syntheses if r.get("avg_rating", 0) >= 4.0 and r.get("total_reviews", 0) > 0}
+            if any(k in raw_data for k in ["promotion", "discount", "offer", "deal", "promo_code"]):
                 page_type = "promotions"
             elif any(k in raw_data for k in ["special", "signature", "unique"]):
                 page_type = "specialties"
-            elif slug in rated_slugs or len(pages_to_create) < 8:
+            elif slug in rated_slugs:
                 page_type = "popular"
             else:
+                # No verifiable marketing or promotional signal — skip fabricating pages
                 continue
 
         file_path = get_page_path(wiki_base, section, page_type, slug)

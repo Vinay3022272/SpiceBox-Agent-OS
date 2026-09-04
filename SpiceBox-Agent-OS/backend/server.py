@@ -14,6 +14,14 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 # Ensure backend root is in sys.path
 import sys
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 BACKEND_DIR = Path(__file__).resolve().parent
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
@@ -323,6 +331,58 @@ def _get_wiki_page(rel_path: str) -> dict | None:
                     "type": match.group(3) or "Related",
                 })
 
+    # If this is an index file, parse structured catalog directory entries
+    index_data = None
+    if rel_path.endswith("index.md") or rel_path == "index.md":
+        categories = []
+        products = []
+        marketing = []
+        last_updated = ""
+
+        current_group = "general"
+        for line in raw_content.splitlines():
+            ls = line.strip()
+            if "_Last updated:" in ls:
+                last_updated = ls.replace("_Last updated:", "").replace("_", "").strip()
+            elif ls.startswith("### Categories") or ls.startswith("## Categories"):
+                current_group = "categories"
+            elif ls.startswith("### Products") or ls.startswith("## Products"):
+                current_group = "products"
+            elif ls.startswith("### Popular") or ls.startswith("## Marketing") or ls.startswith("### Promotions"):
+                current_group = "marketing"
+            elif ls.startswith("## "):
+                header = ls[3:].lower()
+                if "marketing" in header:
+                    current_group = "marketing"
+                elif "knowledge" in header:
+                    current_group = "general"
+
+            if ls.startswith("- ["):
+                match = re.search(r"-\s*\[([^\]]+)\]\(([^)]+)\)", ls)
+                if match:
+                    title = match.group(1).strip()
+                    target_link = match.group(2).strip()
+                    clean_path = target_link.lstrip("./").lstrip("/")
+                    slug = Path(clean_path).stem
+                    item = {"title": title, "path": clean_path, "slug": slug}
+                    if current_group == "categories" or "categories/" in clean_path:
+                        categories.append(item)
+                    elif current_group == "marketing" or "marketing/" in clean_path:
+                        marketing.append(item)
+                    else:
+                        products.append(item)
+
+        index_data = {
+            "is_index": True,
+            "last_updated": last_updated,
+            "total_products": len(products),
+            "total_categories": len(categories),
+            "total_marketing": len(marketing),
+            "categories": categories,
+            "products": products,
+            "marketing": marketing,
+        }
+
     return {
         "path": rel_path,
         "raw": raw_content,
@@ -334,6 +394,7 @@ def _get_wiki_page(rel_path: str) -> dict | None:
         "related_links": related_links,
         "primary_product_path": primary_product_path,
         "marketing_intelligence_path": marketing_intelligence_path,
+        "index_data": index_data,
         "last_modified": datetime.fromtimestamp(target.stat().st_mtime).strftime("%Y-%m-%d %H:%M"),
     }
 
@@ -507,7 +568,7 @@ if init_count > 0:
     generation_state["status"] = "success"
 
 
-def _run_pipeline_job(merchant_id: str = "default_merchant", section: str = "both"):
+def _run_pipeline_job(merchant_id: str = "default_merchant", section: str = "knowledge"):
     """Background worker delegating entire wiki generation to the autonomous Wiki Agent."""
     global generation_state
     start_time = time.time()
@@ -702,7 +763,7 @@ class WikiRequestHandler(BaseHTTPRequestHandler):
                     pass
 
             merchant_id = payload.get("merchant_id", "default_merchant")
-            section = payload.get("section", "both")
+            section = payload.get("section", "knowledge")
 
             # Launch background worker
             thread = threading.Thread(
@@ -733,7 +794,7 @@ class WikiRequestHandler(BaseHTTPRequestHandler):
 def run_server():
     server_address = ("0.0.0.0", PORT)
     httpd = HTTPServer(server_address, WikiRequestHandler)
-    print(f"✔ Merchant Wiki Runner Server started at http://0.0.0.0:{PORT}")
+    print(f"[OK] Merchant Wiki Runner Server started at http://0.0.0.0:{PORT}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

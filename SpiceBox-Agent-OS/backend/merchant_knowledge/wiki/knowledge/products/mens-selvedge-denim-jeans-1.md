@@ -4,7 +4,7 @@ slug: mens-selvedge-denim-jeans-1
 name: Men's Selvedge Denim Jeans No. 1
 brand: Ergonomic fit with 2% comfort stretch
 category: Men's Jeans
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -31,8 +31,9 @@ _No review data available yet._
 ## Related
 
 - [Men's Jeans](../categories/men-s-jeans.md) (Category)
-- [Men's Drawstring Leisure Shorts No. 11](./mens-drawstring-leisure-shorts-11.md) (Complementary)
-- [Men's Drawstring Leisure Shorts No. 12](./mens-drawstring-leisure-shorts-12.md) (Complementary)
+- [Men's Selvedge Denim Jeans No. 5](./mens-selvedge-denim-jeans-5.md) (Alternative)
+- [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Complementary)
+- [Men's Pleated Cotton Chino No. 6](./mens-pleated-cotton-chino-6.md) (Complementary)
 
 ## Sources
 

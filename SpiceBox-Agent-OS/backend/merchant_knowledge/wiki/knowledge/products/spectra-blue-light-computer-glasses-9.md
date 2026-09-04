@@ -3,8 +3,8 @@ type: product
 slug: spectra-blue-light-computer-glasses-9
 name: Spectra Blue-Light Computer Glasses Series 9
 brand: UV400 Category 3 polarized optical lenses
-category: Wearables & Tech
-last_updated: 2026-09-02
+category: Eyewear & Sunglasses
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ Crafted with lightweight Italian acetate and durable stainless steel barrel hing
 
 ## Pricing
 
-- **Price**: 1849 INR
+- **Price**: 30 EUR
 
 
 ## Customer Sentiment
@@ -30,13 +30,13 @@ _No review data available yet._
 
 ## Related
 
-- [Wearables & Tech](../categories/wearables-tech.md) (Category)
-- [Apex Active Pulse GPS Watch Gen 12](./apex-active-pulse-gps-watch-12.md) (Alternative)
-- [Apex Active Pulse GPS Watch Gen 7](./apex-active-pulse-gps-watch-7.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 10](./apex-explorer-multi-sport-watch-10.md) (Alternative)
-- [Apex Explorer Multi-Sport Watch Gen 15](./apex-explorer-multi-sport-watch-15.md) (Alternative)
+- [Eyewear & Sunglasses](../categories/eyewear-sunglasses.md) (Category)
+- [Spectra Round Vintage Tortoise Sunnies Series 3](./spectra-round-vintage-tortoise-sunnies-3.md) (Alternative)
+- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Alternative)
+- [Spectra Polarized Aviator Sunglasses Series 11](./spectra-polarized-aviator-sunglasses-11.md) (Alternative)
+- [Spectra Round Vintage Tortoise Sunnies Series 8](./spectra-round-vintage-tortoise-sunnies-8.md) (Alternative)
+- [Spectra Polarized Aviator Sunglasses Series 1](./spectra-polarized-aviator-sunglasses-1.md) (Complementary)
 - [Spectra Blue-Light Computer Glasses Series 4](./spectra-blue-light-computer-glasses-4.md) (Complementary)
-- [Spectra Rimless Minimalist Frames Series 10](./spectra-rimless-minimalist-frames-10.md) (Complementary)
 
 ## Sources
 

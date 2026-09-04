@@ -4,7 +4,7 @@ slug: womens-mock-neck-longsleeve-5
 name: Women's Mock-Neck Longsleeve
 brand: Ultra-soft micro-modal touch with contour fit
 category: 
-last_updated: 2026-09-02
+last_updated: 2026-09-03
 sources: db_catalog_1
 ---
 
@@ -20,7 +20,7 @@ A chic basic that layers seamlessly. Breathable, stretchy, and holds its silhoue
 
 ## Pricing
 
-- **Price**: 1799 INR
+- **Price**: 32 EUR
 
 
 ## Customer Sentiment
@@ -31,7 +31,7 @@ _No review data available yet._
 ## Related
 
 - [Women's Cropped Linen Blouse](./womens-cropped-linen-blouse-3.md) (Complementary)
-- [Women's Cropped Linen Blouse Edition 15](./womens-cropped-linen-blouse-15.md) (Complementary)
+- [Women's Square-Neck Ribbed Top](./womens-square-neck-ribbed-top-1.md) (Complementary)
 
 ## Sources
 
