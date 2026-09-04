@@ -10,7 +10,7 @@ import json
 from langchain_core.messages import HumanMessage, AIMessage
 
 # Ensure path is backend root
-backend_root = Path(__file__).resolve().parents[3]
+backend_root = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(backend_root))
 
 from src.agents.intent_analyzer_llm.analyzer import _analyze_selling_context

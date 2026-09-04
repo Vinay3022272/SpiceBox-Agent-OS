@@ -1,4 +1,4 @@
-from .policy import (
+from ..policy import (
     calculate_budget_boundary,
     calculate_upsell_score,
     decide_cross_sell,

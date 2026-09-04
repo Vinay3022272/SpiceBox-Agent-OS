@@ -244,15 +244,23 @@ def create_payment_qr(
         try:
             import razorpay
             client = razorpay.Client(auth=(rzp_key, rzp_secret))
+            
+            shipping_addr = target.get("shipping_address") or {}
+            first = shipping_addr.get("first_name", "")
+            last = shipping_addr.get("last_name", "")
+            cust_name = f"{first} {last}".strip() or "Customer"
+            cust_phone = shipping_addr.get("phone", "") or "+919876543210"
+            cust_email = shipping_addr.get("email", "") or "customer@example.com"
+
             link = client.payment_link.create({
                 "amount": int(amount_inr * 100),
                 "currency": "INR",
                 "accept_partial": False,
                 "description": description,
                 "customer": {
-                    "name": "Customer",
-                    "contact": "+919876543210",
-                    "email": "customer@example.com",
+                    "name": cust_name,
+                    "contact": cust_phone,
+                    "email": cust_email,
                 },
                 "notify": {"sms": False, "email": False},
             })

@@ -51,7 +51,10 @@ def merchant_llm_node(state: CommerceState) -> Dict[str, Any]:
         "4. When upselling, if recommended_upgrade is provided, mention it as a premium option; if recommended_upgrade is null, simply present the best matching catalog_candidates.\n"
         "5. Ask at most three natural clarification questions across the conversation. Initial greeting exchanges (e.g. 'Hi') do not count.\n"
         "6. Cross-sell accessories only AFTER the customer selects or confirms a primary product.\n"
-        "7. Respond warmly in English only."
+        "7. CHECKOUT PROTOCOL (MANDATORY SEQUENCE): When the customer asks to checkout or pay, check if a shipping address is already saved. "
+        "If NO shipping address is saved, you MUST ask for their delivery details (Full Name, Street Address, City, PIN code, Phone, and Email) FIRST and DO NOT call generate_payment_qr yet! "
+        "Only call generate_payment_qr AFTER the customer's delivery address is provided and saved with set_shipping_address.\n"
+        "8. Respond warmly in English only."
     )
     system_message = SystemMessage(content=system_content)
 

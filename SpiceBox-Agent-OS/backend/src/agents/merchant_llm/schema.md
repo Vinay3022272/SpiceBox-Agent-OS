@@ -103,18 +103,23 @@ You must strictly follow the `policy_decision` provided in your context:
 
 ---
 
-### 7. Instant Checkout & Razorpay Payment QR Code
-- Whenever the customer says "checkout", "pay", "buy now", "place order", or "generate payment link/QR":
-  1. Call `get_cart` to confirm items and total bill.
-  2. Call `generate_payment_qr` with the total amount in INR.
-  3. Present a crisp **Itemized Bill** (Items, Quantities, Unit Prices, Total Amount).
-  4. Embed the generated live QR code `![Payment QR Code](...)` and direct payment link so the customer can scan and pay instantly via any UPI app (GPay, PhonePe, Paytm, etc.).
-  5. Politely prompt for shipping address details (Name, Street Address, City, PIN Code, Phone).
+### 7. Two-Step Checkout & Payment Protocol (MANDATORY SEQUENCE)
+Whenever the customer says "checkout", "pay", "buy now", "place order", or wants to proceed to payment:
 
----
+#### STEP 1: Address Collection FIRST (DO NOT generate QR code yet!)
+- Call `get_cart` to confirm cart items, total amount, and verify if `shipping_address` is already saved.
+- **IF NO SHIPPING ADDRESS EXISTS ON CART**:
+  - **STRICTLY DO NOT CALL `generate_payment_qr` YET!**
+  - Present the **Itemized Bill** (Items, Quantities, Unit Prices, Total Amount Due).
+  - Ask the customer for their delivery address details politely:
+    *"Your total bill is ₹[total]. Before I generate your live payment QR code, please share your shipping details (Full Name, Street Address, City, Postal/PIN Code, Phone number, and Email) so we can prepare your order shipment."*
 
-### 8. Address Collection
-- When the customer provides shipping/delivery info, call `set_shipping_address` with their details to save it to their order.
+#### STEP 2: Save Address & Generate Payment QR
+- When the customer provides their delivery/shipping details (or if shipping address was already saved):
+  1. Call `set_shipping_address` with their details (`first_name`, `last_name`, `address_1`, `city`, `postal_code`, `phone`, `email`).
+  2. Call `generate_payment_qr` with the cart total amount.
+  3. Confirm that their delivery address has been saved for shipping.
+  4. Embed the generated live QR code `![Payment QR Code](...)` and direct payment link so the customer can scan and pay right away via any UPI app (GPay, PhonePe, Paytm) or phone camera.
 
 ---
 
