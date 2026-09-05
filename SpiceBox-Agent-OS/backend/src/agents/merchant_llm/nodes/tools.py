@@ -112,14 +112,23 @@ def generate_payment_qr(amount_inr: float = 0.0, description: str = "Store Purch
     """
     Generate a Razorpay payment link and QR code for checkout.
 
-    ONLY call this tool when the customer explicitly asks to pay, checkout, view bill, or
-    proceed to payment. If amount_inr is 0 or not provided, the tool will
-    automatically use the current cart total.
+    MANDATORY PRE-CONDITION:
+    Do NOT call this tool until the customer's delivery/shipping address has been collected and saved using set_shipping_address.
+    If the customer wants to pay or checkout, FIRST ask for their delivery address details (Full Name, Address, City, PIN code, Phone number, Email).
+    Only call this tool AFTER set_shipping_address has been called!
 
     Args:
         amount_inr: The payment amount in INR. If 0, uses the cart total.
         description: A short description for the payment (e.g. "Order Checkout").
     """
+    cart_data = get_cart_data()
+    if not cart_data.get("shipping_address"):
+        return (
+            "Cannot generate payment QR code yet: Customer's delivery/shipping address is missing. "
+            "Please ask the customer to provide their shipping details (Full Name, Street Address, City, PIN Code, Phone number, and Email) "
+            "and save it using set_shipping_address FIRST before generating the payment QR."
+        )
+
     res = create_payment_qr(amount_inr=amount_inr, description=description)
     if not res.get("success"):
         return res.get("error", "Failed to generate payment QR. Please ensure items are in the cart.")

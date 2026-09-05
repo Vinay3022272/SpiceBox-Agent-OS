@@ -3,11 +3,14 @@ cart.py — Dynamic shopping cart operations and payment generation for the Merc
 Supports real-shop cart synchronization, address management, and Razorpay/UPI QR generation.
 """
 
+from typing import Dict, Any, List, Optional
 import os
 import io
 import base64
-from typing import Dict, Any, List, Optional
-import qrcode
+try:
+    import qrcode
+except ImportError:
+    qrcode = None
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
 
@@ -241,15 +244,23 @@ def create_payment_qr(
         try:
             import razorpay
             client = razorpay.Client(auth=(rzp_key, rzp_secret))
+            
+            shipping_addr = target.get("shipping_address") or {}
+            first = shipping_addr.get("first_name", "")
+            last = shipping_addr.get("last_name", "")
+            cust_name = f"{first} {last}".strip() or "Customer"
+            cust_phone = shipping_addr.get("phone", "") or "+919876543210"
+            cust_email = shipping_addr.get("email", "") or "customer@example.com"
+
             link = client.payment_link.create({
                 "amount": int(amount_inr * 100),
                 "currency": "INR",
                 "accept_partial": False,
                 "description": description,
                 "customer": {
-                    "name": "Customer",
-                    "contact": "+919876543210",
-                    "email": "customer@example.com",
+                    "name": cust_name,
+                    "contact": cust_phone,
+                    "email": cust_email,
                 },
                 "notify": {"sms": False, "email": False},
             })
@@ -263,20 +274,22 @@ def create_payment_qr(
         payment_url = f"upi://pay?pa=store@razorpay&pn=MedusaStore&am={amount_inr:.2f}&cu=INR&tn={description.replace(' ', '%20')}"
 
     # Generate QR Code in memory as base64 PNG
-    img = qrcode.make(payment_url)
-
-    # Save to disk as payment_qr_<plink_id>.png if available
-    qr_filename = f"payment_qr_{plink_id}.png" if plink_id else "payment_qr.png"
-    try:
-        img.save(qr_filename)
-    except Exception:
-        pass
-
-    buf = io.BytesIO()
-    # pyrefly: ignore [unexpected-keyword]
-    img.save(buf, format="PNG")
-    b64_qr = base64.b64encode(buf.getvalue()).decode("utf-8")
-    qr_data_url = f"data:image/png;base64,{b64_qr}"
+    qr_filename = None
+    qr_data_url = None
+    if qrcode is not None:
+        try:
+            img = qrcode.make(payment_url)
+            qr_filename = f"payment_qr_{plink_id}.png" if plink_id else "payment_qr.png"
+            try:
+                img.save(qr_filename)
+            except Exception:
+                pass
+            buf = io.BytesIO()
+            img.save(buf, format="PNG")
+            b64_qr = base64.b64encode(buf.getvalue()).decode("utf-8")
+            qr_data_url = f"data:image/png;base64,{b64_qr}"
+        except Exception as e:
+            print(f"  [QR generator] Error: {e}")
 
     if "last_actions" not in target:
         target["last_actions"] = []

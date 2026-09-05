@@ -41,3 +41,25 @@ class CommerceState(TypedDict, total=False):
     user_id: str
     payment_context: Dict[str, Any]
     policy_context: Dict[str, Any]
+    # Intent-aware selling additions. All are optional to preserve older callers.
+    product_need: Optional[str]
+    customer_preferences: Dict[str, Any]
+    catalog_context: List[Dict[str, Any]]
+    candidate_products: List[Dict[str, Any]]
+    stated_budget: Optional[float]
+    effective_budget: Optional[float]
+    acceptable_budget_stretch: Optional[float]
+    budget_restrictiveness: float
+    quality_value_orientation: float
+    upsell_openness: float
+    upsell_opportunity_score: float
+    upsell_decision: str
+    intent_confidence: float
+    intent_evidence: Dict[str, str]
+    intent_history: List[Dict[str, Any]]
+    questions_asked: int
+    recommended_product: Optional[Dict[str, Any]]
+    cross_sell_candidates: List[Dict[str, Any]]
+    cross_sell_shown: List[str]
+    cross_sell_rejected: bool
+    cross_sell_accepted: List[str]
