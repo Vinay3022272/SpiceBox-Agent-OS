@@ -1,4 +1,4 @@
-# 📦 SpiceBox Agent OS
+# SpiceBox Agent OS
 ### Autonomous AI Commerce & Growth Engine — Powered by LangGraph, Medusa & Razorpay
 
 [![Razorpay Buildathon Track 01](https://img.shields.io/badge/Razorpay_Buildathon-Track_01:_AI_Growth_%26_Agentic_Commerce-blue?style=for-the-badge&logo=razorpay)](https://razorpay.com)
@@ -16,7 +16,7 @@
   <img src="readme_img/hero-storefront.png" alt="SpiceBox Agent OS Storefront and AI Shopkeeper" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
 </p>
 
-### ⚡ What is SpiceBox Agent OS in 60 Seconds?
+### What is SpiceBox Agent OS in 60 Seconds?
 
 **SpiceBox Agent OS** is a production-grade agentic commerce platform built for **Razorpay Buildathon Track 01: "AI Growth & Agentic Commerce"**. 
 
@@ -28,7 +28,7 @@ Traditional e-commerce chatbots are ungrounded conversational toys: they halluci
 
 ---
 
-## 🎬 Visual Feature Tour
+## Visual Feature Tour
 
 Explore how SpiceBox Agent OS guides customers seamlessly from conversational intent to payment verification.
 
@@ -79,7 +79,7 @@ Explore how SpiceBox Agent OS guides customers seamlessly from conversational in
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [The Problem vs. Our Solution](#the-problem-vs-our-solution)
 - [System Architecture](#system-architecture)
