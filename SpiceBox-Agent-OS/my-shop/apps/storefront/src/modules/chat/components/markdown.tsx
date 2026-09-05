@@ -116,7 +116,7 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           <div key={idx} className="my-3 flex flex-col items-center justify-center p-3.5 bg-white border border-gray-200 rounded-xl shadow-sm text-center">
             {isQr && (
               <span className="text-[11px] font-semibold text-neutral-800 mb-2 flex items-center gap-1.5">
-                <span>📱 Scan with Google Pay / PhonePe / Paytm</span>
+                <span>Scan with Google Pay / PhonePe / Paytm</span>
               </span>
             )}
             <img
