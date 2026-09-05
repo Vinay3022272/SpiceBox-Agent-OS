@@ -32,9 +32,9 @@ _No review data available yet._
 
 - [Men's Tops](../categories/men-s-tops.md) (Category)
 - [Men's Oversized Essential Tee](./mens-oversized-tee-1.md) (Alternative)
-- [Men's Organic Cotton Essential Tee Edition 14](./mens-organic-cotton-tee-14.md) (Alternative)
-- [Men's Brushed Cotton Essential Tee Edition 19](./mens-brushed-cotton-tee-19.md) (Alternative)
-- [Men's Linen Resort Shirt](./mens-linen-resort-shirt-2.md) (Alternative)
+- [Men's Flannel Plaid Shirt Vol. 10](./mens-flannel-plaid-shirt-10.md) (Alternative)
+- [Men's Flannel Plaid Shirt](./mens-flannel-plaid-shirt-4.md) (Alternative)
+- [Men's Commuter Harrington Jacket 2](./mens-harrington-jacket-2.md) (Alternative)
 - [Men's French Terry Fleece Hoodie 1](./mens-fleece-hoodie-1.md) (Complementary)
 - [Men's French Terry Fleece Hoodie 7](./mens-fleece-hoodie-7.md) (Complementary)
 - [Men's French Terry Fleece Hoodie 3 — Popular Item Intelligence](../../marketing/popular/mens-fleece-hoodie-3.md) (Market Intelligence)

@@ -39,8 +39,7 @@ def sync_cart_state(external_items: List[Dict[str, Any]], shipping_address: Opti
     """Sync session cart with the real Medusa store cart from storefront."""
     global _SESSION_CART
     _SESSION_CART["items"] = list(external_items)
-    if shipping_address:
-        _SESSION_CART["shipping_address"] = shipping_address
+    _SESSION_CART["shipping_address"] = shipping_address if (shipping_address and any(shipping_address.values())) else None
     if saved_addresses:
         _SESSION_CART["saved_addresses"] = saved_addresses
     _SESSION_CART["last_actions"] = []

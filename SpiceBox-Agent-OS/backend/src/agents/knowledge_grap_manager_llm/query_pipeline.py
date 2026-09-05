@@ -254,24 +254,51 @@ def resolve_product_for_upsell(
 def extract_price_from_page(page: Dict[str, str]) -> Optional[float]:
     """
     Parse a numeric price (INR) from a wiki page's content.
-    Checks YAML frontmatter-style `price:` fields, markdown bold fields
-    like `**Price**: 79900 INR`, and table rows.
+    Prioritizes explicit INR prices (including resolved data conflicts),
+    and converts foreign currencies (USD/EUR) to INR so currency units are never confused.
     """
-    content = page["content"]
+    content = page.get("content", "")
 
-    # Pattern 1: **Price**: 79900 INR  (product pages)
-    m = re.search(r"\*\*Price\*\*\s*[:\-]\s*([\d,]+)", content, re.IGNORECASE)
+    # Priority 1: Resolved / New INR price from data conflict blocks (e.g. `New: 6499 INR`)
+    m = re.search(r"(?:New|Resolved|Current)\s*(?:Price)?\s*[:\-]\s*[`\*]?([\d,]+(?:\.\d+)?)\s*INR", content, re.IGNORECASE)
     if m:
         return float(m.group(1).replace(",", ""))
 
-    # Pattern 2: YAML frontmatter  price: 79900
-    m = re.search(r"^price\s*:\s*([\d,]+)", content, re.MULTILINE | re.IGNORECASE)
+    # Priority 2: Explicit INR price in **Price** or **New Price** field
+    m = re.search(r"\*\*(?:New\s+)?Price\*\*\s*[:\-]\s*(?:₹|Rs\.?|INR)?\s*([\d,]+(?:\.\d+)?)\s*(?:INR|₹|Rs\.?)", content, re.IGNORECASE)
     if m:
         return float(m.group(1).replace(",", ""))
 
-    # Pattern 3: table row  | ProductName | Brand | 79900 INR | ...
-    # Only useful for category pages; not used for single-product matching
+    # Priority 3: Any general INR mention (e.g. ₹6499 or 6499 INR)
+    m = re.search(r"(?:₹|Rs\.?)\s*([\d,]+(?:\.\d+)?)|([\d,]+(?:\.\d+)?)\s*INR", content, re.IGNORECASE)
+    if m:
+        val = m.group(1) or m.group(2)
+        if val:
+            return float(val.replace(",", ""))
+
+    # Priority 4: Foreign currency prices (convert to INR so we don't treat 79 USD as ₹79)
+    m_usd = re.search(r"\*\*Price\*\*\s*[:\-]\s*([\d,]+(?:\.\d+)?)\s*USD", content, re.IGNORECASE)
+    if m_usd:
+        # Convert USD to INR (~83 INR/USD)
+        return round(float(m_usd.group(1).replace(",", "")) * 83.0)
+
+    m_eur = re.search(r"\*\*Price\*\*\s*[:\-]\s*([\d,]+(?:\.\d+)?)\s*EUR", content, re.IGNORECASE)
+    if m_eur:
+        # Convert EUR to INR (~90 INR/EUR)
+        return round(float(m_eur.group(1).replace(",", "")) * 90.0)
+
+    # Priority 5: Generic **Price**: 79900 without explicit currency
+    m = re.search(r"\*\*Price\*\*\s*[:\-]\s*([\d,]+(?:\.\d+)?)", content, re.IGNORECASE)
+    if m:
+        return float(m.group(1).replace(",", ""))
+
+    # Priority 6: YAML frontmatter price: 79900
+    m = re.search(r"^price\s*:\s*([\d,]+(?:\.\d+)?)", content, re.MULTILINE | re.IGNORECASE)
+    if m:
+        return float(m.group(1).replace(",", ""))
+
     return None
+
 
 
 def extract_category_from_page(page: Dict[str, str]) -> str:

@@ -31,7 +31,6 @@ _No review data available yet._
 ## Related
 
 - [Girls' Collection](../categories/girls-collection.md) (Category)
-- [Girls Floral Chiffon Party Frock #7](./kids-girls-floral-chiffon-party-frock-7.md) (Alternative)
 - [Girls Floral Chiffon Party Frock #34](./kids-girls-floral-chiffon-party-frock-34.md) (Alternative)
 - [Girls Soft Ribbed Cardigan #44](./kids-girls-soft-ribbed-cardigan-44.md) (Alternative)
 - [Girls Floral Chiffon Party Frock #43](./kids-girls-floral-chiffon-party-frock-43.md) (Alternative)

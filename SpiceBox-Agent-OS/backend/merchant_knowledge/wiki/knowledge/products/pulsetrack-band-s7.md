@@ -31,11 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Fitness Bands](../categories/fitness-bands.md) (Category)
-- [PulseTrack Band S1 Slim Fitness Tracker](./pulsetrack-band-s1.md) (Alternative)
 - [PulseTrack Band S2 Slim Fitness Tracker](./pulsetrack-band-s2.md) (Alternative)
-- [PulseTrack Band S8 Slim Fitness Tracker](./pulsetrack-band-s8.md) (Alternative)
+- [PulseTrack Band S4 Slim Fitness Tracker](./pulsetrack-band-s4.md) (Alternative)
+- [PulseTrack Band S10 Slim Fitness Tracker](./pulsetrack-band-s10.md) (Alternative)
+- [PulseTrack Band S9 Slim Fitness Tracker](./pulsetrack-band-s9.md) (Alternative)
 - [PulseTrack Band S3 Slim Fitness Tracker](./pulsetrack-band-s3.md) (Complementary)
-- [PulseTrack Band S5 Slim Fitness Tracker](./pulsetrack-band-s5.md) (Complementary)
+- [PulseTrack Band S1 Slim Fitness Tracker](./pulsetrack-band-s1.md) (Complementary)
 
 ## Sources
 

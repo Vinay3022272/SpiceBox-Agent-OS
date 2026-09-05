@@ -31,10 +31,10 @@ _No review data available yet._
 ## Related
 
 - [Men](../categories/men.md) (Category)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
 - [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
-- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
 - [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Brushed Cotton Essential Tee](./mens-brushed-cotton-tee-9.md) (Alternative)
+- [Men's Drop Shoulder Essential Tee](./mens-drop-shoulder-tee-8.md) (Alternative)
 - [Men's Selvedge Denim Jeans No. 1](./mens-selvedge-denim-jeans-1.md) (Complementary)
 - [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Complementary)
 

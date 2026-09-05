@@ -32,7 +32,7 @@ _No review data available yet._
 
 - [Men's Trousers & Chinos](../categories/men-s-trousers-chinos.md) (Category)
 - [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Alternative)
-- [Men's Pleated Cotton Chino No. 8](./mens-pleated-cotton-chino-8.md) (Alternative)
+- [Men's Pleated Cotton Chino No. 7](./mens-pleated-cotton-chino-7.md) (Alternative)
 - [Men's Selvedge Denim Jeans No. 1](./mens-selvedge-denim-jeans-1.md) (Complementary)
 - [Men's Selvedge Denim Jeans No. 3](./mens-selvedge-denim-jeans-3.md) (Complementary)
 

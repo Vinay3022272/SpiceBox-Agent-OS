@@ -31,9 +31,8 @@ _No review data available yet._
 ## Related
 
 - [Men's Bottoms](../categories/men-s-bottoms.md) (Category)
-- [Men's Pleated Cotton Chino No. 9](./mens-pleated-cotton-chino-9.md) (Alternative)
-- [Men's Selvedge Denim Jeans No. 2](./mens-selvedge-denim-jeans-2.md) (Alternative)
-- [Men's Drawstring Leisure Shorts No. 12](./mens-drawstring-leisure-shorts-12.md) (Alternative)
+- [Men's Pleated Cotton Chino No. 8](./mens-pleated-cotton-chino-8.md) (Alternative)
+- [Men's Selvedge Denim Jeans No. 4](./mens-selvedge-denim-jeans-4.md) (Alternative)
 - [Men's Drawstring Leisure Shorts No. 13](./mens-drawstring-leisure-shorts-13.md) (Alternative)
 - [Men's Selvedge Denim Jeans No. 1](./mens-selvedge-denim-jeans-1.md) (Complementary)
 - [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Complementary)

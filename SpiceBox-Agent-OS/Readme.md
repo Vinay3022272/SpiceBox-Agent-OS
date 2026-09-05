@@ -1,18 +1,86 @@
-# SpiceBox Agent OS
-### AI Growth & Agentic Commerce Engine — Powered by LangGraph & Razorpay
+# 📦 SpiceBox Agent OS
+### Autonomous AI Commerce & Growth Engine — Powered by LangGraph, Medusa & Razorpay
 
 [![Razorpay Buildathon Track 01](https://img.shields.io/badge/Razorpay_Buildathon-Track_01:_AI_Growth_%26_Agentic_Commerce-blue?style=for-the-badge&logo=razorpay)](https://razorpay.com)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange?style=for-the-badge)](https://langchain-ai.github.io/langgraph/)
 [![Python](https://img.shields.io/badge/Backend-Python_3.11+-yellow?style=for-the-badge&logo=python)](https://python.org)
+[![MedusaJS](https://img.shields.io/badge/Storefront-Medusa_Next.js-9B51E0?style=for-the-badge)](https://medusajs.com)
 [![Razorpay API](https://img.shields.io/badge/Payments-Razorpay_Test_Mode-0C2340?style=for-the-badge&logo=razorpay)](https://razorpay.com/docs/api/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-> **"Every money action explainable, bounded and gated. Complete audit trail with graceful failure handling."**
+> **"Every financial action explainable, bounded, and gated. Complete audit trail with zero ungrounded transactions."**
 
 ---
 
-## Table of Contents
-- [Executive Overview](#executive-overview)
+<p align="center">
+  <img src="readme_img/hero-storefront.png" alt="SpiceBox Agent OS Storefront and AI Shopkeeper" width="100%" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</p>
+
+### ⚡ What is SpiceBox Agent OS in 60 Seconds?
+
+**SpiceBox Agent OS** is a production-grade agentic commerce platform built for **Razorpay Buildathon Track 01: "AI Growth & Agentic Commerce"**. 
+
+Traditional e-commerce chatbots are ungrounded conversational toys: they hallucinate inventory, push irrelevant products, cannot manage real store carts, and trigger blind payments without customer shipping addresses. 
+
+**SpiceBox Agent OS replaces this with an autonomous two-agent architecture:**
+1. **Agent 1: Offline Knowledge Graph Manager (`store_manager_llm`)** — An autonomous ETL engine embedded in Medusa Admin that maps relational PostgreSQL tables and customer reviews into a 300+ node semantic Knowledge Graph and markdown dossier wiki.
+2. **Agent 2: Online Merchant Commerce Agent (`merchant_llm`)** — A warm, empathetic AI salesman that conducts grounded sales discovery, enforces deterministic mathematical upsell scoring ($0-100$), synchronizes bidirectionally with the real Next.js storefront cart, and generates **gated, address-verified Razorpay live UPI QR codes** directly inside chat.
+
+---
+
+## 🎬 Visual Feature Tour
+
+Explore how SpiceBox Agent OS guides customers seamlessly from conversational intent to payment verification.
+
+### 1. Conversational Discovery & Mathematical Upselling
+
+<p align="center">
+  <img src="readme_img/chat-discovery.png" width="32%" alt="Catalog Discovery" />
+  <img src="readme_img/chat-upsell.png" width="32%" alt="Soft Upsell Recommendation" />
+  <img src="readme_img/chat-features.png" width="32%" alt="Deep Specifications" />
+</p>
+
+* **Grounded Natural Discovery**: When the customer asks for smartwatches, the agent lists real catalog options with verified specs and INR prices from the Knowledge Wiki.
+* **Intent-Aware Soft Upselling**: The intent analyzer extracts quality orientation from customer phrases (*"quality is important"*) and calculates a policy score. Instead of pushy sales tactics, it gently presents a premium upgrade within budget.
+* **Granular Specs on Demand**: Cites battery life, AMOLED display specs, and sensor details directly from indexed markdown product dossiers.
+
+---
+
+### 2. Real-Time Storefront Cart Sync & Address-Gated Razorpay QR
+
+<p align="center">
+  <img src="readme_img/cart-sync.png" width="58%" alt="Storefront Cart Synchronization" />
+  <img src="readme_img/razorpay-qr.png" width="38%" alt="Gated In-Chat Razorpay UPI QR Code" />
+</p>
+
+* **Bidirectional Medusa Cart Synchronization**: When the customer types *"ok add it to the cart"*, the AI invokes the `add_to_cart` tool. The Next.js storefront UI instantly updates the cart badge and line items in real time.
+* **Strict Address-First Gating**: The agent will **never** generate a payment link until complete delivery details (Name, Address, City, PIN Code, Phone, Email) are validated.
+* **Instant Razorpay UPI QR Code**: Once delivery details are saved, the agent generates an official Razorpay payment link (`plink_...`) and renders a scannable dynamic UPI QR code natively inside the chat interface for instant payment via Google Pay, PhonePe, or Paytm.
+
+---
+
+### 3. Medusa Admin: LLM Wiki Mapper & Interactive Knowledge Graph
+
+<p align="center">
+  <img src="readme_img/admin-sql-mapper.png" width="49%" alt="Adaptive SQL Mapper" />
+  <img src="readme_img/admin-visual-joins.png" width="49%" alt="Visual Multi-Hop Joins" />
+</p>
+
+* **Adaptive SQL & Multi-Hop Joins**: Ingests relational SQL tables (`product`, `variant`, `price_set`, `category`, `reviews`) through custom joins or automated Medusa presets.
+* **Continuous Entity Normalization**: Resolves contradictory specs across data feeds with automated LLM conflict resolution and audit logging.
+
+<p align="center">
+  <img src="readme_img/admin-neo4j-graph.png" width="54%" alt="Interactive Neo4j Knowledge Graph" />
+  <img src="readme_img/admin-wiki-index.png" width="44%" alt="Master Knowledge Directory" />
+</p>
+
+* **Master Knowledge Directory**: Automatically organizes 318+ synthesized dossiers across Products (260), Categories (32), and Marketing Intelligence (26).
+* **Interactive Neo4j Topology**: Explores 307 nodes and 921 semantic relationships (`BELONGS_TO`, `ALTERNATIVE_TO`, `COMPLEMENTS`) directly inside the Medusa Admin dashboard.
+
+---
+
+## 📑 Table of Contents
+
 - [The Problem vs. Our Solution](#the-problem-vs-our-solution)
 - [System Architecture](#system-architecture)
 - [The Two-Agent Engine](#the-two-agent-engine)
@@ -30,28 +98,16 @@
 
 ---
 
-## Executive Overview
-
-**SpiceBox Agent OS** is a production-grade agentic commerce backend designed for **Razorpay Buildathon Track 01 ("AI Growth & Agentic Commerce")**. 
-
-Traditional chatbots fail in e-commerce because they suffer from **catalog opacity** (hallucinating specs, stock, and prices from ungrounded prompts) and **ungated financial execution** (blindly generating payment links without shipping addresses or cart verification). 
-
-SpiceBox Agent OS solves this through a decoupled **two-agent architecture**:
-1. An offline **Knowledge Graph Manager Agent** that structures relational SQL tables and raw reviews into an AI-readable, bi-directionally linked semantic Markdown Wiki.
-2. An online **Merchant Commerce Agent** that combines natural language empathy with a 100% deterministic Python policy engine, strictly gating every cart action, address collection, and Razorpay test-mode payment link.
-
----
-
 ## The Problem vs. Our Solution
 
 | Challenge | Traditional Chatbots | SpiceBox Agent OS |
 |---|---|---|
-| **Catalog Grounding** | Prompts hallucinate prices, specs, and out-of-stock items. | Grounded in a persistent, linted Markdown Wiki with YAML frontmatter. |
-| **Sales Decisions** | Random or pushy upselling that alienates budget-conscious buyers. | Deterministic scoring algorithm ($0$ to $100$) with a hard budget firewall (`NO_UPSELL`). |
-| **Cart & Pricing** | LLM invents order totals or discounts in text. | Cart line items $\sum (P \times Q)$ computed deterministically in memory. |
-| **Payment Safety** | Triggers payment immediately without delivery details. | **Address-First Gating**: Hard block on payment creation until shipping address is validated. |
-| **Checkout Experience** | Redirects out of chat to complex web checkouts. | Creates live Razorpay payment links (`plink_...`) with embedded in-chat UPI QR codes. |
-| **Auditability** | Ephemeral, opaque prompt completions. | Every ingest, intent score, and payment link ID is persistently logged to `log.md`. |
+| **Catalog Grounding** | Prompts hallucinate prices, specs, and out-of-stock items. | Grounded in an offline, verified Markdown Wiki with YAML frontmatter & RapidFuzz matching. |
+| **Sales Decisions** | Aggressive or random upselling that causes customer churn. | Deterministic scoring algorithm ($0$ to $100$) with a hard budget firewall (`NO_UPSELL`). |
+| **Cart & Pricing** | LLM invents order totals or discounts in plain text. | Cart line items $\sum (P \times Q)$ computed deterministically by Python cart state. |
+| **Payment Safety** | Triggers payment links prematurely without delivery details. | **Address-First Gating**: Hard block on payment creation until shipping address is validated. |
+| **Checkout UX** | Redirects customer out of chat to complex external forms. | Generates official Razorpay payment links (`plink_...`) with embedded in-chat UPI QR codes. |
+| **Auditability** | Ephemeral, unlogged prompt completions. | Every ingest, conflict resolution, intent score, and payment link ID is permanently logged to `log.md`. |
 
 ---
 
@@ -134,7 +190,7 @@ SpiceBox Agent OS solves this through a decoupled **two-agent architecture**:
 
 ## Mathematical Upsell & Policy Engine
 
-In `intent_analyzer_llm/policy.py`, **no LLM is permitted to make a sales or pricing decision**. All decisions are governed by transparent, explainable formulas:
+In `intent_analyzer_llm/policy.py`, **no LLM is permitted to make an arbitrary sales or pricing decision**. All decisions are governed by transparent, explainable formulas:
 
 ### 1. Upsell Opportunity Score (0 – 100)
 $$\text{Score} = 100 \times \left( 0.45 \cdot \text{openness} + 0.30 \cdot \text{quality} + 0.25 \cdot (1 - \text{restrictiveness}) \right)$$
@@ -171,6 +227,8 @@ To meet the strictest hackathon criteria, we enforce non-negotiable execution bo
    Clarification questions across the session are tracked and capped at **3 total** (excluding pure greetings) to prevent customer fatigue.
 5. **Cross-Sell Discipline**:
    Complementary accessories are suppressed until the customer explicitly selects or confirms a primary product (`primary_selected == True`).
+6. **Policy Privacy Enforcement**:
+   The agent is strictly forbidden from leaking internal system terminology (such as *"policy"*, *"soft-upsell"*, or *"intent signals"*) in customer chat, preserving the authentic feel of a personal shopkeeper.
 
 ---
 
@@ -252,28 +310,42 @@ SpiceBox-Agent-OS/
 │           └── utils/
 │               ├── cart.py                          # In-memory cart, address & Razorpay QR
 │               └── llm.py                           # Multi-model fallback chain (Ollama/Groq)
-└── my-shop/                                         # Medusa DTC Monorepo (Backend & Storefront)
+├── my-shop/                                         # Medusa DTC Monorepo (Backend & Storefront)
+│   ├── apps/backend/                                # Medusa v2 Node.js Core & Admin UI
+│   └── apps/storefront/                             # Next.js Storefront with AI Chat Drawer
+└── readme_img/                                      # High-resolution screenshots & UI walkthroughs
 ```
 
 ---
 
 ## Getting Started & Local Setup
 
-### 1. Prerequisites
-- Python 3.11+
-- Node.js 20+ & pnpm (for storefront/Medusa)
-- Ollama (optional for local models) or Groq API Key
-- Razorpay Test Account Key & Secret
+### Option A: Complete Docker Compose Stack (Recommended)
 
-### 2. Backend Installation
 ```bash
-cd backend
+cd SpiceBox-Agent-OS/my-shop
+docker compose up -d
+```
+
+Services started:
+* **Next.js Storefront**: `http://localhost:8001`
+* **Medusa Backend & Admin Dashboard**: `http://localhost:9001` (Admin: `http://localhost:9001/app`)
+* **SpiceBox Agent OS Runner**: `http://localhost:8002`
+* **PostgreSQL (Port 5433)** & **Redis (Port 6380)**
+
+---
+
+### Option B: Local Development Setup
+
+#### 1. Backend Installation
+```bash
+cd SpiceBox-Agent-OS/backend
 python -m venv venv
-.\venv\Scripts\Activate.ps1   # On Windows
+.\venv\Scripts\Activate.ps1   # On Windows (or source venv/bin/activate on Linux/Mac)
 pip install -r requirement.txt
 ```
 
-### 3. Environment Configuration (`backend/.env`)
+#### 2. Environment Configuration (`backend/.env`)
 ```ini
 GROQ_API_KEY=gsk_your_groq_key
 RAZORPAY_KEY_ID=rzp_test_your_key_id
@@ -283,13 +355,13 @@ WIKI_SERVER_PORT=8002
 MEDUSA_URL=http://localhost:9001
 ```
 
-### 4. Build Knowledge Wiki (Agent 1)
+#### 3. Build Knowledge Wiki (Agent 1)
 ```bash
 # Ingest catalog & marketing data into markdown wiki
 python -m src.agents.store_manager_llm --source ./test_data --wiki ./merchant_knowledge --both
 ```
 
-### 5. Start Merchant Runner Server (Agent 2)
+#### 4. Start Merchant Runner Server (Agent 2)
 ```bash
 python server.py
 # Server starts at http://0.0.0.0:8002
@@ -342,7 +414,7 @@ Processes customer conversation, performs intent analysis, and executes cart/che
 Run the test suite to verify end-to-end commerce flows, intent analysis, and policy gating:
 
 ```bash
-cd backend
+cd SpiceBox-Agent-OS/backend
 
 # Verify Intent Analyzer & 10 Edge Cases
 python -m pytest src/agents/intent_analyzer_llm/test/test_10_cases.py -v

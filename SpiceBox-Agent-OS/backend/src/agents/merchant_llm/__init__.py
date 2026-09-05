@@ -49,11 +49,15 @@ def invoke_merchant_agent(
             last_user_msg = m.content.lower()
             break
 
-    checkout_keywords = ["checkout", "proceed to checkout", "pay", "payment qr", "qr code", "generate qr", "buy now", "pay now", "bill"]
+    checkout_keywords = ["checkout", "proceed to checkout", "pay", "payment qr", "qr code", "generate qr", "buy now", "pay now"]
     cart_current = get_cart_data()
-    has_shipping = bool(cart_current.get("shipping_address"))
-    if has_shipping and any(k in last_user_msg for k in checkout_keywords):
-        last_ai_msg = result["messages"][-1] if result.get("messages") else None
+    shipping = cart_current.get("shipping_address") or {}
+    has_shipping = bool(shipping.get("address_1") and shipping.get("city") and shipping.get("postal_code"))
+    last_ai_msg = result["messages"][-1] if result.get("messages") else None
+    ai_content = getattr(last_ai_msg, "content", "").lower() if last_ai_msg else ""
+    asking_for_address = any(p in ai_content for p in ["delivery details", "shipping details", "postal code", "pin code", "delivery address", "share your"])
+
+    if has_shipping and not asking_for_address and any(k in last_user_msg for k in checkout_keywords):
         if last_ai_msg and "![Payment QR Code]" not in getattr(last_ai_msg, "content", ""):
             from .utils.cart import create_payment_qr
             qr_res = create_payment_qr(amount_inr=0.0)

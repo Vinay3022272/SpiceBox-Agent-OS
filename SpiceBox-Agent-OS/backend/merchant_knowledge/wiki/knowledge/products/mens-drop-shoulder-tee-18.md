@@ -31,8 +31,12 @@ _No review data available yet._
 ## Related
 
 - [Men's T-Shirts](../categories/men-s-t-shirts.md) (Category)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Complementary)
+- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
+- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
+- [Men's Vintage Washed Essential Tee](./mens-vintage-washed-tee-3.md) (Alternative)
+- [Men's Everyday Soft Essential Tee](./mens-everyday-soft-tee-10.md) (Alternative)
 - [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Complementary)
+- [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Complementary)
 - [Men's Drop Shoulder Essential Tee Edition 18 — Popular Item Intelligence](../../marketing/popular/mens-drop-shoulder-tee-18.md) (Market Intelligence)
 
 ## Sources

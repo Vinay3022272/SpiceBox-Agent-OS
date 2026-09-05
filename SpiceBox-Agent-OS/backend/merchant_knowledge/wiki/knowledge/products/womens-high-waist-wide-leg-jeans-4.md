@@ -31,8 +31,6 @@ _No review data available yet._
 ## Related
 
 - [Women's Jeans](../categories/women-s-jeans.md) (Category)
-- [Women's High-Waist Wide Leg Jeans 5](./womens-high-waist-wide-leg-jeans-5.md) (Alternative)
-- [Women's High-Waist Wide Leg Jeans 6](./womens-high-waist-wide-leg-jeans-6.md) (Alternative)
 - [Women's High-Waist Wide Leg Jeans 2](./womens-high-waist-wide-leg-jeans-2.md) (Complementary)
 - [Women's High-Waist Wide Leg Jeans 1](./womens-high-waist-wide-leg-jeans-1.md) (Complementary)
 

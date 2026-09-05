@@ -34,7 +34,7 @@ _No review data available yet._
 - [Stride Court Minimalist Leather Sneaker Edition 1](./stride-court-minimalist-leather-sneaker-1.md) (Alternative)
 - [Stride Retro High-Top Basketball Sneaker Edition 7](./stride-retro-high-top-basketball-sneaker-7.md) (Alternative)
 - [Stride Everyday Foam Slide Edition 10](./stride-everyday-foam-slide-10.md) (Alternative)
-- [Stride Suede Skate Cupsole Sneaker Edition 9](./stride-suede-skate-cupsole-sneaker-9.md) (Alternative)
+- [Stride Breathable Knit Running Trainer Edition 3](./stride-breathable-knit-running-trainer-3.md) (Alternative)
 - [Stride Breathable Knit Running Trainer Edition 8](./stride-breathable-knit-running-trainer-8.md) (Complementary)
 - [Stride Court Minimalist Leather Sneaker Edition 6](./stride-court-minimalist-leather-sneaker-6.md) (Complementary)
 

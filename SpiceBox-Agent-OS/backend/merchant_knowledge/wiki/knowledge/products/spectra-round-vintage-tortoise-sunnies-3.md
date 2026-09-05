@@ -31,11 +31,10 @@ _No review data available yet._
 ## Related
 
 - [Eyewear & Sunglasses](../categories/eyewear-sunglasses.md) (Category)
-- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Alternative)
-- [Spectra Polarized Aviator Sunglasses Series 11](./spectra-polarized-aviator-sunglasses-11.md) (Alternative)
-- [Spectra Blue-Light Computer Glasses Series 9](./spectra-blue-light-computer-glasses-9.md) (Alternative)
+- [Spectra Polarized Aviator Sunglasses Series 1](./spectra-polarized-aviator-sunglasses-1.md) (Alternative)
+- [Spectra Polarized Aviator Sunglasses Series 6](./spectra-polarized-aviator-sunglasses-6.md) (Alternative)
 - [Spectra Round Vintage Tortoise Sunnies Series 8](./spectra-round-vintage-tortoise-sunnies-8.md) (Alternative)
-- [Spectra Polarized Aviator Sunglasses Series 1](./spectra-polarized-aviator-sunglasses-1.md) (Complementary)
+- [Spectra Classic Matte Wayfarers Series 2](./spectra-classic-matte-wayfarers-2.md) (Complementary)
 - [Spectra Blue-Light Computer Glasses Series 4](./spectra-blue-light-computer-glasses-4.md) (Complementary)
 
 ## Sources

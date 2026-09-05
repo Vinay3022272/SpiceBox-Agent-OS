@@ -32,7 +32,7 @@ _No review data available yet._
 
 - [Baby & Toddler](../categories/baby-toddler.md) (Category)
 - [Organic Cotton Baby Romper #10](./kids-organic-cotton-baby-romper-10.md) (Alternative)
-- [Organic Cotton Baby Romper #19](./kids-organic-cotton-baby-romper-19.md) (Alternative)
+- [Organic Cotton Baby Romper #28](./kids-organic-cotton-baby-romper-28.md) (Alternative)
 - [Kids Cotton Pajama Set #9](./kids-kids-cotton-pajama-set-9.md) (Complementary)
 - [Girls Soft Ribbed Cardigan #8](./kids-girls-soft-ribbed-cardigan-8.md) (Complementary)
 

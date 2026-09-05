@@ -31,8 +31,10 @@ _No review data available yet._
 ## Related
 
 - [Boys' Collection](../categories/boys-collection.md) (Category)
+- [Boys Colorblock Zip Hoodie #6](./kids-boys-colorblock-zip-hoodie-6.md) (Alternative)
+- [Boys Colorblock Zip Hoodie #15](./kids-boys-colorblock-zip-hoodie-15.md) (Alternative)
 - [Boys Cargo Fleece Joggers #14](./kids-boys-cargo-fleece-joggers-14.md) (Alternative)
-- [Boys Cargo Fleece Joggers #23](./kids-boys-cargo-fleece-joggers-23.md) (Alternative)
+- [Boys Colorblock Zip Hoodie #24](./kids-boys-colorblock-zip-hoodie-24.md) (Alternative)
 - [Kids Cotton Pajama Set #9](./kids-kids-cotton-pajama-set-9.md) (Complementary)
 - [Organic Cotton Baby Romper #10](./kids-organic-cotton-baby-romper-10.md) (Complementary)
 

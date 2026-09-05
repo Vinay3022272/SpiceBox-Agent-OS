@@ -31,8 +31,8 @@ _No review data available yet._
 ## Related
 
 - [Women's Activewear](../categories/women-s-activewear.md) (Category)
-- [Women's Seamless Performance Biker Tights 19](./womens-seamless-performance-biker-tights-19.md) (Alternative)
-- [Women's Seamless Performance Biker Tights 17](./womens-seamless-performance-biker-tights-17.md) (Alternative)
+- [Women's Seamless Performance Biker Tights 15](./womens-seamless-performance-biker-tights-15.md) (Alternative)
+- [Women's Seamless Performance Biker Tights 16](./womens-seamless-performance-biker-tights-16.md) (Alternative)
 - [Women's High-Waist Wide Leg Jeans 4](./womens-high-waist-wide-leg-jeans-4.md) (Complementary)
 - [Women's High-Waist Wide Leg Jeans 2](./womens-high-waist-wide-leg-jeans-2.md) (Complementary)
 

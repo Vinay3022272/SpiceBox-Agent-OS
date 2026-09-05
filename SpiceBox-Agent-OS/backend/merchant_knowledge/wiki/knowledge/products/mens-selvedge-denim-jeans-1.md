@@ -31,7 +31,8 @@ _No review data available yet._
 ## Related
 
 - [Men's Jeans](../categories/men-s-jeans.md) (Category)
-- [Men's Selvedge Denim Jeans No. 5](./mens-selvedge-denim-jeans-5.md) (Alternative)
+- [Men's Selvedge Denim Jeans No. 3](./mens-selvedge-denim-jeans-3.md) (Alternative)
+- [Men's Selvedge Denim Jeans No. 2](./mens-selvedge-denim-jeans-2.md) (Alternative)
 - [Men's Pleated Cotton Chino No. 10](./mens-pleated-cotton-chino-10.md) (Complementary)
 - [Men's Pleated Cotton Chino No. 6](./mens-pleated-cotton-chino-6.md) (Complementary)
 

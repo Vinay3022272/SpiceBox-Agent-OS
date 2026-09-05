@@ -32,7 +32,6 @@ _No review data available yet._
 
 - [Women's T-Shirts & Tees](../categories/women-s-t-shirts-tees.md) (Category)
 - [Women's Square-Neck Ribbed Top](./womens-square-neck-ribbed-top-1.md) (Alternative)
-- [Women's Square-Neck Ribbed Top Edition 19](./womens-square-neck-ribbed-top-19.md) (Alternative)
 - [Women's Cropped Linen Blouse](./womens-cropped-linen-blouse-3.md) (Complementary)
 - [Women's Oversized Cotton Boyfriend Tee](./womens-oversized-cotton-boyfriend-tee-2.md) (Complementary)
 

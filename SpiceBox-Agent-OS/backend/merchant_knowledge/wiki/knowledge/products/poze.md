@@ -48,10 +48,10 @@ Classic styling gets a modern touch in this SF Dreamer edition, where a deep bla
 ## Related
 
 - [Men](../categories/men.md) (Category)
-- [Men's Boxy Fit Essential Tee](./mens-boxy-fit-tee-6.md) (Alternative)
 - [Men's Heavyweight Essential Tee](./mens-heavyweight-tee-2.md) (Alternative)
-- [Men's Organic Cotton Essential Tee](./mens-organic-cotton-tee-4.md) (Alternative)
 - [Men's Raw Hem Essential Tee](./mens-raw-hem-tee-5.md) (Alternative)
+- [Men's Brushed Cotton Essential Tee](./mens-brushed-cotton-tee-9.md) (Alternative)
+- [Men's Drop Shoulder Essential Tee](./mens-drop-shoulder-tee-8.md) (Alternative)
 - [Sonata Poze Quartz Analog Black Dial Metal Strap Watch for Men — Popular Item Intelligence](../../marketing/popular/poze.md) (Market Intelligence)
 
 ## Sources

@@ -31,6 +31,7 @@ _No review data available yet._
 ## Related
 
 - [Men's Hoodies & Sweaters](../categories/men-s-hoodies-sweaters.md) (Category)
+- [Men's French Terry Fleece Hoodie 7](./mens-fleece-hoodie-7.md) (Alternative)
 - [Men's French Terry Fleece Hoodie 1](./mens-fleece-hoodie-1.md) (Complementary)
 - [Men's French Terry Fleece Hoodie 3](./mens-fleece-hoodie-3.md) (Complementary)
 
